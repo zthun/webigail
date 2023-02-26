@@ -1,7 +1,7 @@
 {
   "useWorkspaces": true,
   "stream": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "nx": true,
   "command": {
     "publish": {
@@ -10,9 +10,7 @@
   },
   "changelogPreset": {
     "name": "conventionalcommits",
-    "issuePrefixes": [
-      "#"
-    ],
+    "issuePrefixes": ["#"],
     "types": [
       {
         "type": "feat",
