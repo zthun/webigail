@@ -1,0 +1,34 @@
+{
+  "name": "@zthun/webigail-url",
+  "version": "0.0.0",
+  "description": "Url parsing and building.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/webigail",
+    "directory": "packages/webigail-url"
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json --no-sourcemap"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "url-parse": "^1.5.10"
+  },
+  "sideEffects": false
+}

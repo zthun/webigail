@@ -3117,6 +3117,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/url-parse@npm:^1.4.8":
+  version: 1.4.8
+  resolution: "@types/url-parse@npm:1.4.8"
+  checksum: 44a5e96ed4b579c43750f3578bfa9165f97a359c3b2a85ee126e9c16db964f6ea105e152afd3d1adbd15850a8b812043215f3820112177bb4255a60b432dbd85
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.49.0":
   version: 5.53.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.53.0"
@@ -3445,6 +3452,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@zthun/webigail-url@workspace:packages/webigail-url":
+  version: 0.0.0-use.local
+  resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
+  dependencies:
+    lodash: ^4.17.21
+    microbundle: ^0.15.1
+    url-parse: ^1.5.10
+    vite: ^4.1.4
+    vitest: ^0.29.1
+  languageName: unknown
+  linkType: soft
+
 "@zthun/webigail@workspace:.":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail@workspace:."
@@ -3454,6 +3473,7 @@ __metadata:
     "@commitlint/config-conventional": ^17.4.4
     "@types/lodash": ^4.14.191
     "@types/node": ^18.14.1
+    "@types/url-parse": ^1.4.8
     "@vitest/coverage-istanbul": ^0.29.1
     "@zthun/lint-janitor": ^14.1.0
     "@zthun/lint-janitor-config": ^14.1.0
@@ -10102,6 +10122,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"querystringify@npm:^2.1.1":
+  version: 2.2.0
+  resolution: "querystringify@npm:2.2.0"
+  checksum: 5641ea231bad7ef6d64d9998faca95611ed4b11c2591a8cae741e178a974f6a8e0ebde008475259abe1621cb15e692404e6b6626e927f7b849d5c09392604b15
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -10381,6 +10408,13 @@ __metadata:
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
   checksum: a03ef6895445f33a4015300c426699bc66b2b044ba7b670aa238610381b56d3f07c686251740d575e22f4c87531ba662d06937508f0f3c0f1ddc04db3130560b
+  languageName: node
+  linkType: hard
+
+"requires-port@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "requires-port@npm:1.0.0"
+  checksum: eee0e303adffb69be55d1a214e415cf42b7441ae858c76dfc5353148644f6fd6e698926fc4643f510d5c126d12a705e7c8ed7e38061113bdf37547ab356797ff
   languageName: node
   linkType: hard
 
@@ -11897,6 +11931,16 @@ __metadata:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
+  languageName: node
+  linkType: hard
+
+"url-parse@npm:^1.5.10":
+  version: 1.5.10
+  resolution: "url-parse@npm:1.5.10"
+  dependencies:
+    querystringify: ^2.1.1
+    requires-port: ^1.0.0
+  checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
   languageName: node
   linkType: hard
 
