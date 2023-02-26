@@ -1,5 +1,4 @@
-/* eslint-disable require-jsdoc */
-
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { IZUrlInfo, ZUrlBuilder } from './url';
 
 describe('ZUrlBuilder', () => {
@@ -22,9 +21,9 @@ describe('ZUrlBuilder', () => {
       port: '',
       protocol,
       search: '',
-      assign: jest.fn(),
-      reload: jest.fn(),
-      replace: jest.fn()
+      assign: vi.fn(),
+      reload: vi.fn(),
+      replace: vi.fn()
     };
   });
 

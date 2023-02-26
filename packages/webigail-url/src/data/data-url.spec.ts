@@ -1,4 +1,4 @@
-/* eslint-disable require-jsdoc */
+import { describe, expect, it } from 'vitest';
 import { ZMimeTypeText } from '../mime/mime-type-text';
 import { ZDataUrlBuilder } from './data-url';
 
