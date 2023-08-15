@@ -1,0 +1,44 @@
+{
+  "name": "@zthun/webigail-nest",
+  "version": "0.1.0",
+  "description": "A nest-js module that add the tokens and implementations for the http service in webigail-http.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/webigail",
+    "directory": "packages/webigail-nest"
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.1.3",
+    "@nestjs/core": "^10.1.3",
+    "@nestjs/testing": "^10.1.3",
+    "microbundle": "^0.15.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.1.3",
+    "@nestjs/core": "^10.1.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@zthun/webigail-http": "^0.1.0"
+  },
+  "sideEffects": false
+}
