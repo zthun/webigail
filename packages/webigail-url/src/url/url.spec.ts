@@ -168,15 +168,6 @@ describe('ZUrlBuilder', () => {
   });
 
   describe('Location', () => {
-    it('initializes with the default location.', () => {
-      // Arrange
-      const target = createTestTarget();
-      // Act
-      const actual = target.location().build();
-      // Assert
-      expect(actual).toBeTruthy();
-    });
-
     it('it constructs the search params.', () => {
       // Arrange
       const target = createTestTarget();
@@ -193,7 +184,7 @@ describe('ZUrlBuilder', () => {
       // Arrange
       const target = createTestTarget();
       // Act
-      const actual = target.api().build();
+      const actual = target.api(loc).build();
       // Assert
       expect(actual).toBeTruthy();
     });
