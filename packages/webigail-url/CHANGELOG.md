@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/zthun/webigail/compare/v0.1.0...v0.2.0) (2023-08-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* location no longer defaults to support node applications
+
+### Features
+
+* location no longer defaults to support node applications ([78de5f5](https://github.com/zthun/webigail/commit/78de5f5917b77484e01d7ad5c7dc3c6016a50e86))
+
+
+
 ## 0.1.0 (2023-02-26)
 
 

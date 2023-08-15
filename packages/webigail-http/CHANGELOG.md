@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0](https://github.com/zthun/webigail/compare/v0.1.0...v0.2.0) (2023-08-15)
+
+
+### Features
+
+* upgrade axios ([31b8086](https://github.com/zthun/webigail/commit/31b808675904c9f926d7cd73c7d82fe0d37a9b90))
+
+
+
 ## 0.1.0 (2023-02-26)
 
 
