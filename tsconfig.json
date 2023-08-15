@@ -2,7 +2,11 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "packages",
-    "target": "esnext"
+    "target": "esnext",
+    "paths": {
+      "@zthun/webigail-url": ["webigail-url/src/index"],
+      "@zthun/webigail-http": ["webigail-http/src/index"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["**/node_modules/**"]
