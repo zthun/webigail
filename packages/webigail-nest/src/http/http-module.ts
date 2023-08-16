@@ -4,11 +4,11 @@ import { ZHttpServiceToken } from './http-service-token';
 
 const ZHttpServiceProvider = { provide: ZHttpServiceToken, useValue: new ZHttpService() };
 
+/**
+ * A module that provides http services.
+ */
 @Module({
   providers: [ZHttpServiceProvider, ZHttpService],
   exports: [ZHttpServiceProvider, ZHttpService]
 })
-/**
- * Represents a module that provides http services.
- */
 export class ZHttpModule {}
