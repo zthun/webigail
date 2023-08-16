@@ -11,7 +11,8 @@
     "nestjs",
     "npmrc",
     "webigail",
-    "zthun"
+    "zthun",
+    "zthunworks"
   ],
   "dictionaries": [
     "typescript",
