@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ZHttpService } from '@zthun/webigail-http';
+import { ZHttpServiceToken } from './http-service-token';
 
-export const ZHttpServiceToken = Symbol();
-const ZHttpServiceProvider = { provide: ZHttpServiceToken, useClass: ZHttpService };
+const ZHttpServiceProvider = { provide: ZHttpServiceToken, useValue: new ZHttpService() };
 
 @Module({
   providers: [ZHttpServiceProvider, ZHttpService],

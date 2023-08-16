@@ -1,7 +1,8 @@
 import { Test } from '@nestjs/testing';
 import { ZHttpService } from '@zthun/webigail-http';
 import { describe, expect, it } from 'vitest';
-import { ZHttpModule, ZHttpServiceToken } from './http-module';
+import { ZHttpModule } from './http-module';
+import { ZHttpServiceToken } from './http-service-token';
 
 describe('ZHttpModule', () => {
   const createTestTarget = async () => {
