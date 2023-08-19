@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/zthun/webigail/compare/v1.0.2...v1.1.0) (2023-08-19)
+
+
+### Features
+
+* support for singular query params ([b975bd8](https://github.com/zthun/webigail/commit/b975bd831888bf42fdc0ad880d72af217a908d3b))
+
+
+
 ## [1.0.2](https://github.com/zthun/webigail/compare/v1.0.1...v1.0.2) (2023-08-16)
 
 **Note:** Version bump only for package @zthun/webigail-url
