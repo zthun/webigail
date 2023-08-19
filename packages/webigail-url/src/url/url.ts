@@ -385,6 +385,62 @@ export class ZUrlBuilder {
   }
 
   /**
+   * Removes all duplicate params and adds one with the key to the value.
+   *
+   * @param key -
+   *        The parameter key that can have only one.
+   * @param val -
+   *        The parameter value.  If this is falsy, then
+   *        the key is deleted.
+   */
+  public onlyParam(key: string, val?: string): this {
+    this._url.params = this._url.params.filter((p) => p.key !== key);
+    return val ? this.param(key, val) : this;
+  }
+
+  /**
+   * Adds a page param.
+   *
+   * @param page -
+   *        The page param to add.  If this null, undefined,
+   *        or less than 1, then any page param is deleted.
+   *
+   * @returns
+   *        This object.
+   */
+  public page(page?: number | null): this {
+    return this.onlyParam('page', page == null || page < 1 ? undefined : String(page));
+  }
+
+  /**
+   * Adds a size param.
+   *
+   * @param size -
+   *        The size param to add.  If this is null, undefined,
+   *        or less than 0, then any size param is deleted.
+   *
+   * @returns
+   *        This object.
+   */
+  public size(size?: number | null): this {
+    return this.onlyParam('size', size == null || size < 0 ? undefined : String(size));
+  }
+
+  /**
+   * Adds a search param.
+   *
+   * @param size -
+   *        The search param to add.  If this is null, undefined,
+   *        or empty, then any search param is deleted.
+   *
+   * @returns
+   *        This object.
+   */
+  public search(search?: string | null): this {
+    return this.onlyParam('search', search ? search : undefined);
+  }
+
+  /**
    * Builds the url string and returns it.
    *
    * @returns

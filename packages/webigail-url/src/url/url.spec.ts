@@ -1,30 +1,14 @@
+import { find } from 'lodash';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { IZUrlInfo, ZUrlBuilder } from './url';
 
 describe('ZUrlBuilder', () => {
-  let loc: Location;
   let protocol: string;
   let hostname: string;
 
   beforeEach(() => {
     protocol = 'https';
     hostname = 'facebook.com';
-
-    loc = {
-      ancestorOrigins: {} as unknown as DOMStringList,
-      hash: '',
-      host: '',
-      hostname,
-      href: '',
-      origin: '',
-      pathname: '',
-      port: '',
-      protocol,
-      search: '',
-      assign: vi.fn(),
-      reload: vi.fn(),
-      replace: vi.fn()
-    };
   });
 
   function createTestTarget() {
@@ -168,6 +152,26 @@ describe('ZUrlBuilder', () => {
   });
 
   describe('Location', () => {
+    let loc: Location;
+
+    beforeEach(() => {
+      loc = {
+        ancestorOrigins: {} as unknown as DOMStringList,
+        hash: '',
+        host: '',
+        hostname,
+        href: '',
+        origin: '',
+        pathname: '',
+        port: '',
+        protocol,
+        search: '',
+        assign: vi.fn(),
+        reload: vi.fn(),
+        replace: vi.fn()
+      };
+    });
+
     it('it constructs the search params.', () => {
       // Arrange
       const target = createTestTarget();
@@ -177,25 +181,25 @@ describe('ZUrlBuilder', () => {
       // Assert
       expect(actual.endsWith('a=b')).toBeTruthy();
     });
-  });
 
-  describe('API', () => {
-    it('initializes with the default parameters.', () => {
-      // Arrange
-      const target = createTestTarget();
-      // Act
-      const actual = target.api(loc).build();
-      // Assert
-      expect(actual).toBeTruthy();
-    });
+    describe('API', () => {
+      it('initializes with the default parameters.', () => {
+        // Arrange
+        const target = createTestTarget();
+        // Act
+        const actual = target.api(loc).build();
+        // Assert
+        expect(actual).toBeTruthy();
+      });
 
-    it('replaces the path with the basePath', () => {
-      // Arrange
-      const target = createTestTarget();
-      // Act
-      const actual = target.api(loc, 'api').build();
-      // Assert
-      expect(actual.endsWith('api')).toBeTruthy();
+      it('replaces the path with the basePath', () => {
+        // Arrange
+        const target = createTestTarget();
+        // Act
+        const actual = target.api(loc, 'api').build();
+        // Assert
+        expect(actual.endsWith('api')).toBeTruthy();
+      });
     });
   });
 
@@ -209,6 +213,101 @@ describe('ZUrlBuilder', () => {
       const size = 256;
       const expected = createTestTarget().parse(ZUrlBuilder.UrlGravatar).append(hash).param('s', `${size}`).build();
       expect(createTestTarget().gravatar(hash, size).build()).toEqual(expected);
+    });
+  });
+
+  describe('Query', () => {
+    const shouldAddParam = (expected: string, key: string, setFn: (t: ZUrlBuilder) => ZUrlBuilder) => {
+      // Arrange.
+      const target = createTestTarget();
+      // Act.
+      const { params } = setFn(target).info();
+      const { val } = find(params, (p) => p.key === key)!;
+      // Assert
+      expect(val).toEqual(expected);
+    };
+
+    const shouldAddOnlyOnce = (expected: string, key: string, setFn: (t: ZUrlBuilder) => ZUrlBuilder) => {
+      // Arrange.
+      const target = createTestTarget();
+      // Act.
+      const { params } = setFn(setFn(target)).info();
+      const actual = params.filter((p) => p.key === key);
+      // Assert
+      expect(actual.length).toEqual(1);
+    };
+
+    const shouldDeleteParam = (key: string, setFn: (t: ZUrlBuilder) => ZUrlBuilder) => {
+      // Arrange.
+      const target = createTestTarget();
+      // Act.
+      const { params } = setFn(target).info();
+      const actual = params.filter((p) => p.key === key);
+      // Assert
+      expect(actual.length).toEqual(0);
+    };
+
+    describe('Page', () => {
+      it('should add the param', () => {
+        shouldAddParam('4', 'page', (t) => t.page(4));
+      });
+
+      it('should only add the param once', () => {
+        shouldAddOnlyOnce('3', 'page', (t) => t.page(3));
+      });
+
+      it('should delete the param', () => {
+        shouldDeleteParam('page', (t) => t.page(3).page());
+      });
+
+      it('should delete the param if less than 1', () => {
+        shouldDeleteParam('page', (t) => t.page(3).page());
+      });
+
+      it('should delete the param if negative', () => {
+        shouldDeleteParam('page', (t) => t.page(3).page(-1));
+      });
+    });
+
+    describe('Size', () => {
+      it('should add the param', () => {
+        shouldAddParam('150', 'size', (t) => t.size(150));
+      });
+
+      it('should add the param if 0', () => {
+        shouldAddParam('0', 'size', (t) => t.size(0));
+      });
+
+      it('should only add the param once', () => {
+        shouldAddOnlyOnce('100', 'size', (t) => t.size(3));
+      });
+
+      it('should delete the param', () => {
+        shouldDeleteParam('size', (t) => t.size(3).size());
+      });
+
+      it('should delete the param if negative', () => {
+        shouldDeleteParam('size', (t) => t.size(3).size(-1));
+      });
+    });
+
+    describe('Search', () => {
+      const Text = 'search text';
+      it('should add the param', () => {
+        shouldAddParam(Text, 'search', (t) => t.search(Text));
+      });
+
+      it('should only add the param once', () => {
+        shouldAddOnlyOnce(Text, 'search', (t) => t.search(Text));
+      });
+
+      it('should delete the param', () => {
+        shouldDeleteParam('search', (t) => t.search(Text).search());
+      });
+
+      it('should delete the param if empty', () => {
+        shouldDeleteParam('search', (t) => t.search(Text).search(''));
+      });
     });
   });
 
