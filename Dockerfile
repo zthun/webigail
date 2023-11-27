@@ -27,3 +27,9 @@ RUN --mount=type=secret,id=GIT_CREDENTIALS,dst=/root/.git-credentials npx lerna 
     git push && \
     git push --tags
 RUN --mount=type=secret,id=NPM_CREDENTIALS,dst=/root/.npmrc npx lerna publish from-package --yes
+
+FROM node:lts-alpine as webigail-web-install
+RUN npm install -g @zthun/webigail-web
+
+FROM nginx:stable-alpine as webigail-web
+COPY --from=webigail-web-install /usr/local/lib/node_modules/@zthun/webigail-web/dist/. /usr/share/nginx/html/
