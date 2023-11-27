@@ -1,0 +1,32 @@
+{
+  "name": "@zthun/webigail-web",
+  "version": "1.1.0",
+  "description": "Documentation site for webigail.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/webigail",
+    "directory": "packages/webigail-web"
+  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "typedoc"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@zthun/webigail-http": "^1.1.0",
+    "@zthun/webigail-nest": "^1.1.0",
+    "@zthun/webigail-url": "^1.1.0",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-extras": "^3.0.0",
+    "typescript": "^5.3.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
