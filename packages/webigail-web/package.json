@@ -1,7 +1,7 @@
 {
   "name": "@zthun/webigail-web",
   "version": "1.1.0",
-  "description": "Documentation site for webigail.",
+  "description": "A documentation website for webigail packages.",
   "author": "Anthony Bonta",
   "license": "MIT",
   "repository": {
