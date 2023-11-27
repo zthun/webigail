@@ -5,8 +5,10 @@
   "words": [
     "Bonta",
     "BUILDKIT",
+    "buildx",
     "commitlint",
     "conventionalcommits",
+    "DOCKERHUB",
     "microbundle",
     "nestjs",
     "npmrc",
