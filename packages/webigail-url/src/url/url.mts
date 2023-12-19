@@ -50,6 +50,11 @@ export interface IZUrlInfo {
 }
 
 /**
+ * The api to target for YouTube.
+ */
+export type ZYouTubeApi = 'embed' | 'watch';
+
+/**
  * Represents an object that is helpful in building a url.
  */
 export class ZUrlBuilder {
@@ -57,6 +62,13 @@ export class ZUrlBuilder {
    * The url to the gravatar api.
    */
   public static UrlGravatar = 'https://s.gravatar.com/avatar';
+
+  /**
+   * The url to youtube.
+   *
+   * This is mostly used to embed videos.
+   */
+  public static UrlYouTube = 'https://www.youtube.com';
 
   /**
    * A mapping between protocol and default port.
@@ -214,6 +226,58 @@ export class ZUrlBuilder {
     let current = this.parse(ZUrlBuilder.UrlGravatar);
     current = hash ? current.append(hash) : current;
     current = size ? current.param('s', String(size)) : current;
+    return current;
+  }
+
+  /**
+   * Sets the url for a target video on YouTube.
+   *
+   * @param api -
+   *        The target api.  If this is watch, then
+   *        it will be a target link to a youTube url.
+   *        If this is embed, then it will be a target
+   *        link that can be put into an iframe for
+   *        embedded youtube videos.
+   * @param id -
+   *        The id of the video to watch.
+   *
+   * @returns
+   *        This object.
+   */
+  public youTube(api: ZYouTubeApi, id: string): this;
+
+  /**
+   * Sets the url to the base YouTube domain.
+   *
+   * @returns
+   *        This object.
+   */
+  public youTube(): this;
+
+  /**
+   * Sets the url target to something on YouTube.
+   *
+   * @param api -
+   *        The supported api.
+   * @param id -
+   *        The id of the video.  If api is set,
+   *        then this parameter is required.
+   *
+   * @returns
+   *        The url for YouTube.  If you set the api and
+   *        id, then the url will be targeted to a specific video,
+   *        otherwise, the base domain url of YouTube will be returned.
+   */
+  public youTube(api?: ZYouTubeApi, id?: string) {
+    let current = this.parse(ZUrlBuilder.UrlYouTube);
+    current = api ? current.path(`${api}/${id}`) : current;
+
+    // The watch api is a little bizarre that they don't actually
+    // use the same format as their other apis.  So we will handle this here.
+    if (api === 'watch') {
+      current = current.path(api).param('v', id!);
+    }
+
     return current;
   }
 

@@ -216,6 +216,24 @@ describe('ZUrlBuilder', () => {
     });
   });
 
+  describe('YouTube', () => {
+    it('returns the base YouTube url.', () => {
+      expect(createTestTarget().youTube().build()).toEqual(ZUrlBuilder.UrlYouTube);
+    });
+
+    it('returns an watch video url for YouTube.', () => {
+      const id = 'kVsR01vPiP4';
+      const expected = createTestTarget().parse(ZUrlBuilder.UrlYouTube).append('watch').param('v', id).build();
+      expect(createTestTarget().youTube('watch', id).build()).toEqual(expected);
+    });
+
+    it('returns an embed video url for YouTube.', () => {
+      const id = 'kVsR01vPiP4';
+      const expected = createTestTarget().parse(ZUrlBuilder.UrlYouTube).append('embed').append(id).build();
+      expect(createTestTarget().youTube('embed', id).build()).toEqual(expected);
+    });
+  });
+
   describe('Query', () => {
     const shouldAddParam = (expected: string, key: string, setFn: (t: ZUrlBuilder) => ZUrlBuilder) => {
       // Arrange.
