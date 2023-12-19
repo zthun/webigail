@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/zthun/webigail/compare/v1.2.0...v2.0.0) (2023-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* converted to esm build
+* convert to module project
+* upgrade nest requirement to latest
+
+### Features
+
+* converted to esm build ([6820c37](https://github.com/zthun/webigail/commit/6820c37f41210cebb89ad86387ab0ad2aba2727a))
+* support for youtube urls are now first class ([f395303](https://github.com/zthun/webigail/commit/f395303e9bd06d635632ea447ce8d486dcc6bdd8))
+* upgrade nest requirement to latest ([7c93b6f](https://github.com/zthun/webigail/commit/7c93b6faa5f99876c5755e596fb0cc8655be34cb))
+
+
+### Code Refactoring
+
+* convert to module project ([63f0f7e](https://github.com/zthun/webigail/commit/63f0f7e382a3479241ddc17093dc2c568739e6a1))
+
+
+
 ## [1.2.0](https://github.com/zthun/webigail/compare/v1.1.0...v1.2.0) (2023-11-27)
 
 

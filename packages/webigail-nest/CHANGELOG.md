@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/zthun/webigail/compare/v1.2.0...v2.0.0) (2023-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade nest requirement to latest
+
+### Features
+
+* upgrade nest requirement to latest ([7c93b6f](https://github.com/zthun/webigail/commit/7c93b6faa5f99876c5755e596fb0cc8655be34cb))
+
+
+
 ## [1.2.0](https://github.com/zthun/webigail/compare/v1.1.0...v1.2.0) (2023-11-27)
 
 **Note:** Version bump only for package @zthun/webigail-nest

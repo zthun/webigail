@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/zthun/webigail/compare/v1.2.0...v2.0.0) (2023-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* converted to esm build
+
+### Features
+
+* converted to esm build ([6820c37](https://github.com/zthun/webigail/commit/6820c37f41210cebb89ad86387ab0ad2aba2727a))
+* support for youtube urls are now first class ([f395303](https://github.com/zthun/webigail/commit/f395303e9bd06d635632ea447ce8d486dcc6bdd8))
+
+
+
 ## [1.2.0](https://github.com/zthun/webigail/compare/v1.1.0...v1.2.0) (2023-11-27)
 
 **Note:** Version bump only for package @zthun/webigail-url

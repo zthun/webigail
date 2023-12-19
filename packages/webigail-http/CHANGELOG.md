@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/zthun/webigail/compare/v1.2.0...v2.0.0) (2023-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* convert to module project
+
+### Code Refactoring
+
+* convert to module project ([63f0f7e](https://github.com/zthun/webigail/commit/63f0f7e382a3479241ddc17093dc2c568739e6a1))
+
+
+
 ## [1.2.0](https://github.com/zthun/webigail/compare/v1.1.0...v1.2.0) (2023-11-27)
 
 
