@@ -1,6 +1,6 @@
 import { find } from 'lodash';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { IZUrlInfo, ZUrlBuilder } from './url.mjs';
+import { IZUrlInfo, ZUrlBuilder, ZYouTubeApi } from './url.mjs';
 
 describe('ZUrlBuilder', () => {
   let protocol: string;
@@ -224,13 +224,13 @@ describe('ZUrlBuilder', () => {
     it('returns an watch video url for YouTube.', () => {
       const id = 'kVsR01vPiP4';
       const expected = createTestTarget().parse(ZUrlBuilder.UrlYouTube).append('watch').param('v', id).build();
-      expect(createTestTarget().youTube('watch', id).build()).toEqual(expected);
+      expect(createTestTarget().youTube(ZYouTubeApi.Watch, id).build()).toEqual(expected);
     });
 
     it('returns an embed video url for YouTube.', () => {
       const id = 'kVsR01vPiP4';
       const expected = createTestTarget().parse(ZUrlBuilder.UrlYouTube).append('embed').append(id).build();
-      expect(createTestTarget().youTube('embed', id).build()).toEqual(expected);
+      expect(createTestTarget().youTube(ZYouTubeApi.Embed, id).build()).toEqual(expected);
     });
   });
 

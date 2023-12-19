@@ -52,7 +52,10 @@ export interface IZUrlInfo {
 /**
  * The api to target for YouTube.
  */
-export type ZYouTubeApi = 'embed' | 'watch';
+export enum ZYouTubeApi {
+  Embed = 'embed',
+  Watch = 'watch'
+}
 
 /**
  * Represents an object that is helpful in building a url.
@@ -274,7 +277,7 @@ export class ZUrlBuilder {
 
     // The watch api is a little bizarre that they don't actually
     // use the same format as their other apis.  So we will handle this here.
-    if (api === 'watch') {
+    if (api === ZYouTubeApi.Watch) {
       current = current.path(api).param('v', id!);
     }
 
