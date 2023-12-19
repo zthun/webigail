@@ -2571,7 +2571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^10.2.10":
+"@nestjs/common@npm:^10.3.0":
   version: 10.3.0
   resolution: "@nestjs/common@npm:10.3.0"
   dependencies:
@@ -2592,7 +2592,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:^10.2.10":
+"@nestjs/core@npm:^10.3.0":
   version: 10.3.0
   resolution: "@nestjs/core@npm:10.3.0"
   dependencies:
@@ -2620,7 +2620,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/testing@npm:^10.2.10":
+"@nestjs/testing@npm:^10.3.0":
   version: 10.3.0
   resolution: "@nestjs/testing@npm:10.3.0"
   dependencies:
@@ -3873,12 +3873,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
-    "@nestjs/common": ^10.2.10
-    "@nestjs/core": ^10.2.10
-    "@nestjs/testing": ^10.2.10
+    "@nestjs/common": ^10.3.0
+    "@nestjs/core": ^10.3.0
+    "@nestjs/testing": ^10.3.0
     "@zthun/webigail-http": ^1.2.0
     microbundle: ^0.15.1
-    reflect-metadata: ^0.1.13
+    reflect-metadata: ^0.2.1
     rxjs: ^7.8.1
     vite: ^5.0.10
     vitest: ^1.1.0
@@ -11393,10 +11393,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reflect-metadata@npm:^0.1.13":
-  version: 0.1.14
-  resolution: "reflect-metadata@npm:0.1.14"
-  checksum: 155ad339319cec3c2d9d84719f730f8b6a6cd2a074733ec29dbae6c89d48a2914c7d07a2350212594f3aae160fa4da4f903e6512f27ceaf968443a7c692bcad0
+"reflect-metadata@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "reflect-metadata@npm:0.2.1"
+  checksum: 772f552a544e04b999c1bf2c868225fef10032274e9d9e315bc3e7a687a504b8b115fa71966665b9619acfd323123a941f892b593250140da809330d41564181
   languageName: node
   linkType: hard
 
