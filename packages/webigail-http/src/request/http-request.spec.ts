@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ZHttpMethod, ZHttpRequestBuilder } from './http-request';
+import { ZHttpMethod, ZHttpRequestBuilder } from './http-request.mjs';
 
 describe('ZHttpRequestBuilder', () => {
   function createTestTarget() {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { ZHttpCodeRedirection } from './http-code-redirection';
-import { ZHttpResultBuilder } from './http-result';
+import { ZHttpCodeRedirection } from './http-code-redirection.mjs';
+import { ZHttpResultBuilder } from './http-result.mjs';
 
 describe('ZHttpResultBuilder', () => {
   function createTestTarget() {

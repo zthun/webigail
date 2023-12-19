@@ -1,16 +1,16 @@
-import { ZHttpCodeClient, ZHttpCodeClientDescriptions, ZHttpCodeClientNames } from './http-code-client';
+import { ZHttpCodeClient, ZHttpCodeClientDescriptions, ZHttpCodeClientNames } from './http-code-client.mjs';
 import {
   ZHttpCodeInformationalResponse,
   ZHttpCodeInformationalResponseDescriptions,
   ZHttpCodeInformationalResponseNames
-} from './http-code-informational-response';
+} from './http-code-informational-response.mjs';
 import {
   ZHttpCodeRedirection,
   ZHttpCodeRedirectionDescriptions,
   ZHttpCodeRedirectionNames
-} from './http-code-redirection';
-import { ZHttpCodeServer, ZHttpCodeServerDescriptions, ZHttpCodeServerNames } from './http-code-server';
-import { ZHttpCodeSuccess, ZHttpCodeSuccessDescriptions, ZHttpCodeSuccessNames } from './http-code-success';
+} from './http-code-redirection.mjs';
+import { ZHttpCodeServer, ZHttpCodeServerDescriptions, ZHttpCodeServerNames } from './http-code-server.mjs';
+import { ZHttpCodeSuccess, ZHttpCodeSuccessDescriptions, ZHttpCodeSuccessNames } from './http-code-success.mjs';
 
 /**
  * Represents a category of http code.

@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { IZHttpRequest, ZHttpMethod, ZHttpRequestBuilder } from '../request/http-request';
-import { ZHttpCode } from '../result/http-code';
-import { ZHttpCodeClient } from '../result/http-code-client';
-import { ZHttpCodeInformationalResponse } from '../result/http-code-informational-response';
-import { ZHttpCodeServer } from '../result/http-code-server';
-import { ZHttpCodeSuccess } from '../result/http-code-success';
-import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result';
-import { ZHttpServiceMock } from './http-service-mock';
+import { IZHttpRequest, ZHttpMethod, ZHttpRequestBuilder } from '../request/http-request.mjs';
+import { ZHttpCodeClient } from '../result/http-code-client.mjs';
+import { ZHttpCodeInformationalResponse } from '../result/http-code-informational-response.mjs';
+import { ZHttpCodeServer } from '../result/http-code-server.mjs';
+import { ZHttpCodeSuccess } from '../result/http-code-success.mjs';
+import { ZHttpCode } from '../result/http-code.mjs';
+import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
+import { ZHttpServiceMock } from './http-service-mock.mjs';
 
 describe('ZHttpServiceMock', () => {
   function createTestTarget() {

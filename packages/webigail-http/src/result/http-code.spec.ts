@@ -1,26 +1,26 @@
 import { describe, expect, it } from 'vitest';
-import {
-  getHttpCodeCategory,
-  getHttpCodeDescription,
-  getHttpCodeName,
-  getHttpCodeSeverity,
-  ZHttpCode,
-  ZHttpCodeCategory,
-  ZHttpCodeSeverity
-} from './http-code';
-import { ZHttpCodeClient, ZHttpCodeClientDescriptions, ZHttpCodeClientNames } from './http-code-client';
+import { ZHttpCodeClient, ZHttpCodeClientDescriptions, ZHttpCodeClientNames } from './http-code-client.mjs';
 import {
   ZHttpCodeInformationalResponse,
   ZHttpCodeInformationalResponseDescriptions,
   ZHttpCodeInformationalResponseNames
-} from './http-code-informational-response';
+} from './http-code-informational-response.mjs';
 import {
   ZHttpCodeRedirection,
   ZHttpCodeRedirectionDescriptions,
   ZHttpCodeRedirectionNames
-} from './http-code-redirection';
-import { ZHttpCodeServer, ZHttpCodeServerDescriptions, ZHttpCodeServerNames } from './http-code-server';
-import { ZHttpCodeSuccess, ZHttpCodeSuccessDescriptions, ZHttpCodeSuccessNames } from './http-code-success';
+} from './http-code-redirection.mjs';
+import { ZHttpCodeServer, ZHttpCodeServerDescriptions, ZHttpCodeServerNames } from './http-code-server.mjs';
+import { ZHttpCodeSuccess, ZHttpCodeSuccessDescriptions, ZHttpCodeSuccessNames } from './http-code-success.mjs';
+import {
+  ZHttpCode,
+  ZHttpCodeCategory,
+  ZHttpCodeSeverity,
+  getHttpCodeCategory,
+  getHttpCodeDescription,
+  getHttpCodeName,
+  getHttpCodeSeverity
+} from './http-code.mjs';
 
 describe('ZHttpCode', () => {
   function assertValueFromDictionary(

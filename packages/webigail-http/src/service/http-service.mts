@@ -1,8 +1,8 @@
 import axios, { AxiosError } from 'axios';
 
-import { IZHttpRequest } from '../request/http-request';
-import { ZHttpCodeServer } from '../result/http-code-server';
-import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result';
+import { IZHttpRequest } from '../request/http-request.mjs';
+import { ZHttpCodeServer } from '../result/http-code-server.mjs';
+import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
 
 /**
  * Represents a service that makes http invocations.

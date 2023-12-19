@@ -8,6 +8,5 @@
       "@zthun/webigail-http": ["webigail-http/src/index"]
     }
   },
-  "include": ["**/*.ts"],
-  "exclude": ["**/node_modules/**"]
+  "include": ["**/*.ts", "**/*.mts"]
 }

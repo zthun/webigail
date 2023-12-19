@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosHeaders } from 'axios';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { IZHttpRequest, ZHttpRequestBuilder } from '../request/http-request';
-import { ZHttpService } from './http-service';
+import { IZHttpRequest, ZHttpRequestBuilder } from '../request/http-request.mjs';
+import { ZHttpService } from './http-service.mjs';
 
 vi.mock('axios');
 
