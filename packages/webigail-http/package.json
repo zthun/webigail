@@ -25,7 +25,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "microbundle": "^0.15.1",
     "vite": "^5.0.10",
     "vitest": "^1.1.0"
   },
