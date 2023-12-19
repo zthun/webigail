@@ -9,11 +9,16 @@
     "url": "https://github.com/zthun/webigail",
     "directory": "packages/webigail-nest"
   },
-  "main": "./dist/lib/index.js",
-  "module": "./dist/lib/index.esm.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
   "scripts": {
-    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json"
+    "build": "vite build"
   },
   "publishConfig": {
     "access": "public"
@@ -22,7 +27,6 @@
     "@nestjs/common": "^10.3.0",
     "@nestjs/core": "^10.3.0",
     "@nestjs/testing": "^10.3.0",
-    "microbundle": "^0.15.1",
     "reflect-metadata": "^0.2.1",
     "rxjs": "^7.8.1",
     "vite": "^5.0.10",
