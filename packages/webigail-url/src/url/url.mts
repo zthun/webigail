@@ -1,4 +1,4 @@
-import { trim, trimEnd, trimStart } from 'lodash';
+import { trim, trimEnd, trimStart } from 'lodash-es';
 import URLParse from 'url-parse';
 
 /**
