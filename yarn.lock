@@ -2723,7 +2723,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-url@npm:^2.0.1, @zthun/webigail-url@workspace:packages/webigail-url":
+"@zthun/webigail-url@npm:^2.0.2, @zthun/webigail-url@workspace:packages/webigail-url":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
@@ -2740,7 +2740,7 @@ __metadata:
   dependencies:
     "@zthun/webigail-http": "npm:^2.0.1"
     "@zthun/webigail-nest": "npm:^2.0.1"
-    "@zthun/webigail-url": "npm:^2.0.1"
+    "@zthun/webigail-url": "npm:^2.0.2"
     typedoc: "npm:^0.25.4"
     typedoc-plugin-extras: "npm:^3.0.0"
     typescript: "npm:^5.3.3"
