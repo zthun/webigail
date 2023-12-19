@@ -1,7 +1,7 @@
 import { Buffer } from 'buffer';
 import { last } from 'lodash';
-import { ZSupportedMimeTypes } from '../mime/mime-type';
-import { ZMimeTypeApplication } from '../mime/mime-type-application';
+import { ZMimeTypeApplication } from '../mime/mime-type-application.mjs';
+import { ZSupportedMimeTypes } from '../mime/mime-type.mjs';
 
 /**
  * Represents information about a data url.

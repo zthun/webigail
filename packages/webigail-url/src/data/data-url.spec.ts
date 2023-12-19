@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { ZMimeTypeText } from '../mime/mime-type-text';
-import { ZDataUrlBuilder } from './data-url';
+import { ZMimeTypeText } from '../mime/mime-type-text.mjs';
+import { ZDataUrlBuilder } from './data-url.mjs';
 
 describe('ZDataUrlBuilder', () => {
   function createTestTarget() {

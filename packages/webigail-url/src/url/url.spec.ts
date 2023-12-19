@@ -1,6 +1,6 @@
 import { find } from 'lodash';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { IZUrlInfo, ZUrlBuilder } from './url';
+import { IZUrlInfo, ZUrlBuilder } from './url.mjs';
 
 describe('ZUrlBuilder', () => {
   let protocol: string;

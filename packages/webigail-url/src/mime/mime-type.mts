@@ -1,7 +1,7 @@
 import { keyBy } from 'lodash';
-import { ZMimeTypeApplication } from './mime-type-application';
-import { ZMimeTypeImage } from './mime-type-image';
-import { ZMimeTypeText } from './mime-type-text';
+import { ZMimeTypeApplication } from './mime-type-application.mjs';
+import { ZMimeTypeImage } from './mime-type-image.mjs';
+import { ZMimeTypeText } from './mime-type-text.mjs';
 
 /**
  * Mime types for file data.
