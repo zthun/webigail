@@ -9,17 +9,21 @@
     "url": "https://github.com/zthun/webigail",
     "directory": "packages/webigail-url"
   },
-  "main": "./dist/lib/index.js",
-  "module": "./dist/lib/index.esm.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
   "scripts": {
-    "build": "microbundle --format esm,cjs --tsconfig tsconfig.prod.json"
+    "build": "vite build"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "microbundle": "^0.15.1",
     "vite": "^5.0.10",
     "vitest": "^1.1.0"
   },
