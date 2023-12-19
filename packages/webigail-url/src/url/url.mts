@@ -53,7 +53,13 @@ export interface IZUrlInfo {
  * The api to target for YouTube.
  */
 export enum ZYouTubeApi {
+  /**
+   * An embedded video link.
+   */
   Embed = 'embed',
+  /**
+   * A watch video link.
+   */
   Watch = 'watch'
 }
 
