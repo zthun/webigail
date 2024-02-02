@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/zthun/webigail/compare/v2.0.2...v2.1.0) (2024-02-02)
+
+
+### Bug Fixes
+
+* param documentation on search is now correct ([a465834](https://github.com/zthun/webigail/commit/a46583478ff06b3f9cf2c44667a3f7ef19e198ad))
+
+
+
 ## [2.0.2](https://github.com/zthun/webigail/compare/v2.0.1...v2.0.2) (2023-12-19)
 
 
