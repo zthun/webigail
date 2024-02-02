@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/zthun/webigail/compare/v2.0.1...v2.0.2) (2023-12-19)
+
+
+### Bug Fixes
+
+* migrate lodash to lodash-es ([40fdc83](https://github.com/zthun/webigail/commit/40fdc83f1f3d9605fad6c3e3326b2efdf07d9bb0))
+
+
+
 ## [2.0.1](https://github.com/zthun/webigail/compare/v2.0.0...v2.0.1) (2023-12-19)
 
 

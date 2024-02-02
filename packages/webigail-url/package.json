@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-url",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Url parsing and building.",
   "author": "Anthony Bonta",
   "license": "MIT",
