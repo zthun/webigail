@@ -502,7 +502,7 @@ export class ZUrlBuilder {
   /**
    * Adds a search param.
    *
-   * @param size -
+   * @param search -
    *        The search param to add.  If this is null, undefined,
    *        or empty, then any search param is deleted.
    *
