@@ -1,0 +1,41 @@
+{
+  "name": "@zthun/webigail-rest",
+  "version": "2.0.1",
+  "description": "Helpful services for querying rest services based on specific standards.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/webigail",
+    "directory": "packages/webigail-rest"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs",
+    "types": "./dist/index.d.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@zthun/helpful-fn": "^3.2.0",
+    "@zthun/helpful-query": "^3.2.0",
+    "@zthun/webigail-http": "^2.0.1",
+    "@zthun/webigail-url": "^2.0.1"
+  },
+  "sideEffects": false
+}
