@@ -22,7 +22,7 @@
     "@zthun/webigail-http": "^2.0.1",
     "@zthun/webigail-nest": "^2.0.1",
     "@zthun/webigail-url": "^2.0.2",
-    "typedoc": "^0.25.4",
+    "typedoc": "^0.25.7",
     "typedoc-plugin-extras": "^3.0.0",
     "typescript": "^5.3.3"
   },

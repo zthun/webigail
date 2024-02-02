@@ -22,17 +22,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@asamuzakjp/dom-selector@npm:^2.0.1":
-  version: 2.0.2
-  resolution: "@asamuzakjp/dom-selector@npm:2.0.2"
-  dependencies:
-    bidi-js: "npm:^1.0.3"
-    css-tree: "npm:^2.3.1"
-    is-potential-custom-element-name: "npm:^1.0.1"
-  checksum: 54d9afa3d654a98fcf2e45c53ea330237e513877f130f8c8c17611c603c8d50cb18f937e1b0bcc08f0030443a9c8479dcad9cebff02766025e2df2754459c647
-  languageName: node
-  linkType: hard
-
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.23.5":
   version: 7.23.5
   resolution: "@babel/code-frame@npm:7.23.5"
@@ -258,7 +247,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^18.4.3":
+"@commitlint/cli@npm:^18.6.0":
   version: 18.6.0
   resolution: "@commitlint/cli@npm:18.6.0"
   dependencies:
@@ -278,7 +267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^18.4.3":
+"@commitlint/config-conventional@npm:^18.6.0":
   version: 18.6.0
   resolution: "@commitlint/config-conventional@npm:18.6.0"
   dependencies:
@@ -1399,7 +1388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^10.3.0":
+"@nestjs/common@npm:^10.3.1":
   version: 10.3.1
   resolution: "@nestjs/common@npm:10.3.1"
   dependencies:
@@ -1420,7 +1409,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:^10.3.0":
+"@nestjs/core@npm:^10.3.1":
   version: 10.3.1
   resolution: "@nestjs/core@npm:10.3.1"
   dependencies:
@@ -1448,7 +1437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/testing@npm:^10.3.0":
+"@nestjs/testing@npm:^10.3.1":
   version: 10.3.1
   resolution: "@nestjs/testing@npm:10.3.1"
   dependencies:
@@ -2204,7 +2193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash-es@npm:^4.14.202":
+"@types/lodash-es@npm:^4.17.12":
   version: 4.17.12
   resolution: "@types/lodash-es@npm:4.17.12"
   dependencies:
@@ -2234,7 +2223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.10.5":
+"@types/node@npm:*, @types/node@npm:^20.11.16":
   version: 20.11.16
   resolution: "@types/node@npm:20.11.16"
   dependencies:
@@ -2401,7 +2390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-istanbul@npm:^1.1.0":
+"@vitest/coverage-istanbul@npm:^1.2.2":
   version: 1.2.2
   resolution: "@vitest/coverage-istanbul@npm:1.2.2"
   dependencies:
@@ -2739,9 +2728,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
-    axios: "npm:^1.6.2"
-    vite: "npm:^5.0.10"
-    vitest: "npm:^1.1.0"
+    axios: "npm:^1.6.7"
+    vite: "npm:^5.0.12"
+    vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
 
@@ -2749,14 +2738,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
-    "@nestjs/common": "npm:^10.3.0"
-    "@nestjs/core": "npm:^10.3.0"
-    "@nestjs/testing": "npm:^10.3.0"
+    "@nestjs/common": "npm:^10.3.1"
+    "@nestjs/core": "npm:^10.3.1"
+    "@nestjs/testing": "npm:^10.3.1"
     "@zthun/webigail-http": "npm:^2.0.1"
     reflect-metadata: "npm:^0.2.1"
     rxjs: "npm:^7.8.1"
-    vite: "npm:^5.0.10"
-    vitest: "npm:^1.1.0"
+    vite: "npm:^5.0.12"
+    vitest: "npm:^1.2.2"
   peerDependencies:
     "@nestjs/common": ^10.3.0
     "@nestjs/core": ^10.3.0
@@ -2772,20 +2761,20 @@ __metadata:
     "@zthun/helpful-fn": "npm:^3.2.0"
     "@zthun/helpful-query": "npm:^3.2.0"
     "@zthun/webigail-http": "npm:^2.0.1"
-    "@zthun/webigail-url": "npm:^2.0.1"
-    vite: "npm:^5.0.10"
-    vitest: "npm:^1.1.0"
+    "@zthun/webigail-url": "npm:^2.0.2"
+    vite: "npm:^5.0.12"
+    vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-url@npm:^2.0.1, @zthun/webigail-url@npm:^2.0.2, @zthun/webigail-url@workspace:packages/webigail-url":
+"@zthun/webigail-url@npm:^2.0.2, @zthun/webigail-url@workspace:packages/webigail-url":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
     lodash-es: "npm:^4.17.21"
     url-parse: "npm:^1.5.10"
-    vite: "npm:^5.0.10"
-    vitest: "npm:^1.1.0"
+    vite: "npm:^5.0.12"
+    vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
 
@@ -2796,7 +2785,7 @@ __metadata:
     "@zthun/webigail-http": "npm:^2.0.1"
     "@zthun/webigail-nest": "npm:^2.0.1"
     "@zthun/webigail-url": "npm:^2.0.2"
-    typedoc: "npm:^0.25.4"
+    typedoc: "npm:^0.25.7"
     typedoc-plugin-extras: "npm:^3.0.0"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -2806,26 +2795,26 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:^18.4.3"
-    "@commitlint/config-conventional": "npm:^18.4.3"
+    "@commitlint/cli": "npm:^18.6.0"
+    "@commitlint/config-conventional": "npm:^18.6.0"
     "@types/jsdom": "npm:^21.1.6"
-    "@types/lodash-es": "npm:^4.14.202"
-    "@types/node": "npm:^20.10.5"
+    "@types/lodash-es": "npm:^4.17.12"
+    "@types/node": "npm:^20.11.16"
     "@types/url-parse": "npm:^1.4.11"
-    "@vitest/coverage-istanbul": "npm:^1.1.0"
+    "@vitest/coverage-istanbul": "npm:^1.2.2"
     "@zthun/lint-janitor": "npm:^15.1.2"
     "@zthun/lint-janitor-config": "npm:^15.1.2"
-    husky: "npm:^8.0.3"
-    jsdom: "npm:^23.0.1"
-    lerna: "npm:^8.0.1"
+    husky: "npm:^9.0.10"
+    jsdom: "npm:^24.0.0"
+    lerna: "npm:^8.0.2"
     rimraf: "npm:^5.0.5"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
-    vite: "npm:^5.0.10"
-    vite-plugin-dts: "npm:^3.6.4"
+    vite: "npm:^5.0.12"
+    vite-plugin-dts: "npm:^3.7.2"
     vite-plugin-externalize-deps: "npm:^0.8.0"
-    vite-tsconfig-paths: "npm:^4.2.2"
-    vitest: "npm:^1.1.0"
+    vite-tsconfig-paths: "npm:^4.3.1"
+    vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
 
@@ -3231,7 +3220,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.5.1, axios@npm:^1.6.2":
+"axios@npm:^1.5.1, axios@npm:^1.6.7":
   version: 1.6.7
   resolution: "axios@npm:1.6.7"
   dependencies:
@@ -3267,15 +3256,6 @@ __metadata:
   version: 2.2.3
   resolution: "before-after-hook@npm:2.2.3"
   checksum: 0488c4ae12df758ca9d49b3bb27b47fd559677965c52cae7b335784724fb8bf96c42b6e5ba7d7afcbc31facb0e294c3ef717cc41c5bc2f7bd9e76f8b90acd31c
-  languageName: node
-  linkType: hard
-
-"bidi-js@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "bidi-js@npm:1.0.3"
-  dependencies:
-    require-from-string: "npm:^2.0.2"
-  checksum: fdddea4aa4120a34285486f2267526cd9298b6e8b773ad25e765d4f104b6d7437ab4ba542e6939e3ac834a7570bcf121ee2cf6d3ae7cd7082c4b5bedc8f271e1
   languageName: node
   linkType: hard
 
@@ -6041,12 +6021,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.3":
-  version: 8.0.3
-  resolution: "husky@npm:8.0.3"
+"husky@npm:^9.0.10":
+  version: 9.0.10
+  resolution: "husky@npm:9.0.10"
   bin:
-    husky: lib/bin.js
-  checksum: 6722591771c657b91a1abb082e07f6547eca79144d678e586828ae806499d90dce2a6aee08b66183fd8b085f19d20e0990a2ad396961746b4c8bd5bdb619d668
+    husky: bin.mjs
+  checksum: 585d95fec151d2e3fba1a8d97c1290dee40b83eb2b8850afae0805e183b3b3ec45bfeef97b2d0c4ae16f1c1bf19788b9129627d9ba02d924c874632207e33b93
   languageName: node
   linkType: hard
 
@@ -6813,11 +6793,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:^23.0.1":
-  version: 23.2.0
-  resolution: "jsdom@npm:23.2.0"
+"jsdom@npm:^24.0.0":
+  version: 24.0.0
+  resolution: "jsdom@npm:24.0.0"
   dependencies:
-    "@asamuzakjp/dom-selector": "npm:^2.0.1"
     cssstyle: "npm:^4.0.1"
     data-urls: "npm:^5.0.0"
     decimal.js: "npm:^10.4.3"
@@ -6826,6 +6805,7 @@ __metadata:
     http-proxy-agent: "npm:^7.0.0"
     https-proxy-agent: "npm:^7.0.2"
     is-potential-custom-element-name: "npm:^1.0.1"
+    nwsapi: "npm:^2.2.7"
     parse5: "npm:^7.1.2"
     rrweb-cssom: "npm:^0.6.0"
     saxes: "npm:^6.0.0"
@@ -6843,7 +6823,7 @@ __metadata:
   peerDependenciesMeta:
     canvas:
       optional: true
-  checksum: b062af50f7be59d914ba75236b7817c848ef3cd007aea1d6b8020a41eb263b7d5bd2652298106e9756b56892f773d990598778d02adab7d0d0d8e58726fc41d3
+  checksum: 7b35043d7af39ad6dcaef0fa5679d8c8a94c6c9b6cc4a79222b7c9987d57ab7150c50856684ae56b473ab28c7d82aec0fb7ca19dcbd4c3f46683c807d717a3af
   languageName: node
   linkType: hard
 
@@ -7013,7 +6993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lerna@npm:^8.0.1":
+"lerna@npm:^8.0.2":
   version: 8.0.2
   resolution: "lerna@npm:8.0.2"
   dependencies:
@@ -8245,6 +8225,13 @@ __metadata:
     gauge: "npm:^4.0.3"
     set-blocking: "npm:^2.0.0"
   checksum: 0cacedfbc2f6139c746d9cd4a85f62718435ad0ca4a2d6459cd331dd33ae58206e91a0742c1558634efcde3f33f8e8e7fd3adf1bfe7978310cf00bd55cccf890
+  languageName: node
+  linkType: hard
+
+"nwsapi@npm:^2.2.7":
+  version: 2.2.7
+  resolution: "nwsapi@npm:2.2.7"
+  checksum: 44be198adae99208487a1c886c0a3712264f7bbafa44368ad96c003512fed2753d4e22890ca1e6edb2690c3456a169f2a3c33bfacde1905cf3bf01c7722464db
   languageName: node
   linkType: hard
 
@@ -10877,7 +10864,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:^0.25.4":
+"typedoc@npm:^0.25.7":
   version: 0.25.7
   resolution: "typedoc@npm:0.25.7"
   dependencies:
@@ -11132,7 +11119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-dts@npm:^3.6.4":
+"vite-plugin-dts@npm:^3.7.2":
   version: 3.7.2
   resolution: "vite-plugin-dts@npm:3.7.2"
   dependencies:
@@ -11161,7 +11148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-tsconfig-paths@npm:^4.2.2":
+"vite-tsconfig-paths@npm:^4.3.1":
   version: 4.3.1
   resolution: "vite-tsconfig-paths@npm:4.3.1"
   dependencies:
@@ -11177,7 +11164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0, vite@npm:^5.0.10":
+"vite@npm:^5.0.0, vite@npm:^5.0.12":
   version: 5.0.12
   resolution: "vite@npm:5.0.12"
   dependencies:
@@ -11217,7 +11204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^1.1.0":
+"vitest@npm:^1.2.2":
   version: 1.2.2
   resolution: "vitest@npm:1.2.2"
   dependencies:
