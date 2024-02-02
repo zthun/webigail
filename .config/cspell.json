@@ -6,20 +6,19 @@
     "Bonta",
     "BUILDKIT",
     "buildx",
+    "bulbasaur",
     "commitlint",
     "conventionalcommits",
     "DOCKERHUB",
     "microbundle",
     "nestjs",
     "npmrc",
+    "pikachu",
+    "upsert",
+    "upserted",
     "webigail",
     "zthun",
     "zthunworks"
   ],
-  "dictionaries": [
-    "typescript",
-    "node",
-    "npm",
-    "en_US"
-  ]
+  "dictionaries": ["typescript", "node", "npm", "en_US"]
 }
