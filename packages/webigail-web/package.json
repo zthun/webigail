@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-web",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "A documentation website for webigail packages.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -19,9 +19,9 @@
     "access": "public"
   },
   "devDependencies": {
-    "@zthun/webigail-http": "^2.0.1",
-    "@zthun/webigail-nest": "^2.0.1",
-    "@zthun/webigail-url": "^2.0.2",
+    "@zthun/webigail-http": "^2.1.0",
+    "@zthun/webigail-nest": "^2.1.0",
+    "@zthun/webigail-url": "^2.1.0",
     "typedoc": "^0.25.7",
     "typedoc-plugin-extras": "^3.0.0",
     "typescript": "^5.3.3"
