@@ -9,6 +9,9 @@ import { IZRestfulUpsert } from './restful-upsert.mjs';
 
 /**
  * A service that conforms to all known restful standards.
+ *
+ * @param T -
+ *        The type of resource being retrieved or mutated.
  */
 export interface IZRestfulService<T>
   extends IZRestfulCreate<T>,
@@ -25,6 +28,9 @@ export interface IZRestfulService<T>
  * This can be used to invoke a service that is only partially implemented.  If your service,
  * for example, is read only, then create, upsert, update, and delete should all return
  * not found or forbidden errors.
+ *
+ * @param T -
+ *        The type of resource being retrieved or mutated.
  */
 export class ZRestfulService<T> implements IZRestfulService<T> {
   /**
