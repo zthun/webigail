@@ -1,87 +1,23 @@
 import { IZDataRequest, IZDataSource } from '@zthun/helpful-query';
 import { IZHttpService, ZHttpRequestBuilder } from '@zthun/webigail-http';
 import { ZUrlBuilder } from '@zthun/webigail-url';
+import { IZRestfulCreate } from './restful-create.mjs';
+import { IZRestfulDelete } from './restful-delete.mjs';
+import { IZRestfulGet } from './restful-get.mjs';
+import { IZRestfulUpdate } from './restful-update.mjs';
+import { IZRestfulUpsert } from './restful-upsert.mjs';
 
 /**
- * A service that conforms to restful standards.
+ * A service that conforms to all known restful standards.
  */
-export interface IZRestfulService<T> extends IZDataSource<T> {
-  /**
-   * Retrieves a single item by it's identification.
-   *
-   * This uses a GET verb.
-   *
-   * @param identification -
-   *        The identification of the resource to retrieve.
-   *
-   * @returns
-   *        The json representation of the entity.
-   */
-  get(identification: number | string): Promise<T>;
-
-  /**
-   * Creates a new entity.
-   *
-   * This uses a POST verb.
-   *
-   * @param body -
-   *        The post body that represents the resource to create.
-   *
-   * @returns
-   *        The resource that was created.
-   */
-  create(body: T): Promise<T>;
-
-  /**
-   * Creates a new entity or updates an existing entity.
-   *
-   * This is determined by the body parameters on whether
-   * or not an entity already exists.
-   *
-   * This uses the PUT verb.
-   *
-   * @param body -
-   *        The post body that represents the resource to create
-   *        or update.
-   *
-   * @returns
-   *        The resource that was created or updated.
-   */
-  upsert(body: T): Promise<T>;
-
-  /**
-   * Partially updates an existing resource entity.
-   *
-   * This uses the PATCH verb.
-   *
-   * @param identification -
-   *        The identification of the resource to update.
-   * @param fields -
-   *        The partial fields to update.
-   *
-   * @returns
-   *        The resource that was updated.
-   */
-  update(identification: string, fields: Partial<T>): Promise<T>;
-
-  /**
-   * Deletes a resource entity.
-   *
-   * This uses the DELETE verb.
-   *
-   * @param identification -
-   *        The identification of the resource to delete.
-   */
-  delete(identification: string): Promise<void>;
-}
-
-/**
- * A factory for constructing basic http request builders.
- *
- * This is used to create a common construction for http requests
- * that contain common options like headers and timeouts.
- */
-export type ZHttpRequestFactory = () => ZHttpRequestBuilder;
+export interface IZRestfulService<T>
+  extends IZRestfulCreate<T>,
+    IZRestfulDelete,
+    IZRestfulGet<T>,
+    IZRestfulUpdate<T>,
+    IZRestfulUpdate<T>,
+    IZRestfulUpsert<T>,
+    IZDataSource<T> {}
 
 /**
  * A generic implementation of a restful service that assumes all verbs are implemented.
