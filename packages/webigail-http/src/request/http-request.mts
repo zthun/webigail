@@ -12,7 +12,7 @@ export enum ZHttpMethod {
   /**
    * PUT
    *
-   * Used for updates.
+   * Used for updates and can combine creates.
    */
   Put = 'put',
 
@@ -50,8 +50,7 @@ export enum ZHttpMethod {
   /**
    * HEAD
    *
-   * Used for retrieving the headers that would
-   * be returned.
+   * Used for metadata.
    */
   Head = 'head'
 }
