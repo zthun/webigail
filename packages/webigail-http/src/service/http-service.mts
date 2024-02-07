@@ -34,8 +34,7 @@ export class ZHttpService implements IZHttpService {
    */
   public async request<TResult = any, TBody = any>(req: IZHttpRequest<TBody>): Promise<IZHttpResult<TResult>> {
     try {
-      const res = await axios({
-        url: req.url,
+      const res = await axios(req.url, {
         method: req.method,
         data: req.body,
         timeout: req.timeout,
@@ -45,21 +44,14 @@ export class ZHttpService implements IZHttpService {
     } catch (e) {
       const error = e as AxiosError;
 
-      let builder = new ZHttpResultBuilder<any>(null).headers({});
+      let builder = new ZHttpResultBuilder<any>(null)
+        .headers(error.response?.headers)
+        .status(error.response?.status || ZHttpCodeServer.InternalServerError)
+        .data(error.response?.data || error.message);
 
-      if (error.response) {
-        // A call was made to the server and the status falls outside the accepted success range.
-        builder = builder.headers(error.response.headers).status(error.response.status).data(error.response.data);
-      } else if (error.request) {
+      if (error.response == null && error.request) {
         // The request was made but the server was never hit.
-        builder = builder
-          .status(ZHttpCodeServer.ServiceUnavailable)
-          .data('The target endpoint could not be reached.  You may need to try again later.');
-      } else {
-        // Some other error occurred.
-        builder = builder
-          .status(ZHttpCodeServer.InternalServerError)
-          .data(error.message || 'An unexpected error occurred.');
+        builder = builder.status(ZHttpCodeServer.ServiceUnavailable);
       }
 
       return Promise.reject(builder.build());
