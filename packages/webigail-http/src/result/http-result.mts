@@ -78,7 +78,7 @@ export class ZHttpResultBuilder<TData = any> {
    * @returns
    *        This object.
    */
-  public headers(headers: Record<string, any>): this {
+  public headers(headers: Record<string, any> = {}): this {
     this._result.headers = headers;
     return this;
   }
