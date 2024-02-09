@@ -1,5 +1,13 @@
 import { createGuid } from '@zthun/helpful-fn';
-import { ZDataRequestBuilder, ZPageBuilder } from '@zthun/helpful-query';
+import {
+  ZDataRequestBuilder,
+  ZFilterLogicBuilder,
+  ZFilterSerialize,
+  ZFilterUnaryBuilder,
+  ZPageBuilder,
+  ZSortBuilder,
+  ZSortSerialize
+} from '@zthun/helpful-query';
 import {
   ZHttpCodeSuccess,
   ZHttpMethod,
@@ -54,10 +62,23 @@ describe('ZRestfulService', () => {
     it('should support a result key on the page', async () => {
       // Arrange.
       const target = createTestTarget();
-      const request = new ZDataRequestBuilder().page(1).size(20).search('ele').build();
+      const filter = new ZFilterLogicBuilder()
+        .and()
+        .clause(new ZFilterUnaryBuilder().isNotNull().subject('name').build())
+        .clause(new ZFilterUnaryBuilder().isNotNull().subject('id').build())
+        .build();
+      const sort = new ZSortBuilder().ascending('sort').build();
+      const request = new ZDataRequestBuilder().page(1).size(20).search('ele').filter(filter).sort(sort).build();
       const expected = { count: 1, result: [electric] };
       http.set(
-        target.endpoint().page(request.page).size(request.size).search(request.search).build(),
+        target
+          .endpoint()
+          .page(request.page)
+          .size(request.size)
+          .search(request.search)
+          .filter(new ZFilterSerialize().serialize(filter))
+          .sort(new ZSortSerialize().serialize(sort))
+          .build(),
         ZHttpMethod.Get,
         new ZHttpResultBuilder(expected).build()
       );
@@ -72,10 +93,19 @@ describe('ZRestfulService', () => {
     it('should return the total number of items across all pages', async () => {
       // Arrange.
       const target = createTestTarget();
+      const filter = new ZFilterLogicBuilder()
+        .and()
+        .clause(new ZFilterUnaryBuilder().isNotNull().subject('name').build())
+        .clause(new ZFilterUnaryBuilder().isNotNull().subject('id').build())
+        .build();
       const expected = new ZPageBuilder<any>().data([fire]).count(types.length).build();
-      http.set(target.endpoint().page(1).size(1).build(), ZHttpMethod.Get, new ZHttpResultBuilder(expected).build());
+      http.set(
+        target.endpoint().page(1).size(1).search('fir').filter(new ZFilterSerialize().serialize(filter)).build(),
+        ZHttpMethod.Get,
+        new ZHttpResultBuilder(expected).build()
+      );
       // Act.
-      const actual = await target.count(new ZDataRequestBuilder().build());
+      const actual = await target.count(new ZDataRequestBuilder().search('fir').filter(filter).build());
       // Assert.
       expect(actual).toEqual(expected.count);
     });

@@ -1,4 +1,4 @@
-import { IZDataRequest, IZDataSource } from '@zthun/helpful-query';
+import { IZDataRequest, IZDataSource, ZFilterSerialize, ZSortSerialize } from '@zthun/helpful-query';
 import { IZHttpService, ZHttpRequestBuilder } from '@zthun/webigail-http';
 import { ZUrlBuilder } from '@zthun/webigail-url';
 import { IZRestfulCreate } from './restful-create.mjs';
@@ -69,14 +69,17 @@ export class ZRestfulService<T> implements IZRestfulService<T> {
   }
 
   public async count(req: IZDataRequest): Promise<number> {
-    const url = this.endpoint().page(1).size(1).search(req.search).build();
+    const filter = new ZFilterSerialize().serialize(req.filter);
+    const url = this.endpoint().page(1).size(1).search(req.search).filter(filter).build();
     const r = new ZHttpRequestBuilder().copy(this._request).get().url(url).build();
     const { data: page } = await this._http.request<any>(r);
     return page.count;
   }
 
   public async retrieve(req: IZDataRequest): Promise<T[]> {
-    const url = this.endpoint().page(req.page).size(req.size).search(req.search).build();
+    const filter = new ZFilterSerialize().serialize(req.filter);
+    const sort = new ZSortSerialize().serialize(req.sort);
+    const url = this.endpoint().page(req.page).size(req.size).search(req.search).filter(filter).sort(sort).build();
     const r = new ZHttpRequestBuilder().copy(this._request).get().url(url).build();
     const { data: page } = await this._http.request<any>(r);
     return page.data ?? page.result;
