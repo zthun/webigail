@@ -2293,12 +2293,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.11.16":
+"@types/node@npm:*":
   version: 20.11.16
   resolution: "@types/node@npm:20.11.16"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 4886b90278e9c877a84efd3edd4667cd990e032d77268d2a798b99ebc1901ea336fa7dfbe9eaf4ad6ad1da9ce2ec31baf300038a3905838692362eb19904ebde
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.11.17":
+  version: 20.11.17
+  resolution: "@types/node@npm:20.11.17"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 1f30dae80b416cbf38f133a619ffb0e9fb9e7bc58f82d900bf73816ae5781740c4640892bf5971dd9c12570d5d05241646be3e7540bb4e059322ec6af4e51e15
   languageName: node
   linkType: hard
 
@@ -2674,22 +2683,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/helpful-fn@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "@zthun/helpful-fn@npm:3.2.0"
+"@zthun/helpful-fn@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@zthun/helpful-fn@npm:3.3.0"
   dependencies:
     uuid: "npm:^9.0.1"
-  checksum: 860b91ebc1722861e222c17103c63c0c53e34fe02e6a7c9b7d2873af0c07f927f9bf4df12f3ce398fdf41a37ee76da8e86783894c3cffbdf2069e5ba0cc3d164
+  checksum: e88d5cc52c5f14758a8257a965c4109ea9fcb89a9d260cf5e162954a0547cdecb8c651635a624e78349659d9b8d31a2de8f6992a092a5ca0540578449ee95892
   languageName: node
   linkType: hard
 
-"@zthun/helpful-query@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "@zthun/helpful-query@npm:3.2.0"
+"@zthun/helpful-query@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@zthun/helpful-query@npm:3.3.1"
   dependencies:
-    "@zthun/helpful-fn": "npm:^3.2.0"
+    "@zthun/helpful-fn": "npm:^3.3.0"
     lodash-es: "npm:^4.17.21"
-  checksum: e680d211ed2dfcba26655afea103a2e24f104b422758a3d29b0d65adff5168d28ddbcafb4355dae5f0978e34b57382c39dd4d9d775e40a6a03b97072b7876e2f
+  checksum: e135d13ab86713385f996cc544c7233f231f3ba2c24073a7d0f538c03d08a704fa8a760e2654a59d8a8b0bfadf2bde635fbd1018393f68df35a335232c2c0cc3
   languageName: node
   linkType: hard
 
@@ -2807,7 +2816,7 @@ __metadata:
   dependencies:
     axios: "npm:^1.6.7"
     msw: "npm:^2.1.7"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
@@ -2822,7 +2831,7 @@ __metadata:
     "@zthun/webigail-http": "npm:^2.1.1"
     reflect-metadata: "npm:^0.2.1"
     rxjs: "npm:^7.8.1"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
   peerDependencies:
     "@nestjs/common": ^10.3.0
@@ -2836,11 +2845,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-rest@workspace:packages/webigail-rest"
   dependencies:
-    "@zthun/helpful-fn": "npm:^3.2.0"
-    "@zthun/helpful-query": "npm:^3.2.0"
+    "@zthun/helpful-fn": "npm:^3.3.0"
+    "@zthun/helpful-query": "npm:^3.3.1"
     "@zthun/webigail-http": "npm:^2.1.1"
     "@zthun/webigail-url": "npm:^2.1.1"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
@@ -2851,7 +2860,7 @@ __metadata:
   dependencies:
     lodash-es: "npm:^4.17.21"
     url-parse: "npm:^1.5.10"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
@@ -2863,7 +2872,7 @@ __metadata:
     "@zthun/webigail-http": "npm:^2.1.1"
     "@zthun/webigail-nest": "npm:^2.1.1"
     "@zthun/webigail-url": "npm:^2.1.1"
-    typedoc: "npm:^0.25.7"
+    typedoc: "npm:^0.25.8"
     typedoc-plugin-extras: "npm:^3.0.0"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -2877,7 +2886,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.6.0"
     "@types/jsdom": "npm:^21.1.6"
     "@types/lodash-es": "npm:^4.17.12"
-    "@types/node": "npm:^20.11.16"
+    "@types/node": "npm:^20.11.17"
     "@types/url-parse": "npm:^1.4.11"
     "@vitest/coverage-istanbul": "npm:^1.2.2"
     "@zthun/lint-janitor": "npm:^15.1.2"
@@ -2888,7 +2897,7 @@ __metadata:
     rimraf: "npm:^5.0.5"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.3.3"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.1"
     vite-plugin-dts: "npm:^3.7.2"
     vite-plugin-externalize-deps: "npm:^0.8.0"
     vite-tsconfig-paths: "npm:^4.3.1"
@@ -9161,6 +9170,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:^8.4.35":
+  version: 8.4.35
+  resolution: "postcss@npm:8.4.35"
+  dependencies:
+    nanoid: "npm:^3.3.7"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.0.2"
+  checksum: e8dd04e48001eb5857abc9475365bf08f4e508ddf9bc0b8525449a95d190f10d025acebc5b56ac2e94b3c7146790e4ae78989bb9633cb7ee20d1cc9b7dc909b2
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -11081,9 +11101,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:^0.25.7":
-  version: 0.25.7
-  resolution: "typedoc@npm:0.25.7"
+"typedoc@npm:^0.25.8":
+  version: 0.25.8
+  resolution: "typedoc@npm:0.25.8"
   dependencies:
     lunr: "npm:^2.3.9"
     marked: "npm:^4.3.0"
@@ -11093,7 +11113,7 @@ __metadata:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x
   bin:
     typedoc: bin/typedoc
-  checksum: e663be0534dd56f45f041a478ee0613a1bf96cad7208a5cfc771981c904d0f30d8dca51956486f125f8004237264acc5dd45920fa6a0a32e351e36d74279abb1
+  checksum: f1adb64bd124a04da57227bdd7ec367a38e17b59e33b1acfaf04da560efc6318b0f7a0dfee85b90671b5e81e1e6dca6ca0d7157c10774c7a1a1f0931e8b30099
   languageName: node
   linkType: hard
 
@@ -11381,7 +11401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0, vite@npm:^5.0.12":
+"vite@npm:^5.0.0":
   version: 5.0.12
   resolution: "vite@npm:5.0.12"
   dependencies:
@@ -11418,6 +11438,46 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: c51b8e458851943c903fddde6973e720099ef8a5f364fb107cddade59c9e90f6d9ad98b61a7419cdfa0c6374236e10bff965d0c2d9e7b1790c68b874e5e7950c
+  languageName: node
+  linkType: hard
+
+"vite@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "vite@npm:5.1.1"
+  dependencies:
+    esbuild: "npm:^0.19.3"
+    fsevents: "npm:~2.3.3"
+    postcss: "npm:^8.4.35"
+    rollup: "npm:^4.2.0"
+  peerDependencies:
+    "@types/node": ^18.0.0 || >=20.0.0
+    less: "*"
+    lightningcss: ^1.21.0
+    sass: "*"
+    stylus: "*"
+    sugarss: "*"
+    terser: ^5.4.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    less:
+      optional: true
+    lightningcss:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: d7c23284aeb3a8333e0ea208fab7da4dd4f69134f22ff959d865f56d48c3afd04fbc548368c15a5fbc0c6453ee950db42bd3532aa0dd50b85464eabefaa51396
   languageName: node
   linkType: hard
 
