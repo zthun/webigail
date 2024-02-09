@@ -327,6 +327,46 @@ describe('ZUrlBuilder', () => {
         shouldDeleteParam('search', (t) => t.search(Text).search(''));
       });
     });
+
+    describe('Filter', () => {
+      const Filter = 'eq(subject, "value")';
+
+      it('should add the param', () => {
+        shouldAddParam(Filter, 'filter', (t) => t.filter(Filter));
+      });
+
+      it('should only add the param once', () => {
+        shouldAddOnlyOnce(Filter, 'filter', (t) => t.filter(Filter));
+      });
+
+      it('should delete the param', () => {
+        shouldDeleteParam('filter', (t) => t.filter(Filter).filter());
+      });
+
+      it('should delete the param if empty', () => {
+        shouldDeleteParam('filter', (t) => t.filter(Filter).filter(''));
+      });
+    });
+
+    describe('Sort', () => {
+      const Sort = 'asc(subject)';
+
+      it('should add the param', () => {
+        shouldAddParam(Sort, 'sort', (t) => t.sort(Sort));
+      });
+
+      it('should only add the param once', () => {
+        shouldAddOnlyOnce(Sort, 'sort', (t) => t.sort(Sort));
+      });
+
+      it('should delete the param', () => {
+        shouldDeleteParam('sort', (t) => t.sort(Sort).sort());
+      });
+
+      it('should delete the param if empty', () => {
+        shouldDeleteParam('sort', (t) => t.sort(Sort).sort(''));
+      });
+    });
   });
 
   describe('Info', () => {

@@ -510,7 +510,35 @@ export class ZUrlBuilder {
    *        This object.
    */
   public search(search?: string | null): this {
-    return this.onlyParam('search', search ? search : undefined);
+    return this.onlyParam('search', search || undefined);
+  }
+
+  /**
+   * Adds a filter param.
+   *
+   * @param filter -
+   *        The filter param to add.  If this is null, undefined,
+   *        or empty, then any filter param is deleted.
+   *
+   * @returns
+   *        This object.
+   */
+  public filter(filter?: string | null): this {
+    return this.onlyParam('filter', filter || undefined);
+  }
+
+  /**
+   * Adds a sort param.
+   *
+   * @param sort -
+   *        The sort param to add.  If this is null, undefined,
+   *        or empty, then any filter param is deleted.
+   *
+   * @returns
+   *        This object.
+   */
+  public sort(sort?: string | null): this {
+    return this.onlyParam('sort', sort || undefined);
   }
 
   /**
