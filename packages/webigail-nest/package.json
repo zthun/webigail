@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-nest",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "A nest-js module that add the tokens and implementations for the http service in webigail-http.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "dist"
   ],
   "dependencies": {
-    "@zthun/webigail-http": "^2.2.0"
+    "@zthun/webigail-http": "^2.3.0"
   },
   "sideEffects": false
 }
