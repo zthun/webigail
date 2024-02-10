@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-http",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Http service implementation with an equivalent mock for testing.",
   "author": "Anthony Bonta",
   "license": "MIT",
