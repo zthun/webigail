@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 
-import { ZHttpCodeClient } from 'src/result/http-code-client.mjs';
 import { IZHttpRequest } from '../request/http-request.mjs';
+import { ZHttpCodeClient } from '../result/http-code-client.mjs';
 import { ZHttpCodeServer } from '../result/http-code-server.mjs';
 import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
 
