@@ -2814,7 +2814,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
-    axios: "npm:^1.6.7"
+    cross-fetch: "npm:^4.0.0"
     msw: "npm:^2.1.7"
     vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
@@ -3317,7 +3317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.0, axios@npm:^1.6.7":
+"axios@npm:^1.6.0":
   version: 1.6.7
   resolution: "axios@npm:1.6.7"
   dependencies:
@@ -4122,6 +4122,15 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: 157cbc59b2430ae9a90034a5f3a1b398b6738bf510f713edc4d4e45e169bc514d3d99dd34d8d01ca7ae7830b5b8b537e46ae8f3c8f932371b0875c0151d7ec91
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "cross-fetch@npm:4.0.0"
+  dependencies:
+    node-fetch: "npm:^2.6.12"
+  checksum: 386727dc4c6b044746086aced959ff21101abb85c43df5e1d151547ccb6f338f86dec3f28b9dbddfa8ff5b9ec8662ed2263ad4607a93b2dc354fb7fe3bbb898a
   languageName: node
   linkType: hard
 
@@ -8136,7 +8145,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.2, node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.12, node-fetch@npm:^2.6.2, node-fetch@npm:^2.6.7":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:

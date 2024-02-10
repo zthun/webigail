@@ -1,5 +1,6 @@
-import axios, { AxiosError } from 'axios';
+import fetch from 'cross-fetch';
 
+import { ZHttpCodeClient } from 'src/result/http-code-client.mjs';
 import { IZHttpRequest } from '../request/http-request.mjs';
 import { ZHttpCodeServer } from '../result/http-code-server.mjs';
 import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
@@ -34,27 +35,35 @@ export class ZHttpService implements IZHttpService {
    */
   public async request<TResult = any, TBody = any>(req: IZHttpRequest<TBody>): Promise<IZHttpResult<TResult>> {
     try {
-      const res = await axios(req.url, {
+      const res = await fetch(req.url, {
         method: req.method,
-        data: req.body,
-        timeout: req.timeout,
-        headers: req.headers
+        body: req.body ? JSON.stringify(req.body) : undefined,
+        headers: req.headers,
+        redirect: 'follow'
       });
-      return new ZHttpResultBuilder(res.data).headers(res.headers).status(res.status).build();
+
+      const data = await this._body(res);
+      const result = new ZHttpResultBuilder(data).headers(res.headers).status(res.status).build();
+      return res.ok ? Promise.resolve(result) : Promise.reject(result);
     } catch (e) {
-      const error = e as AxiosError;
+      let result = new ZHttpResultBuilder(e.message).headers().status(ZHttpCodeServer.InternalServerError);
 
-      let builder = new ZHttpResultBuilder<any>(null)
-        .headers(error.response?.headers)
-        .status(error.response?.status || ZHttpCodeServer.InternalServerError)
-        .data(error.response?.data || error.message);
-
-      if (error.response == null && error.request) {
-        // The request was made but the server was never hit.
-        builder = builder.status(ZHttpCodeServer.ServiceUnavailable);
+      if (e.code === 'ENOTFOUND') {
+        // The request was made, but some DNS lookup failed.
+        result = result.status(ZHttpCodeClient.NotFound);
       }
 
-      return Promise.reject(builder.build());
+      return Promise.reject(result.build());
     }
+  }
+
+  private async _body(res: Response): Promise<any> {
+    const contentType = res.headers.get('content-type');
+
+    if (contentType === 'application/json') {
+      return res.json();
+    }
+
+    return res.text();
   }
 }

@@ -1,3 +1,5 @@
+// @vitest-environment jsdom
+
 import { HttpResponse, http } from 'msw';
 import { SetupServer, setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
@@ -118,7 +120,10 @@ describe('ZHttpService', () => {
       const req = new ZHttpRequestBuilder().get().url(`${Domain}/api/failure/client`).build();
       const target = createTestTarget();
       // Act
-      const actual = await target.request(req).catch((err) => err);
+      const actual = await target
+        .request(req)
+        .then(() => null)
+        .catch((err) => err);
       // Assert
       expect(actual.status).toEqual(404);
       expect(actual.data).toEqual(FailureJson);
@@ -140,7 +145,10 @@ describe('ZHttpService', () => {
       const req = new ZHttpRequestBuilder().get().url('lol-wut').build();
       const target = createTestTarget();
       // Act
-      const actual = await target.request(req).catch((err) => err);
+      const actual = await target
+        .request(req)
+        .then(() => null)
+        .catch((err) => err);
       // Assert
       expect(actual.status).toBeGreaterThanOrEqual(404);
       expect(actual.data).toBeDefined();
@@ -151,14 +159,16 @@ describe('ZHttpService', () => {
       const req = new ZHttpRequestBuilder().get().url(`${Domain}/api/failure/internal`).build();
       const target = createTestTarget();
       // Act
-      const actual = await target.request(req).catch((err) => err);
+      const actual = await target
+        .request(req)
+        .then(() => null)
+        .catch((err) => err);
       // Assert
       expect(actual.status).toBeGreaterThanOrEqual(500);
-      expect(actual.data).toEqual(FailureJson.message);
+      expect(actual.data).toContain(FailureJson.message);
     });
   });
 
-  /*
   describe('Redirect', () => {
     it('should follow a redirect to the new URL.', async () => {
       // Arrange.
@@ -171,5 +181,4 @@ describe('ZHttpService', () => {
       expect(actual.data).toEqual(SuccessJson);
     });
   });
-  */
 });
