@@ -32,6 +32,7 @@
     "dist"
   ],
   "dependencies": {
+    "buffer": "^6.0.3",
     "lodash-es": "^4.17.21",
     "url-parse": "^1.5.10"
   },
