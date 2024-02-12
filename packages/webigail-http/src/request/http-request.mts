@@ -95,6 +95,23 @@ export class ZHttpRequestBuilder<TBody = any> {
   private _request: IZHttpRequest<TBody>;
 
   /**
+   * Duplicates a request, keeping it's structure intact.
+   *
+   * The underlying headers will be duplicated, but everything
+   * else will be a shallow copy to preserve the body in the
+   * case that it is a blob or other binary structure.
+   *
+   * @param other -
+   *        The request to duplicate.
+   *
+   * @returns
+   *        The duplicated object.
+   */
+  public static duplicate<TBody>(other: IZHttpRequest<TBody>): IZHttpRequest<TBody> {
+    return { ...other, headers: structuredClone(other.headers) };
+  }
+
+  /**
    * Initializes a new instance of this object.
    */
   public constructor() {
@@ -257,7 +274,7 @@ export class ZHttpRequestBuilder<TBody = any> {
    *        This object.
    */
   public copy(other: IZHttpRequest): this {
-    this._request = JSON.parse(JSON.stringify(other));
+    this._request = ZHttpRequestBuilder.duplicate(other);
     return this;
   }
 
@@ -268,6 +285,6 @@ export class ZHttpRequestBuilder<TBody = any> {
    *        The constructed request.
    */
   public build(): IZHttpRequest {
-    return JSON.parse(JSON.stringify(this._request));
+    return ZHttpRequestBuilder.duplicate(this._request);
   }
 }
