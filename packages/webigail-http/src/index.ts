@@ -8,3 +8,4 @@ export * from './result/http-code.mjs';
 export * from './result/http-result.mjs';
 export * from './service/http-service-mock.mjs';
 export * from './service/http-service.mjs';
+export * from './util/body-init.mjs';
