@@ -2801,7 +2801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/webigail-http@npm:^2.3.0, @zthun/webigail-http@workspace:packages/webigail-http":
+"@zthun/webigail-http@npm:^2.4.0, @zthun/webigail-http@workspace:packages/webigail-http":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
@@ -2813,14 +2813,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-nest@npm:^2.3.0, @zthun/webigail-nest@workspace:packages/webigail-nest":
+"@zthun/webigail-nest@npm:^2.4.0, @zthun/webigail-nest@workspace:packages/webigail-nest":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
     "@nestjs/common": "npm:^10.3.2"
     "@nestjs/core": "npm:^10.3.2"
     "@nestjs/testing": "npm:^10.3.2"
-    "@zthun/webigail-http": "npm:^2.3.0"
+    "@zthun/webigail-http": "npm:^2.4.0"
     reflect-metadata: "npm:^0.2.1"
     rxjs: "npm:^7.8.1"
     vite: "npm:^5.1.1"
@@ -2839,14 +2839,14 @@ __metadata:
   dependencies:
     "@zthun/helpful-fn": "npm:^3.3.0"
     "@zthun/helpful-query": "npm:^3.3.1"
-    "@zthun/webigail-http": "npm:^2.3.0"
-    "@zthun/webigail-url": "npm:^2.3.0"
+    "@zthun/webigail-http": "npm:^2.4.0"
+    "@zthun/webigail-url": "npm:^2.4.0"
     vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-url@npm:^2.3.0, @zthun/webigail-url@workspace:packages/webigail-url":
+"@zthun/webigail-url@npm:^2.4.0, @zthun/webigail-url@workspace:packages/webigail-url":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
@@ -2862,9 +2862,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-web@workspace:packages/webigail-web"
   dependencies:
-    "@zthun/webigail-http": "npm:^2.3.0"
-    "@zthun/webigail-nest": "npm:^2.3.0"
-    "@zthun/webigail-url": "npm:^2.3.0"
+    "@zthun/webigail-http": "npm:^2.4.0"
+    "@zthun/webigail-nest": "npm:^2.4.0"
+    "@zthun/webigail-url": "npm:^2.4.0"
     typedoc: "npm:^0.25.8"
     typedoc-plugin-extras: "npm:^3.0.0"
     typescript: "npm:^5.3.3"
