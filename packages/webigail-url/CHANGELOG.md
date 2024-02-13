@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/zthun/webigail/compare/v2.3.0...v2.4.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* webigail data urls now properly import buffer for dom compatibility ([4bf1194](https://github.com/zthun/webigail/commit/4bf1194172aa716568b9f31f122e8ddbaa2e6511))
+
+
+
 ## [2.3.0](https://github.com/zthun/webigail/compare/v2.2.0...v2.3.0) (2024-02-10)
 
 

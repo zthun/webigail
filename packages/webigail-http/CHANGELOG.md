@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/zthun/webigail/compare/v2.3.0...v2.4.0) (2024-02-13)
+
+
+### Features
+
+* from content type deconstructs an object base on the content type and body init ([fc08909](https://github.com/zthun/webigail/commit/fc0890920fa41417a1f932493a27f2ed007aea8e))
+* http service can now handle binary, text, form, and json data ([8e8b705](https://github.com/zthun/webigail/commit/8e8b705ebbe7c9c9a2957ad6474bf857590a7a4d))
+* isBodyInit and toBodyInit enable casting of objects to BodyInit supported shapes ([ded6dfe](https://github.com/zthun/webigail/commit/ded6dfe2aff9e98c09a02db6feb407aea191d637))
+* webigail-http now depends on lodash-es ([4261f3b](https://github.com/zthun/webigail/commit/4261f3b685955442a0e5c7b052b1c5616a173fd2))
+
+
+### Bug Fixes
+
+* request builder now properly duplicates the body without destroying it ([e81ed50](https://github.com/zthun/webigail/commit/e81ed5045339798bdcdaa45c1348f0ffab5a532f))
+
+
+
 ## [2.3.0](https://github.com/zthun/webigail/compare/v2.2.0...v2.3.0) (2024-02-10)
 
 **Note:** Version bump only for package @zthun/webigail-http
