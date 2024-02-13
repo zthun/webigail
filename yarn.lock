@@ -2806,6 +2806,7 @@ __metadata:
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
     cross-fetch: "npm:^4.0.0"
+    lodash-es: "npm:^4.17.21"
     msw: "npm:^2.1.7"
     vite: "npm:^5.1.1"
     vitest: "npm:^1.2.2"
