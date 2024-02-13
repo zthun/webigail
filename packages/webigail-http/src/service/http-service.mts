@@ -4,6 +4,8 @@ import { IZHttpRequest } from '../request/http-request.mjs';
 import { ZHttpCodeClient } from '../result/http-code-client.mjs';
 import { ZHttpCodeServer } from '../result/http-code-server.mjs';
 import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
+import { isBodyInit } from '../util/body-init.mjs';
+import { fromContentType } from '../util/content-type.mjs';
 
 /**
  * Represents a service that makes http invocations.
@@ -37,12 +39,12 @@ export class ZHttpService implements IZHttpService {
     try {
       const res = await fetch(req.url, {
         method: req.method,
-        body: req.body ? JSON.stringify(req.body) : undefined,
+        body: isBodyInit(req.body) ? req.body : JSON.stringify(req.body),
         headers: req.headers,
         redirect: 'follow'
       });
 
-      const data = await this._body(res);
+      const data = await fromContentType(res);
       const result = new ZHttpResultBuilder(data).headers(res.headers).status(res.status).build();
       return res.ok ? Promise.resolve(result) : Promise.reject(result);
     } catch (e) {
@@ -55,15 +57,5 @@ export class ZHttpService implements IZHttpService {
 
       return Promise.reject(result.build());
     }
-  }
-
-  private async _body(res: Response): Promise<any> {
-    const contentType = res.headers.get('content-type');
-
-    if (contentType === 'application/json') {
-      return res.json();
-    }
-
-    return res.text();
   }
 }

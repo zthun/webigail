@@ -1,5 +1,4 @@
-// @vitest-environment jsdom
-
+// @vitest-environment node
 import { HttpResponse, http } from 'msw';
 import { SetupServer, setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
@@ -24,6 +23,9 @@ describe('ZHttpService', () => {
       http.get(`${Domain}/api/success/json`, () => HttpResponse.json(SuccessJson, { status: ZHttpCodeSuccess.OK })),
       http.post(`${Domain}/api/success/json`, async (r) =>
         HttpResponse.json(await r.request.json(), { status: ZHttpCodeSuccess.Created })
+      ),
+      http.post(`${Domain}/api/success/text`, async (r) =>
+        HttpResponse.text(await r.request.text(), { status: ZHttpCodeSuccess.Created })
       ),
       http.patch(`${Domain}/api/success/json`, async (r) =>
         HttpResponse.json(await r.request.json(), { status: ZHttpCodeSuccess.OK })
@@ -111,6 +113,31 @@ describe('ZHttpService', () => {
       const actual = await target.request(req);
       // Assert.
       expect(actual.status).toEqual(204);
+    });
+  });
+
+  describe('Body', () => {
+    it('should send JSON for objects.', async () => {
+      // Arrange.
+      const url = `${Domain}/api/success/json`;
+      const req = new ZHttpRequestBuilder().post(SuccessJson).url(url).build();
+      const target = createTestTarget();
+      // Act.
+      const { data: actual } = await target.request(req);
+      // Assert.
+      expect(actual).toEqual(SuccessJson);
+    });
+
+    it('should send a BodyInit as the BodyInit', async () => {
+      // Arrange.
+      const url = `${Domain}/api/success/text`;
+      const expected = 'this-should-be-raw-text';
+      const req = new ZHttpRequestBuilder().post(expected).url(url).build();
+      const target = createTestTarget();
+      // Act.
+      const { data: actual } = await target.request<string>(req);
+      // Assert.
+      expect(actual).toEqual(expected);
     });
   });
 

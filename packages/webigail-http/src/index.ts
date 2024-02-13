@@ -9,3 +9,4 @@ export * from './result/http-result.mjs';
 export * from './service/http-service-mock.mjs';
 export * from './service/http-service.mjs';
 export * from './util/body-init.mjs';
+export * from './util/content-type.mjs';
