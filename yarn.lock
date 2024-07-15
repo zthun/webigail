@@ -2935,22 +2935,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/helpful-fn@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "@zthun/helpful-fn@npm:3.3.0"
+"@zthun/helpful-fn@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@zthun/helpful-fn@npm:5.0.3"
   dependencies:
-    uuid: "npm:^9.0.1"
-  checksum: e88d5cc52c5f14758a8257a965c4109ea9fcb89a9d260cf5e162954a0547cdecb8c651635a624e78349659d9b8d31a2de8f6992a092a5ca0540578449ee95892
+    uuid: "npm:^10.0.0"
+  checksum: 49b3711af57cf8b4277a2b2746b92bc1443c32e65a4501e0c964f02bfb101c8bcdd9d3c5f16d63e1a17d9492602a27dbe5b646890f7087b731803c74d256024d
   languageName: node
   linkType: hard
 
-"@zthun/helpful-query@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "@zthun/helpful-query@npm:3.3.1"
+"@zthun/helpful-query@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@zthun/helpful-query@npm:5.0.3"
   dependencies:
-    "@zthun/helpful-fn": "npm:^3.3.0"
+    "@zthun/helpful-fn": "npm:^5.0.3"
     lodash-es: "npm:^4.17.21"
-  checksum: e135d13ab86713385f996cc544c7233f231f3ba2c24073a7d0f538c03d08a704fa8a760e2654a59d8a8b0bfadf2bde635fbd1018393f68df35a335232c2c0cc3
+  checksum: 1539a8338045f68b1e37172c06f0eaae0a0dd2d1427d3c691157311f658c813b8e22813dce90a29c67f38ce55cfe82c90a5cd79b022452ea719d017d77a6de05
   languageName: node
   linkType: hard
 
@@ -3097,8 +3097,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-rest@workspace:packages/webigail-rest"
   dependencies:
-    "@zthun/helpful-fn": "npm:^3.3.0"
-    "@zthun/helpful-query": "npm:^3.3.1"
+    "@zthun/helpful-fn": "npm:^5.0.3"
+    "@zthun/helpful-query": "npm:^5.0.3"
     "@zthun/webigail-http": "npm:^2.4.0"
     "@zthun/webigail-url": "npm:^2.4.0"
     vite: "npm:^5.3.3"
@@ -10970,17 +10970,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.3":
+"tslib@npm:2.6.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
   version: 2.6.3
   resolution: "tslib@npm:2.6.3"
   checksum: 2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
-  version: 2.6.2
-  resolution: "tslib@npm:2.6.2"
-  checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
   languageName: node
   linkType: hard
 
@@ -11328,15 +11321,6 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: eab18c27fe4ab9fb9709a5d5f40119b45f2ec8314f8d4cf12ce27e4c6f4ffa4a6321dc7db6c515068fa373c075b49691ba969f0010bf37f44c37ca40cd6bf7fe
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "uuid@npm:9.0.1"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 1607dd32ac7fc22f2d8f77051e6a64845c9bce5cd3dd8aa0070c074ec73e666a1f63c7b4e0f4bf2bc8b9d59dc85a15e17807446d9d2b17c8485fbc2147b27f9b
   languageName: node
   linkType: hard
 
