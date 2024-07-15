@@ -1556,12 +1556,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^10.3.2":
-  version: 10.3.2
-  resolution: "@nestjs/common@npm:10.3.2"
+"@nestjs/common@npm:^10.3.10":
+  version: 10.3.10
+  resolution: "@nestjs/common@npm:10.3.10"
   dependencies:
     iterare: "npm:1.2.1"
-    tslib: "npm:2.6.2"
+    tslib: "npm:2.6.3"
     uid: "npm:2.0.2"
   peerDependencies:
     class-transformer: "*"
@@ -1573,19 +1573,19 @@ __metadata:
       optional: true
     class-validator:
       optional: true
-  checksum: 5e679a0166359ac2094294a3d88342364a02695c7e9a97933372c34ea667fe3be7d334083242fccf3958bae81d8d59ebb7157458e1a8fa1c0be7376a60013e79
+  checksum: 8797d7d89b666dc36101faf97a901dc11894c26cbc221317117a7f823019defdaf938d28fa312417f5b481e0a28c1ec45cefdade406e7c691e5fc9a8da96fb11
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:^10.3.2":
-  version: 10.3.2
-  resolution: "@nestjs/core@npm:10.3.2"
+"@nestjs/core@npm:^10.3.10":
+  version: 10.3.10
+  resolution: "@nestjs/core@npm:10.3.10"
   dependencies:
     "@nuxtjs/opencollective": "npm:0.3.2"
     fast-safe-stringify: "npm:2.1.1"
     iterare: "npm:1.2.1"
     path-to-regexp: "npm:3.2.0"
-    tslib: "npm:2.6.2"
+    tslib: "npm:2.6.3"
     uid: "npm:2.0.2"
   peerDependencies:
     "@nestjs/common": ^10.0.0
@@ -1601,15 +1601,15 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: bd024f5af0ccaf380524340315467cba2ca2d8a8e20569f88023b6b3d2b82726a74a24c5b96ffb84a8e05f7db04e11e6ceb6194ad198052f5931acc46e5c1905
+  checksum: 6648a059165e5e4653c647eeeecf1e1b3bbc014f6a00c343623af4a862ad2efedca04769bf2ed53ac78a9457c92b46b767fb8ea37cf602e658de3d83160794c8
   languageName: node
   linkType: hard
 
-"@nestjs/testing@npm:^10.3.2":
-  version: 10.3.2
-  resolution: "@nestjs/testing@npm:10.3.2"
+"@nestjs/testing@npm:^10.3.10":
+  version: 10.3.10
+  resolution: "@nestjs/testing@npm:10.3.10"
   dependencies:
-    tslib: "npm:2.6.2"
+    tslib: "npm:2.6.3"
   peerDependencies:
     "@nestjs/common": ^10.0.0
     "@nestjs/core": ^10.0.0
@@ -1620,7 +1620,7 @@ __metadata:
       optional: true
     "@nestjs/platform-express":
       optional: true
-  checksum: 2dcaf3771ac2f34253fbd9c953daa496542825eaffde652cdc99171fd31b38a78d2086166bda6f015bceba50bb835a810eb1f0578ec5ec16a25f30a08fd311cf
+  checksum: 784d9519d6d6561efb52a4a3b19120b04cd65dcc11d7f0a6d7b0a8516413f53aca18b3bc153ae5919f4d486da2ec0f3b34abe5d318af99e228135300fc3decb7
   languageName: node
   linkType: hard
 
@@ -3077,11 +3077,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
-    "@nestjs/common": "npm:^10.3.2"
-    "@nestjs/core": "npm:^10.3.2"
-    "@nestjs/testing": "npm:^10.3.2"
+    "@nestjs/common": "npm:^10.3.10"
+    "@nestjs/core": "npm:^10.3.10"
+    "@nestjs/testing": "npm:^10.3.10"
     "@zthun/webigail-http": "npm:^2.4.0"
-    reflect-metadata: "npm:^0.2.1"
+    reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.1"
     vite: "npm:^5.3.3"
     vitest: "npm:^2.0.2"
@@ -9555,10 +9555,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reflect-metadata@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "reflect-metadata@npm:0.2.1"
-  checksum: 6ca3c674bb43cf8ec3a3f5f38c8730a6116335f8e562fcdcdf3a492af168c5a7f0e8f17476a5710c3fe6bf9b5d22e8a463f14c0e26e326339cab65e099900ef7
+"reflect-metadata@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "reflect-metadata@npm:0.2.2"
+  checksum: 1cd93a15ea291e420204955544637c264c216e7aac527470e393d54b4bb075f10a17e60d8168ec96600c7e0b9fcc0cb0bb6e91c3fbf5b0d8c9056f04e6ac1ec2
   languageName: node
   linkType: hard
 
@@ -10970,7 +10970,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.2, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
+"tslib@npm:2.6.3":
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
