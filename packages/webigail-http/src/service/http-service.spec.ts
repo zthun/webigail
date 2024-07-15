@@ -192,7 +192,7 @@ describe('ZHttpService', () => {
         .catch((err) => err);
       // Assert
       expect(actual.status).toBeGreaterThanOrEqual(500);
-      expect(actual.data).toContain(FailureJson.message);
+      expect(actual.data).toEqual(expect.objectContaining(FailureJson));
     });
   });
 
