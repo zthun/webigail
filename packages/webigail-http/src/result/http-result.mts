@@ -1,5 +1,5 @@
-import { ZHttpCodeSuccess } from './http-code-success.mjs';
-import { ZHttpCode } from './http-code.mjs';
+import { ZHttpCodeSuccess } from "./http-code-success.mjs";
+import { ZHttpCode } from "./http-code.mjs";
 
 /**
  * Represents a result from an http request.
@@ -37,7 +37,7 @@ export class ZHttpResultBuilder<TData = any> {
     this._result = {
       status: ZHttpCodeSuccess.OK,
       headers: {},
-      data
+      data,
     };
   }
 

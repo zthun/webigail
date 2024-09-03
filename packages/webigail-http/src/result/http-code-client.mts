@@ -173,81 +173,97 @@ export enum ZHttpCodeClient {
    *
    * The code 451 was chosen as a reference to the novel Fahrenheit 451.
    */
-  UnavailableForLegalReasons = 451
+  UnavailableForLegalReasons = 451,
 }
 
 /**
  * English friendly names of the codes.
  */
 export const ZHttpCodeClientNames: Record<ZHttpCodeClient, string> = {
-  [ZHttpCodeClient.BadRequest]: 'Bad Request',
-  [ZHttpCodeClient.Unauthorized]: 'Unauthorized',
-  [ZHttpCodeClient.PaymentRequired]: 'Payment Required',
-  [ZHttpCodeClient.Forbidden]: 'Forbidden',
-  [ZHttpCodeClient.NotFound]: 'Not Found',
-  [ZHttpCodeClient.MethodNotAllowed]: 'Method not Allowed',
-  [ZHttpCodeClient.NotAcceptable]: 'Not Acceptable',
-  [ZHttpCodeClient.ProxyAuthenticationRequired]: 'Proxy Authentication Required',
-  [ZHttpCodeClient.RequestTimeout]: 'Request Timeout',
-  [ZHttpCodeClient.Conflict]: 'Conflict',
-  [ZHttpCodeClient.Gone]: 'Gone',
-  [ZHttpCodeClient.LengthRequired]: 'Length Required',
-  [ZHttpCodeClient.PreconditionFailed]: 'Precondition Failed',
-  [ZHttpCodeClient.PayloadTooLarge]: 'Payload Too Large',
-  [ZHttpCodeClient.URITooLong]: 'URI Too Long',
-  [ZHttpCodeClient.UnsupportedMediaType]: 'Unsupported Media Type',
-  [ZHttpCodeClient.RangeNotSatisfiable]: 'Range Not Satisfiable',
-  [ZHttpCodeClient.ExpectationFailed]: 'Expectation Failed',
-  [ZHttpCodeClient.ImATeapot]: 'I am a Teapot',
-  [ZHttpCodeClient.MisdirectedRequest]: 'Misdirected Requested',
-  [ZHttpCodeClient.UnProcessableEntity]: 'Entity Not Processable',
-  [ZHttpCodeClient.Locked]: 'Locked',
-  [ZHttpCodeClient.FailedDependency]: 'Failed Dependency',
-  [ZHttpCodeClient.UpgradeRequired]: 'Upgrade Required',
-  [ZHttpCodeClient.PreconditionRequired]: 'Precondition Required',
-  [ZHttpCodeClient.TooManyRequests]: 'Too Many Requests',
-  [ZHttpCodeClient.RequestHeaderFieldsTooLarge]: 'Request Header Fields Too Large',
-  [ZHttpCodeClient.UnavailableForLegalReasons]: 'Unavailable for Legal Reasons'
+  [ZHttpCodeClient.BadRequest]: "Bad Request",
+  [ZHttpCodeClient.Unauthorized]: "Unauthorized",
+  [ZHttpCodeClient.PaymentRequired]: "Payment Required",
+  [ZHttpCodeClient.Forbidden]: "Forbidden",
+  [ZHttpCodeClient.NotFound]: "Not Found",
+  [ZHttpCodeClient.MethodNotAllowed]: "Method not Allowed",
+  [ZHttpCodeClient.NotAcceptable]: "Not Acceptable",
+  [ZHttpCodeClient.ProxyAuthenticationRequired]:
+    "Proxy Authentication Required",
+  [ZHttpCodeClient.RequestTimeout]: "Request Timeout",
+  [ZHttpCodeClient.Conflict]: "Conflict",
+  [ZHttpCodeClient.Gone]: "Gone",
+  [ZHttpCodeClient.LengthRequired]: "Length Required",
+  [ZHttpCodeClient.PreconditionFailed]: "Precondition Failed",
+  [ZHttpCodeClient.PayloadTooLarge]: "Payload Too Large",
+  [ZHttpCodeClient.URITooLong]: "URI Too Long",
+  [ZHttpCodeClient.UnsupportedMediaType]: "Unsupported Media Type",
+  [ZHttpCodeClient.RangeNotSatisfiable]: "Range Not Satisfiable",
+  [ZHttpCodeClient.ExpectationFailed]: "Expectation Failed",
+  [ZHttpCodeClient.ImATeapot]: "I am a Teapot",
+  [ZHttpCodeClient.MisdirectedRequest]: "Misdirected Requested",
+  [ZHttpCodeClient.UnProcessableEntity]: "Entity Not Processable",
+  [ZHttpCodeClient.Locked]: "Locked",
+  [ZHttpCodeClient.FailedDependency]: "Failed Dependency",
+  [ZHttpCodeClient.UpgradeRequired]: "Upgrade Required",
+  [ZHttpCodeClient.PreconditionRequired]: "Precondition Required",
+  [ZHttpCodeClient.TooManyRequests]: "Too Many Requests",
+  [ZHttpCodeClient.RequestHeaderFieldsTooLarge]:
+    "Request Header Fields Too Large",
+  [ZHttpCodeClient.UnavailableForLegalReasons]: "Unavailable for Legal Reasons",
 };
 
 /**
  * English friendly descriptions of HttpClientCodes
  */
 export const ZHttpCodeClientDescriptions: Record<ZHttpCodeClient, string> = {
-  [ZHttpCodeClient.BadRequest]: 'A bad request was sent.',
-  [ZHttpCodeClient.Unauthorized]: 'You are not authenticated and cannot view this content.',
-  [ZHttpCodeClient.PaymentRequired]: 'Payment is required',
-  [ZHttpCodeClient.Forbidden]: 'You are not authorized to view this content.',
-  [ZHttpCodeClient.NotFound]: 'The resource you are looking for could not be found.',
-  [ZHttpCodeClient.MethodNotAllowed]: 'The requested operation was not allowed.',
-  [ZHttpCodeClient.NotAcceptable]: 'The requested resource is not capable of generating the content for you.',
-  [ZHttpCodeClient.ProxyAuthenticationRequired]: 'You must first authenticate your self with the proxy.',
-  [ZHttpCodeClient.RequestTimeout]: 'The server timed out waiting for a request.  Please try again.',
-  [ZHttpCodeClient.Conflict]: 'There was a conflict with request.  Try something else.',
-  [ZHttpCodeClient.Gone]: 'The resource you requested is no longer available.',
+  [ZHttpCodeClient.BadRequest]: "A bad request was sent.",
+  [ZHttpCodeClient.Unauthorized]:
+    "You are not authenticated and cannot view this content.",
+  [ZHttpCodeClient.PaymentRequired]: "Payment is required",
+  [ZHttpCodeClient.Forbidden]: "You are not authorized to view this content.",
+  [ZHttpCodeClient.NotFound]:
+    "The resource you are looking for could not be found.",
+  [ZHttpCodeClient.MethodNotAllowed]:
+    "The requested operation was not allowed.",
+  [ZHttpCodeClient.NotAcceptable]:
+    "The requested resource is not capable of generating the content for you.",
+  [ZHttpCodeClient.ProxyAuthenticationRequired]:
+    "You must first authenticate your self with the proxy.",
+  [ZHttpCodeClient.RequestTimeout]:
+    "The server timed out waiting for a request.  Please try again.",
+  [ZHttpCodeClient.Conflict]:
+    "There was a conflict with request.  Try something else.",
+  [ZHttpCodeClient.Gone]: "The resource you requested is no longer available.",
   [ZHttpCodeClient.LengthRequired]:
-    'Your request did not specify the length of its content, which is required by the requested resource.',
+    "Your request did not specify the length of its content, which is required by the requested resource.",
   [ZHttpCodeClient.PreconditionFailed]:
-    'The server did not meet the requirements that was required to meet the request.',
-  [ZHttpCodeClient.PayloadTooLarge]: 'The request is too large and the server cannot handle it.',
-  [ZHttpCodeClient.URITooLong]: 'The URI provided was too long for the server to process.',
-  [ZHttpCodeClient.UnsupportedMediaType]: 'The media type requested is not supported by the server.',
+    "The server did not meet the requirements that was required to meet the request.",
+  [ZHttpCodeClient.PayloadTooLarge]:
+    "The request is too large and the server cannot handle it.",
+  [ZHttpCodeClient.URITooLong]:
+    "The URI provided was too long for the server to process.",
+  [ZHttpCodeClient.UnsupportedMediaType]:
+    "The media type requested is not supported by the server.",
   [ZHttpCodeClient.RangeNotSatisfiable]:
-    'A portion of the file was requested by the server cannot supply said portion.',
-  [ZHttpCodeClient.ExpectationFailed]: 'The server cannot meet the requirements of the expectation made of it.',
+    "A portion of the file was requested by the server cannot supply said portion.",
+  [ZHttpCodeClient.ExpectationFailed]:
+    "The server cannot meet the requirements of the expectation made of it.",
   [ZHttpCodeClient.ImATeapot]:
-    'Short and stout.  Here is my handle, here is my spout.  When I get all steamed up, hear me shout.  Tip me over and pour me out!',
+    "Short and stout.  Here is my handle, here is my spout.  When I get all steamed up, hear me shout.  Tip me over and pour me out!",
   [ZHttpCodeClient.MisdirectedRequest]:
-    'The request was directed at the server, but the server cannot produce a response.',
+    "The request was directed at the server, but the server cannot produce a response.",
   [ZHttpCodeClient.UnProcessableEntity]:
-    'The request was well-formed but was unable to be followed due to semantic errors.',
-  [ZHttpCodeClient.Locked]: 'The resource that is being accessed is locked.',
+    "The request was well-formed but was unable to be followed due to semantic errors.",
+  [ZHttpCodeClient.Locked]: "The resource that is being accessed is locked.",
   [ZHttpCodeClient.FailedDependency]:
-    'The request failed because it depended on another request and that request failed.',
-  [ZHttpCodeClient.UpgradeRequired]: 'The client needs to switch to a different protocol.',
-  [ZHttpCodeClient.PreconditionRequired]: 'The origin server requires the request to be conditional.',
-  [ZHttpCodeClient.TooManyRequests]: 'The user has sent too many requests in a given amount of time.',
+    "The request failed because it depended on another request and that request failed.",
+  [ZHttpCodeClient.UpgradeRequired]:
+    "The client needs to switch to a different protocol.",
+  [ZHttpCodeClient.PreconditionRequired]:
+    "The origin server requires the request to be conditional.",
+  [ZHttpCodeClient.TooManyRequests]:
+    "The user has sent too many requests in a given amount of time.",
   [ZHttpCodeClient.RequestHeaderFieldsTooLarge]:
-    'The request cannot be processed because the collective header fields are too large.',
-  [ZHttpCodeClient.UnavailableForLegalReasons]: 'Call your lawyer!'
+    "The request cannot be processed because the collective header fields are too large.",
+  [ZHttpCodeClient.UnavailableForLegalReasons]: "Call your lawyer!",
 };

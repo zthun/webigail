@@ -7,28 +7,28 @@ export enum ZHttpMethod {
    *
    * Used for reads
    */
-  Get = 'get',
+  Get = "get",
 
   /**
    * PUT
    *
    * Used for updates and can combine creates.
    */
-  Put = 'put',
+  Put = "put",
 
   /**
    * POST
    *
    * Use for create.
    */
-  Post = 'post',
+  Post = "post",
 
   /**
    * DELETE.
    *
    * Used for....delete..duh.
    */
-  Delete = 'delete',
+  Delete = "delete",
 
   /**
    * PATCH.
@@ -36,7 +36,7 @@ export enum ZHttpMethod {
    * Used for updates but only
    * partials of objects.
    */
-  Patch = 'patch',
+  Patch = "patch",
 
   /**
    * OPTIONS
@@ -45,14 +45,14 @@ export enum ZHttpMethod {
    * accessors for a single api.  Normally used
    * by the browser.
    */
-  Options = 'options',
+  Options = "options",
 
   /**
    * HEAD
    *
    * Used for metadata.
    */
-  Head = 'head'
+  Head = "head",
 }
 
 /**
@@ -107,7 +107,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        The duplicated object.
    */
-  public static duplicate<TBody>(other: IZHttpRequest<TBody>): IZHttpRequest<TBody> {
+  public static duplicate<TBody>(
+    other: IZHttpRequest<TBody>,
+  ): IZHttpRequest<TBody> {
     return { ...other, headers: structuredClone(other.headers) };
   }
 
@@ -117,7 +119,7 @@ export class ZHttpRequestBuilder<TBody = any> {
   public constructor() {
     this._request = {
       method: ZHttpMethod.Get,
-      url: ''
+      url: "",
     };
   }
 
@@ -157,7 +159,10 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public post: (body?: TBody) => this = this._method.bind(this, ZHttpMethod.Post);
+  public post: (body?: TBody) => this = this._method.bind(
+    this,
+    ZHttpMethod.Post,
+  );
 
   /**
    * Constructs a put request.
@@ -181,7 +186,10 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public patch: (body?: TBody) => this = this._method.bind(this, ZHttpMethod.Patch);
+  public patch: (body?: TBody) => this = this._method.bind(
+    this,
+    ZHttpMethod.Patch,
+  );
 
   /**
    * Constructs a options request.

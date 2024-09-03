@@ -1,7 +1,7 @@
-import { IZHttpRequest, ZHttpMethod } from '../request/http-request.mjs';
-import { ZHttpCodeClient } from '../result/http-code-client.mjs';
-import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
-import { IZHttpService } from './http-service.mjs';
+import { IZHttpRequest, ZHttpMethod } from "../request/http-request.mjs";
+import { ZHttpCodeClient } from "../result/http-code-client.mjs";
+import { IZHttpResult, ZHttpResultBuilder } from "../result/http-result.mjs";
+import { IZHttpService } from "./http-service.mjs";
 
 /**
  * Represents a mock http service that can be useful for demos,
@@ -10,7 +10,9 @@ import { IZHttpService } from './http-service.mjs';
 export class ZHttpServiceMock implements IZHttpService {
   private _mapping: {
     [endpoint: string]: {
-      [verb: string]: (req: IZHttpRequest) => IZHttpResult | Promise<IZHttpResult>;
+      [verb: string]: (
+        req: IZHttpRequest,
+      ) => IZHttpResult | Promise<IZHttpResult>;
     };
   } = {};
 
@@ -27,10 +29,15 @@ export class ZHttpServiceMock implements IZHttpService {
   public set<TResult = any>(
     endpoint: string,
     verb: ZHttpMethod,
-    invoke: IZHttpResult<TResult> | ((req: IZHttpRequest) => IZHttpResult<TResult> | Promise<IZHttpResult<TResult>>)
+    invoke:
+      | IZHttpResult<TResult>
+      | ((
+          req: IZHttpRequest,
+        ) => IZHttpResult<TResult> | Promise<IZHttpResult<TResult>>),
   ) {
     this._mapping[endpoint] = this._mapping[endpoint] || {};
-    this._mapping[endpoint][verb] = typeof invoke === 'function' ? invoke : () => invoke;
+    this._mapping[endpoint][verb] =
+      typeof invoke === "function" ? invoke : () => invoke;
   }
 
   /**
@@ -43,17 +50,23 @@ export class ZHttpServiceMock implements IZHttpService {
    *        A promise that resolves with the given result if the status code is less than 400.
    *        Any status code above 400 will result in a rejected promise.
    */
-  public async request<TResult = any, TBody = any>(req: IZHttpRequest<TBody>): Promise<IZHttpResult<TResult>> {
+  public async request<TResult = any, TBody = any>(
+    req: IZHttpRequest<TBody>,
+  ): Promise<IZHttpResult<TResult>> {
     const endpointConfig = this._mapping[req.url];
     const result = endpointConfig?.[req.method];
 
     if (result == null) {
-      const notFound = new ZHttpResultBuilder(null).status(ZHttpCodeClient.NotFound).build();
+      const notFound = new ZHttpResultBuilder(null)
+        .status(ZHttpCodeClient.NotFound)
+        .build();
       return Promise.reject(notFound);
     }
 
     const errorThreshold = 400;
     const intermediate = await result(req);
-    return +intermediate.status < errorThreshold ? Promise.resolve(intermediate) : Promise.reject(intermediate);
+    return +intermediate.status < errorThreshold
+      ? Promise.resolve(intermediate)
+      : Promise.reject(intermediate);
   }
 }

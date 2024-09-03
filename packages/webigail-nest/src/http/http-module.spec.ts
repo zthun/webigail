@@ -1,19 +1,19 @@
-import { Test } from '@nestjs/testing';
-import { ZHttpService } from '@zthun/webigail-http';
-import { describe, expect, it } from 'vitest';
-import { ZHttpModule } from './http-module';
-import { ZHttpServiceToken } from './http-service-token';
+import { Test } from "@nestjs/testing";
+import { ZHttpService } from "@zthun/webigail-http";
+import { describe, expect, it } from "vitest";
+import { ZHttpModule } from "./http-module";
+import { ZHttpServiceToken } from "./http-service-token";
 
-describe('ZHttpModule', () => {
+describe("ZHttpModule", () => {
   const createTestTarget = async () => {
     const _target = await Test.createTestingModule({
-      imports: [ZHttpModule]
+      imports: [ZHttpModule],
     }).compile();
 
     return _target;
   };
 
-  it('should export the http service as a token', async () => {
+  it("should export the http service as a token", async () => {
     // Arrange.
     const target = await createTestTarget();
     // Act.
@@ -22,7 +22,7 @@ describe('ZHttpModule', () => {
     expect(actual).toBeInstanceOf(ZHttpService);
   });
 
-  it('should export the http service as a class type', async () => {
+  it("should export the http service as a class type", async () => {
     // Arrange.
     const target = await createTestTarget();
     // Act.

@@ -13,7 +13,7 @@
 export function isBodyInit(obj: any): obj is BodyInit {
   return (
     obj == null ||
-    typeof obj === 'string' ||
+    typeof obj === "string" ||
     obj instanceof Blob ||
     obj instanceof ArrayBuffer ||
     ArrayBuffer.isView(obj) ||

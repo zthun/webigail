@@ -68,40 +68,46 @@ export enum ZHttpCodeRedirection {
    * 307 and 308 parallel the behaviors of 302 and 301, but do not allow the HTTP method to change.
    * So, for example, submitting a form to a permanently redirected resource may continue smoothly.
    */
-  PermanentRedirect = 308
+  PermanentRedirect = 308,
 }
 
 /**
  * English friendly names of the redirection codes.
  */
 export const ZHttpCodeRedirectionNames: Record<ZHttpCodeRedirection, string> = {
-  [ZHttpCodeRedirection.MultipleChoices]: 'Multiple Choices',
-  [ZHttpCodeRedirection.MovedPermanently]: 'Moved Permanently',
-  [ZHttpCodeRedirection.Found]: 'Found',
-  [ZHttpCodeRedirection.SeeOther]: 'See Other',
-  [ZHttpCodeRedirection.NotModified]: 'Not Modified',
-  [ZHttpCodeRedirection.UseProxy]: 'Use Proxy',
-  [ZHttpCodeRedirection.SwitchProxy]: 'Switch Proxy',
-  [ZHttpCodeRedirection.TemporaryRedirect]: 'Temporary Redirect',
-  [ZHttpCodeRedirection.PermanentRedirect]: 'Permanent Redirect'
+  [ZHttpCodeRedirection.MultipleChoices]: "Multiple Choices",
+  [ZHttpCodeRedirection.MovedPermanently]: "Moved Permanently",
+  [ZHttpCodeRedirection.Found]: "Found",
+  [ZHttpCodeRedirection.SeeOther]: "See Other",
+  [ZHttpCodeRedirection.NotModified]: "Not Modified",
+  [ZHttpCodeRedirection.UseProxy]: "Use Proxy",
+  [ZHttpCodeRedirection.SwitchProxy]: "Switch Proxy",
+  [ZHttpCodeRedirection.TemporaryRedirect]: "Temporary Redirect",
+  [ZHttpCodeRedirection.PermanentRedirect]: "Permanent Redirect",
 };
 
 /**
  * English friendly descriptions of the redirection codes.
  */
-export const ZHttpCodeRedirectionDescriptions: Record<ZHttpCodeRedirection, string> = {
+export const ZHttpCodeRedirectionDescriptions: Record<
+  ZHttpCodeRedirection,
+  string
+> = {
   [ZHttpCodeRedirection.MultipleChoices]:
-    'Indicates multiple options for the resource from which the client may choose.',
-  [ZHttpCodeRedirection.MovedPermanently]: 'This and all future requests should be directed to the given URI.',
-  [ZHttpCodeRedirection.Found]: 'Tells the client to look at another url',
-  [ZHttpCodeRedirection.SeeOther]: 'The response to the request can be found under another URI using the GET method.',
+    "Indicates multiple options for the resource from which the client may choose.",
+  [ZHttpCodeRedirection.MovedPermanently]:
+    "This and all future requests should be directed to the given URI.",
+  [ZHttpCodeRedirection.Found]: "Tells the client to look at another url",
+  [ZHttpCodeRedirection.SeeOther]:
+    "The response to the request can be found under another URI using the GET method.",
   [ZHttpCodeRedirection.NotModified]:
-    'Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.',
+    "Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.",
   [ZHttpCodeRedirection.UseProxy]:
-    'The requested resource is available only through a proxy, the address for which is provided in the response.',
+    "The requested resource is available only through a proxy, the address for which is provided in the response.",
   [ZHttpCodeRedirection.SwitchProxy]:
     'No longer used. Originally meant "Subsequent requests should use the specified proxy.',
   [ZHttpCodeRedirection.TemporaryRedirect]:
-    'In this case, the request should be repeated with another URI; however, future requests should still use the original URI.',
-  [ZHttpCodeRedirection.PermanentRedirect]: 'The request and all future requests should be repeated using another URI.'
+    "In this case, the request should be repeated with another URI; however, future requests should still use the original URI.",
+  [ZHttpCodeRedirection.PermanentRedirect]:
+    "The request and all future requests should be repeated using another URI.",
 };

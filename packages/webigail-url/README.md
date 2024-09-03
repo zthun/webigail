@@ -1,7 +1,8 @@
 # Webigail URL
 
-It's easy to make mistakes when making REST invocations and public API calls. Webigail solves this by using the builder
-pattern to construct a full URL given different parts of a URI.
+It's easy to make mistakes when making REST invocations and public API calls.
+Webigail solves this by using the builder pattern to construct a full URL given
+different parts of a URI.
 
 ## Build Status
 
@@ -19,9 +20,13 @@ yarn add @zthun/webigail-url
 ```
 
 ```ts
-import { ZUrlBuilder } from '@zthun/webigail-url';
+import { ZUrlBuilder } from "@zthun/webigail-url";
 
-const url = new ZUrlBuilder().protocol('https').hostname('zthunworks.com').subdomain('webigail').build();
+const url = new ZUrlBuilder()
+  .protocol("https")
+  .hostname("zthunworks.com")
+  .subdomain("webigail")
+  .build();
 
 // Outputs https://webigail.zthunworks.com
 console.log(url);
@@ -30,19 +35,23 @@ console.log(url);
 There are also some utility functions for common use cases.
 
 ```ts
-import { ZUrlBuilder } from '@zthun/webigail-url';
+import { ZUrlBuilder } from "@zthun/webigail-url";
 
 // Note: Browser only unless you're using jsdom in node.  Outputs the current
 // browser location with /api appended to it.
-const locationUrl = new ZUrlBuilder().location(location).path('/api').build();
+const locationUrl = new ZUrlBuilder().location(location).path("/api").build();
 console.log(url);
 
 // Url for a persons gravatar if one exists.
-const avatar = new ZUrlBuilder().gravatar(md5('john-doe@gmail.com'), 256).build();
+const avatar = new ZUrlBuilder()
+  .gravatar(md5("john-doe@gmail.com"), 256)
+  .build();
 console.log(avatar);
 
 // Outputs the existing pieces of the url.
-const existingInfo = new ZUrlBuilder().parse('https://webigail.zthunworks.com/api/path?filter=hello').info();
+const existingInfo = new ZUrlBuilder()
+  .parse("https://webigail.zthunworks.com/api/path?filter=hello")
+  .info();
 console.log(existingInfo);
 ```
 
@@ -51,10 +60,14 @@ console.log(existingInfo);
 Webigail also supports building and parsing data urls as well.
 
 ```ts
-import { ZDataUrlBuilder, ZMimeTypeApplication } from '@zthun/webigail-url';
+import { ZDataUrlBuilder, ZMimeTypeApplication } from "@zthun/webigail-url";
 
-const raw = require('my-data.json');
+const raw = require("my-data.json");
 const mimeType = ZMimeTypeApplication.JSON;
-const url = new ZDataUrlBuilder().mimeType(mimeType).buffer(Buffer.from(raw)).encode('base64').build();
+const url = new ZDataUrlBuilder()
+  .mimeType(mimeType)
+  .buffer(Buffer.from(raw))
+  .encode("base64")
+  .build();
 console.log(url);
 ```

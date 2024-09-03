@@ -1,11 +1,11 @@
-import fetch from 'cross-fetch';
+import fetch from "cross-fetch";
 
-import { IZHttpRequest } from '../request/http-request.mjs';
-import { ZHttpCodeClient } from '../result/http-code-client.mjs';
-import { ZHttpCodeServer } from '../result/http-code-server.mjs';
-import { IZHttpResult, ZHttpResultBuilder } from '../result/http-result.mjs';
-import { isBodyInit } from '../util/body-init.mjs';
-import { fromContentType } from '../util/content-type.mjs';
+import { IZHttpRequest } from "../request/http-request.mjs";
+import { ZHttpCodeClient } from "../result/http-code-client.mjs";
+import { ZHttpCodeServer } from "../result/http-code-server.mjs";
+import { IZHttpResult, ZHttpResultBuilder } from "../result/http-result.mjs";
+import { isBodyInit } from "../util/body-init.mjs";
+import { fromContentType } from "../util/content-type.mjs";
 
 /**
  * Represents a service that makes http invocations.
@@ -22,7 +22,9 @@ export interface IZHttpService {
    *        rejects if a 400 or 500 code is returned.  The request is
    *        rerouted if a 300 code is returned.
    */
-  request<TResult = any, TBody = any>(req: IZHttpRequest<TBody>): Promise<IZHttpResult<TResult>>;
+  request<TResult = any, TBody = any>(
+    req: IZHttpRequest<TBody>,
+  ): Promise<IZHttpResult<TResult>>;
 }
 
 /**
@@ -35,22 +37,29 @@ export class ZHttpService implements IZHttpService {
    * @param req -
    *        The request information to make.
    */
-  public async request<TResult = any, TBody = any>(req: IZHttpRequest<TBody>): Promise<IZHttpResult<TResult>> {
+  public async request<TResult = any, TBody = any>(
+    req: IZHttpRequest<TBody>,
+  ): Promise<IZHttpResult<TResult>> {
     try {
       const res = await fetch(req.url, {
         method: req.method,
         body: isBodyInit(req.body) ? req.body : JSON.stringify(req.body),
         headers: req.headers,
-        redirect: 'follow'
+        redirect: "follow",
       });
 
       const data = await fromContentType(res);
-      const result = new ZHttpResultBuilder(data).headers(res.headers).status(res.status).build();
+      const result = new ZHttpResultBuilder(data)
+        .headers(res.headers)
+        .status(res.status)
+        .build();
       return res.ok ? Promise.resolve(result) : Promise.reject(result);
     } catch (e) {
-      let result = new ZHttpResultBuilder(e.message).headers().status(ZHttpCodeServer.InternalServerError);
+      let result = new ZHttpResultBuilder(e.message)
+        .headers()
+        .status(ZHttpCodeServer.InternalServerError);
 
-      if (e.code === 'ENOTFOUND') {
+      if (e.code === "ENOTFOUND") {
         // The request was made, but some DNS lookup failed.
         result = result.status(ZHttpCodeClient.NotFound);
       }

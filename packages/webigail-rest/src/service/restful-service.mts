@@ -1,11 +1,16 @@
-import { IZDataRequest, IZDataSource, ZFilterSerialize, ZSortSerialize } from '@zthun/helpful-query';
-import { IZHttpService, ZHttpRequestBuilder } from '@zthun/webigail-http';
-import { ZUrlBuilder } from '@zthun/webigail-url';
-import { IZRestfulCreate } from './restful-create.mjs';
-import { IZRestfulDelete } from './restful-delete.mjs';
-import { IZRestfulGet } from './restful-get.mjs';
-import { IZRestfulUpdate } from './restful-update.mjs';
-import { IZRestfulUpsert } from './restful-upsert.mjs';
+import {
+  IZDataRequest,
+  IZDataSource,
+  ZFilterSerialize,
+  ZSortSerialize,
+} from "@zthun/helpful-query";
+import { IZHttpService, ZHttpRequestBuilder } from "@zthun/webigail-http";
+import { ZUrlBuilder } from "@zthun/webigail-url";
+import { IZRestfulCreate } from "./restful-create.mjs";
+import { IZRestfulDelete } from "./restful-delete.mjs";
+import { IZRestfulGet } from "./restful-get.mjs";
+import { IZRestfulUpdate } from "./restful-update.mjs";
+import { IZRestfulUpsert } from "./restful-upsert.mjs";
 
 /**
  * A service that conforms to all known restful standards.
@@ -50,7 +55,7 @@ export class ZRestfulService<T> implements IZRestfulService<T> {
   public constructor(
     private readonly _http: IZHttpService,
     private readonly _endpointUrl: string,
-    private readonly _request = new ZHttpRequestBuilder<T>().build()
+    private readonly _request = new ZHttpRequestBuilder<T>().build(),
   ) {}
 
   /**
@@ -70,8 +75,17 @@ export class ZRestfulService<T> implements IZRestfulService<T> {
 
   public async count(req: IZDataRequest): Promise<number> {
     const filter = new ZFilterSerialize().serialize(req.filter);
-    const url = this.endpoint().page(1).size(1).search(req.search).filter(filter).build();
-    const r = new ZHttpRequestBuilder().copy(this._request).get().url(url).build();
+    const url = this.endpoint()
+      .page(1)
+      .size(1)
+      .search(req.search)
+      .filter(filter)
+      .build();
+    const r = new ZHttpRequestBuilder()
+      .copy(this._request)
+      .get()
+      .url(url)
+      .build();
     const { data: page } = await this._http.request<any>(r);
     return page.count;
   }
@@ -79,43 +93,76 @@ export class ZRestfulService<T> implements IZRestfulService<T> {
   public async retrieve(req: IZDataRequest): Promise<T[]> {
     const filter = new ZFilterSerialize().serialize(req.filter);
     const sort = new ZSortSerialize().serialize(req.sort);
-    const url = this.endpoint().page(req.page).size(req.size).search(req.search).filter(filter).sort(sort).build();
-    const r = new ZHttpRequestBuilder().copy(this._request).get().url(url).build();
+    const url = this.endpoint()
+      .page(req.page)
+      .size(req.size)
+      .search(req.search)
+      .filter(filter)
+      .sort(sort)
+      .build();
+    const r = new ZHttpRequestBuilder()
+      .copy(this._request)
+      .get()
+      .url(url)
+      .build();
     const { data: page } = await this._http.request<any>(r);
     return page.data ?? page.result;
   }
 
   public async get(identification: number | string): Promise<T> {
     const url = this.endpoint(identification).build();
-    const r = new ZHttpRequestBuilder().copy(this._request).get().url(url).build();
+    const r = new ZHttpRequestBuilder()
+      .copy(this._request)
+      .get()
+      .url(url)
+      .build();
     const { data } = await this._http.request<T>(r);
     return data;
   }
 
   public async create(body: T): Promise<T> {
     const url = this.endpoint().build();
-    const r = new ZHttpRequestBuilder<T>().copy(this._request).post(body).url(url).build();
+    const r = new ZHttpRequestBuilder<T>()
+      .copy(this._request)
+      .post(body)
+      .url(url)
+      .build();
     const { data } = await this._http.request<T>(r);
     return data;
   }
 
   public async upsert(body: T): Promise<T> {
     const url = this.endpoint().build();
-    const r = new ZHttpRequestBuilder<T>().copy(this._request).put(body).url(url).build();
+    const r = new ZHttpRequestBuilder<T>()
+      .copy(this._request)
+      .put(body)
+      .url(url)
+      .build();
     const { data } = await this._http.request<T>(r);
     return data;
   }
 
-  public async update(identification: number | string, fields: Partial<T>): Promise<T> {
+  public async update(
+    identification: number | string,
+    fields: Partial<T>,
+  ): Promise<T> {
     const url = this.endpoint(identification).build();
-    const r = new ZHttpRequestBuilder<Partial<T>>().copy(this._request).patch(fields).url(url).build();
+    const r = new ZHttpRequestBuilder<Partial<T>>()
+      .copy(this._request)
+      .patch(fields)
+      .url(url)
+      .build();
     const { data } = await this._http.request<T>(r);
     return data;
   }
 
   public async delete(identification: number | string): Promise<void> {
     const url = this.endpoint(identification).build();
-    const r = new ZHttpRequestBuilder<undefined>().copy(this._request).delete().url(url).build();
+    const r = new ZHttpRequestBuilder<undefined>()
+      .copy(this._request)
+      .delete()
+      .url(url)
+      .build();
     await this._http.request(r);
   }
 }

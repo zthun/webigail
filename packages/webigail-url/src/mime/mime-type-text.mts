@@ -8,33 +8,33 @@ export enum ZMimeTypeText {
    * Style files used in html documents must be sent as
    * css.
    */
-  CSS = 'text/css',
+  CSS = "text/css",
 
   /**
    * Comma separated values.
    */
-  CSV = 'text/csv',
+  CSV = "text/csv",
 
   /**
    * JavaScript.
    */
-  EcmaScript = 'text/ecmascript',
+  EcmaScript = "text/ecmascript",
 
   /**
    * Hyper Text Markup Language.  Markup language for
    * web pages.
    */
-  HTML = 'text/html',
+  HTML = "text/html",
 
   /**
    * JavaScript.
    */
-  JavaScript = 'text/javascript',
+  JavaScript = "text/javascript",
 
   /**
    * Plain (basic) text.
    */
-  Plain = 'text/plain',
+  Plain = "text/plain",
 
   /**
    * Xtreme Markup Language.
@@ -42,5 +42,5 @@ export enum ZMimeTypeText {
    * Superset of HTML.  Bulky, but can
    * represent anything.
    */
-  XML = 'text/xml'
+  XML = "text/xml",
 }

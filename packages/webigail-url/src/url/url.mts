@@ -1,5 +1,5 @@
-import { trim, trimEnd, trimStart } from 'lodash-es';
-import URLParse from 'url-parse';
+import { trim, trimEnd, trimStart } from "lodash-es";
+import URLParse from "url-parse";
 
 /**
  * Represents information about a url.
@@ -56,11 +56,11 @@ export enum ZYouTubeApi {
   /**
    * An embedded video link.
    */
-  Embed = 'embed',
+  Embed = "embed",
   /**
    * A watch video link.
    */
-  Watch = 'watch'
+  Watch = "watch",
 }
 
 /**
@@ -70,14 +70,14 @@ export class ZUrlBuilder {
   /**
    * The url to the gravatar api.
    */
-  public static UrlGravatar = 'https://s.gravatar.com/avatar';
+  public static UrlGravatar = "https://s.gravatar.com/avatar";
 
   /**
    * The url to youtube.
    *
    * This is mostly used to embed videos.
    */
-  public static UrlYouTube = 'https://www.youtube.com';
+  public static UrlYouTube = "https://www.youtube.com";
 
   /**
    * A mapping between protocol and default port.
@@ -89,7 +89,7 @@ export class ZUrlBuilder {
     sftp: 22,
     ssh: 22,
     smtp: 25,
-    smb: 445
+    smb: 445,
   };
 
   /**
@@ -135,13 +135,13 @@ export class ZUrlBuilder {
    * @param hostname -
    *        The hostname to connect with.
    */
-  public constructor(protocol = 'http', hostname = 'localhost') {
+  public constructor(protocol = "http", hostname = "localhost") {
     this._url = {
       protocol,
       hostname,
-      path: ['/'],
-      hash: '',
-      params: []
+      path: ["/"],
+      hash: "",
+      params: [],
     };
   }
 
@@ -155,14 +155,20 @@ export class ZUrlBuilder {
    *        This object.
    */
   public location(loc: Location): this {
-    this.protocol(loc.protocol).hostname(loc.hostname).hash(loc.hash).path(loc.pathname).port(+loc.port);
+    this.protocol(loc.protocol)
+      .hostname(loc.hostname)
+      .hash(loc.hash)
+      .path(loc.pathname)
+      .port(+loc.port);
 
     let search = loc.search;
 
-    if (search.startsWith('?')) {
+    if (search.startsWith("?")) {
       search = search.slice(1);
-      const pairs = search.split('&');
-      pairs.map((pair) => pair.split('=')).forEach((matrix) => this.param(matrix[0], matrix[1]));
+      const pairs = search.split("&");
+      pairs
+        .map((pair) => pair.split("="))
+        .forEach((matrix) => this.param(matrix[0], matrix[1]));
     }
 
     return this;
@@ -184,8 +190,8 @@ export class ZUrlBuilder {
    * @returns
    *        This object.
    */
-  public api(loc: Location, basePath = 'api'): this {
-    return this.location(loc).hash('').path(basePath);
+  public api(loc: Location, basePath = "api"): this {
+    return this.location(loc).hash("").path(basePath);
   }
 
   /**
@@ -215,7 +221,9 @@ export class ZUrlBuilder {
       .path(current.pathname)
       .port(current.port ? +current.port : undefined);
 
-    Object.keys(current.query).forEach((key) => this.param(key, current.query[key] as string));
+    Object.keys(current.query).forEach((key) =>
+      this.param(key, current.query[key] as string),
+    );
 
     return this;
   }
@@ -234,7 +242,7 @@ export class ZUrlBuilder {
   public gravatar(hash?: string, size?: number): this {
     let current = this.parse(ZUrlBuilder.UrlGravatar);
     current = hash ? current.append(hash) : current;
-    current = size ? current.param('s', String(size)) : current;
+    current = size ? current.param("s", String(size)) : current;
     return current;
   }
 
@@ -284,7 +292,7 @@ export class ZUrlBuilder {
     // The watch api is a little bizarre that they don't actually
     // use the same format as their other apis.  So we will handle this here.
     if (api === ZYouTubeApi.Watch) {
-      current = current.path(api).param('v', id!);
+      current = current.path(api).param("v", id!);
     }
 
     return current;
@@ -366,7 +374,9 @@ export class ZUrlBuilder {
    *        This object.
    */
   public subdomain(domain: string): this {
-    this._url.hostname = this._url.hostname ? `${domain}.${this._url.hostname}` : domain;
+    this._url.hostname = this._url.hostname
+      ? `${domain}.${this._url.hostname}`
+      : domain;
     return this;
   }
 
@@ -377,9 +387,9 @@ export class ZUrlBuilder {
    *        This object.
    */
   public popSubdomain(): this {
-    const parts = this._url.hostname.split('.');
+    const parts = this._url.hostname.split(".");
     parts.splice(0, 1);
-    this._url.hostname = parts.join('.');
+    this._url.hostname = parts.join(".");
     return this;
   }
 
@@ -482,7 +492,10 @@ export class ZUrlBuilder {
    *        This object.
    */
   public page(page?: number | null): this {
-    return this.onlyParam('page', page == null || page < 1 ? undefined : String(page));
+    return this.onlyParam(
+      "page",
+      page == null || page < 1 ? undefined : String(page),
+    );
   }
 
   /**
@@ -496,7 +509,10 @@ export class ZUrlBuilder {
    *        This object.
    */
   public size(size?: number | null): this {
-    return this.onlyParam('size', size == null || size < 0 ? undefined : String(size));
+    return this.onlyParam(
+      "size",
+      size == null || size < 0 ? undefined : String(size),
+    );
   }
 
   /**
@@ -510,7 +526,7 @@ export class ZUrlBuilder {
    *        This object.
    */
   public search(search?: string | null): this {
-    return this.onlyParam('search', search || undefined);
+    return this.onlyParam("search", search || undefined);
   }
 
   /**
@@ -524,7 +540,7 @@ export class ZUrlBuilder {
    *        This object.
    */
   public filter(filter?: string | null): this {
-    return this.onlyParam('filter', filter || undefined);
+    return this.onlyParam("filter", filter || undefined);
   }
 
   /**
@@ -538,7 +554,7 @@ export class ZUrlBuilder {
    *        This object.
    */
   public sort(sort?: string | null): this {
-    return this.onlyParam('sort', sort || undefined);
+    return this.onlyParam("sort", sort || undefined);
   }
 
   /**
@@ -548,23 +564,25 @@ export class ZUrlBuilder {
    *        The url string.
    */
   public build(): string {
-    const search = this._url.params.map((param) => `${param.key}=${encodeURIComponent(param.val)}`).join('&');
+    const search = this._url.params
+      .map((param) => `${param.key}=${encodeURIComponent(param.val)}`)
+      .join("&");
     const user = trim(this._url.username);
     const password = trim(this._url.password);
     let protocol = trim(this._url.protocol);
     let host = trim(this._url.hostname);
     let port = String(this._url.port);
     let hash = trim(this._url.hash);
-    let path = this._url.path.map((segment) => trim(segment, '/')).join('/');
-    let credentials = '';
+    let path = this._url.path.map((segment) => trim(segment, "/")).join("/");
+    let credentials = "";
 
-    protocol = trimEnd(protocol, '/:');
-    host = trim(host, '/');
-    hash = trimStart(hash, '#');
-    path = trim(path, '/');
+    protocol = trimEnd(protocol, "/:");
+    host = trim(host, "/");
+    hash = trimStart(hash, "#");
+    path = trim(path, "/");
 
     if (ZUrlBuilder.defaults(protocol, port)) {
-      port = '';
+      port = "";
     } else {
       port = `:${port}`;
     }

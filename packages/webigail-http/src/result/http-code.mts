@@ -1,16 +1,28 @@
-import { ZHttpCodeClient, ZHttpCodeClientDescriptions, ZHttpCodeClientNames } from './http-code-client.mjs';
+import {
+  ZHttpCodeClient,
+  ZHttpCodeClientDescriptions,
+  ZHttpCodeClientNames,
+} from "./http-code-client.mjs";
 import {
   ZHttpCodeInformationalResponse,
   ZHttpCodeInformationalResponseDescriptions,
-  ZHttpCodeInformationalResponseNames
-} from './http-code-informational-response.mjs';
+  ZHttpCodeInformationalResponseNames,
+} from "./http-code-informational-response.mjs";
 import {
   ZHttpCodeRedirection,
   ZHttpCodeRedirectionDescriptions,
-  ZHttpCodeRedirectionNames
-} from './http-code-redirection.mjs';
-import { ZHttpCodeServer, ZHttpCodeServerDescriptions, ZHttpCodeServerNames } from './http-code-server.mjs';
-import { ZHttpCodeSuccess, ZHttpCodeSuccessDescriptions, ZHttpCodeSuccessNames } from './http-code-success.mjs';
+  ZHttpCodeRedirectionNames,
+} from "./http-code-redirection.mjs";
+import {
+  ZHttpCodeServer,
+  ZHttpCodeServerDescriptions,
+  ZHttpCodeServerNames,
+} from "./http-code-server.mjs";
+import {
+  ZHttpCodeSuccess,
+  ZHttpCodeSuccessDescriptions,
+  ZHttpCodeSuccessNames,
+} from "./http-code-success.mjs";
 
 /**
  * Represents a category of http code.
@@ -29,23 +41,23 @@ export enum ZHttpCodeCategory {
   /**
    * Error codes 100-199.
    */
-  InformationalResponse = 'Informational Response',
+  InformationalResponse = "Informational Response",
   /**
    * Error codes 200-299.
    */
-  Success = 'Success',
+  Success = "Success",
   /**
    * Error codes 300-399.
    */
-  Redirection = 'Redirection',
+  Redirection = "Redirection",
   /**
    * Error codes 400-499.
    */
-  Client = 'Client Error',
+  Client = "Client Error",
   /**
    * Error codes 500-599.
    */
-  Server = 'Server Error'
+  Server = "Server Error",
 }
 
 /**
@@ -55,19 +67,19 @@ export enum ZHttpCodeSeverity {
   /**
    * Covers information response (100-199) and redirection codes (300-399).
    */
-  Info = 'info',
+  Info = "info",
   /**
    * Covers the success codes (200-299)
    */
-  Success = 'success',
+  Success = "success",
   /**
    * Covers client errors (400-499).
    */
-  Warning = 'warning',
+  Warning = "warning",
   /**
    * Covers server errors (500-599).
    */
-  Error = 'error'
+  Error = "error",
 }
 
 /**

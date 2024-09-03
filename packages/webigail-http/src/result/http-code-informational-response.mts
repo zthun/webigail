@@ -35,28 +35,35 @@ export enum ZHttpCodeInformationalResponse {
   /**
    * Used to return some response headers before final HTTP message.
    */
-  EarlyHints = 103
+  EarlyHints = 103,
 }
 
 /**
  * English friendly names of the codes.
  */
-export const ZHttpCodeInformationalResponseNames: Record<ZHttpCodeInformationalResponse, string> = {
-  [ZHttpCodeInformationalResponse.Continue]: 'Continue',
-  [ZHttpCodeInformationalResponse.SwitchingProtocols]: 'Switching Protocols',
-  [ZHttpCodeInformationalResponse.Processing]: 'Processing',
-  [ZHttpCodeInformationalResponse.EarlyHints]: 'Early Hints'
+export const ZHttpCodeInformationalResponseNames: Record<
+  ZHttpCodeInformationalResponse,
+  string
+> = {
+  [ZHttpCodeInformationalResponse.Continue]: "Continue",
+  [ZHttpCodeInformationalResponse.SwitchingProtocols]: "Switching Protocols",
+  [ZHttpCodeInformationalResponse.Processing]: "Processing",
+  [ZHttpCodeInformationalResponse.EarlyHints]: "Early Hints",
 };
 
 /**
  * English friendly descriptions of the codes.
  */
-export const ZHttpCodeInformationalResponseDescriptions: Record<ZHttpCodeInformationalResponse, string> = {
-  [ZHttpCodeInformationalResponse.Continue]: 'The client should continue to send the request body.',
+export const ZHttpCodeInformationalResponseDescriptions: Record<
+  ZHttpCodeInformationalResponse,
+  string
+> = {
+  [ZHttpCodeInformationalResponse.Continue]:
+    "The client should continue to send the request body.",
   [ZHttpCodeInformationalResponse.SwitchingProtocols]:
-    'The requestor has asked the server to switch protocols and the server has agreed to do so.',
+    "The requestor has asked the server to switch protocols and the server has agreed to do so.",
   [ZHttpCodeInformationalResponse.Processing]:
-    'The server has received and is processing the request, but a response is not available yet.',
+    "The server has received and is processing the request, but a response is not available yet.",
   [ZHttpCodeInformationalResponse.EarlyHints]:
-    'There are some early response headers available for you before the final message.'
+    "There are some early response headers available for you before the final message.",
 };

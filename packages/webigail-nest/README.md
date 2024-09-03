@@ -1,8 +1,9 @@
 # Webigail Nest
 
-NestJs already comes with an http module built in, so it is recommended to just use that one. If you are using
-webigail-http and you want to inject that service into your nest project, then this package comes with the module that
-will do that for you.
+NestJs already comes with an http module built in, so it is recommended to just
+use that one. If you are using webigail-http and you want to inject that service
+into your nest project, then this package comes with the module that will do
+that for you.
 
 ## Build Status
 
