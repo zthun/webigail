@@ -32,8 +32,8 @@
     "dist"
   ],
   "dependencies": {
-    "@zthun/helpful-fn": "^5.0.3",
-    "@zthun/helpful-query": "^5.0.3",
+    "@zthun/helpful-fn": "^6.0.0",
+    "@zthun/helpful-query": "^6.0.0",
     "@zthun/webigail-http": "^2.4.1",
     "@zthun/webigail-url": "^2.4.1"
   },
