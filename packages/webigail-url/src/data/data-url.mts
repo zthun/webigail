@@ -1,4 +1,3 @@
-import { Buffer } from "buffer";
 import { last } from "lodash-es";
 import { ZMimeTypeApplication } from "../mime/mime-type-application.mjs";
 import { ZSupportedMimeTypes } from "../mime/mime-type.mjs";
@@ -20,7 +19,7 @@ export interface IZDataUrlInfo {
   /**
    * The raw data buffer.
    */
-  buffer: Buffer;
+  buffer: Uint8Array;
 }
 
 /**
@@ -40,7 +39,7 @@ export class ZDataUrlBuilder {
     this._data = {
       mimeType: "",
       encoding: "utf8",
-      buffer: Buffer.from(""),
+      buffer: new Uint8Array([]),
     };
   }
 
@@ -57,7 +56,7 @@ export class ZDataUrlBuilder {
     this._data = {
       mimeType: "",
       encoding: "utf8",
-      buffer: Buffer.from(""),
+      buffer: new Uint8Array([]),
     };
 
     if (!url.startsWith("data:")) {
@@ -94,10 +93,18 @@ export class ZDataUrlBuilder {
     // Commas can be in the body.  Type this into chrome and you can
     // see that chrome actually parses it:  data:text/plain,cat,,,
     // We will support this here, but we're going to properly encode it.
-    const body = bodyParts.join("%2C");
-    this._data.buffer = isBase64
-      ? Buffer.from(body, "base64")
-      : Buffer.from(decodeURIComponent(body));
+    let body = bodyParts.join("%2C");
+
+    if (isBase64) {
+      try {
+        body = atob(body);
+      } catch {
+        body = "";
+      }
+    } else {
+      body = decodeURIComponent(body);
+    }
+    this._data.buffer = new TextEncoder().encode(body);
     return this;
   }
 
@@ -124,8 +131,9 @@ export class ZDataUrlBuilder {
    * @returns
    *        This object.
    */
-  public buffer(data: Buffer | string): this {
-    this._data.buffer = typeof data === "string" ? Buffer.from(data) : data;
+  public buffer(data: string | Uint8Array): this {
+    this._data.buffer =
+      typeof data === "string" ? new TextEncoder().encode(data) : data;
     return this;
   }
 
@@ -155,7 +163,7 @@ export class ZDataUrlBuilder {
     const protocol = "data";
     const modifier = this._data.encoding === "base64" ? ";base64" : "";
 
-    let raw = this._data.buffer.toString(this._data.encoding);
+    let raw = new TextDecoder("utf8").decode(this._data.buffer);
 
     if (this._data.encoding === "utf8") {
       raw = encodeURIComponent(raw);
@@ -164,6 +172,10 @@ export class ZDataUrlBuilder {
       // it's actually valid, but some servers don't accept ! as a character
       // and it must be encoded.  Just fix it here.
       raw = raw.split("!").join("%21");
+    }
+
+    if (this._data.encoding === "base64") {
+      raw = btoa(raw);
     }
 
     return `${protocol}:${this._data.mimeType}${modifier},${raw}`;

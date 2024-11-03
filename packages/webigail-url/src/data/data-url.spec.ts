@@ -18,7 +18,7 @@ describe("ZDataUrlBuilder", () => {
       expect(
         createTestTarget()
           .mimeType(ZMimeTypeText.Plain)
-          .buffer(Buffer.from("hello"))
+          .buffer(new TextEncoder().encode("hello"))
           .build(),
       ).toEqual(expected);
     });
@@ -139,7 +139,7 @@ describe("ZDataUrlBuilder", () => {
       );
       // Act
       const info = target.info();
-      const actual = info.buffer.toString("utf8");
+      const actual = new TextDecoder("utf8").decode(info.buffer);
       // Assert
       expect(actual).toEqual(expected);
     });
