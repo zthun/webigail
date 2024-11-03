@@ -25,15 +25,15 @@
     "access": "public"
   },
   "devDependencies": {
-    "vite": "^5.4.2",
-    "vitest": "^2.0.5"
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@zthun/helpful-fn": "^6.0.0",
-    "@zthun/helpful-query": "^6.0.0",
+    "@zthun/helpful-fn": "^6.5.0",
+    "@zthun/helpful-query": "^6.5.0",
     "@zthun/webigail-http": "^2.4.1",
     "@zthun/webigail-url": "^2.4.1"
   },

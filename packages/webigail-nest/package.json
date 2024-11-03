@@ -30,8 +30,8 @@
     "@nestjs/testing": "^10.4.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "vite": "^5.4.2",
-    "vitest": "^2.0.5"
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
   },
   "peerDependencies": {
     "@nestjs/common": "^10.3.0",
