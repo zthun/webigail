@@ -3255,7 +3255,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-nest@npm:^3.0.0, @zthun/webigail-nest@workspace:packages/webigail-nest":
+"@zthun/webigail-nest@npm:^3.0.1, @zthun/webigail-nest@workspace:packages/webigail-nest":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
@@ -3304,7 +3304,7 @@ __metadata:
   resolution: "@zthun/webigail-web@workspace:packages/webigail-web"
   dependencies:
     "@zthun/webigail-http": "npm:^3.0.0"
-    "@zthun/webigail-nest": "npm:^3.0.0"
+    "@zthun/webigail-nest": "npm:^3.0.1"
     "@zthun/webigail-url": "npm:^3.0.0"
     typedoc: "npm:^0.26.11"
     typedoc-plugin-extras: "npm:^3.1.0"
