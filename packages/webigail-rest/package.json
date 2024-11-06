@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-rest",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Helpful services for querying rest services based on specific standards.",
   "author": "Anthony Bonta",
   "license": "MIT",
