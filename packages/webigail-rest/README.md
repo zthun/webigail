@@ -40,10 +40,12 @@ service
 // Get a single resource - uses GET verb
 service.get("ditto").then((ditto) => console.log(ditto));
 
-// Note:  The pokemon API is read only, but these would still invoke the endpoint with the given verbs
-// The would just fail with 404s, but these are here to illustrate the usage of a full rest service.
-// There is also an assumption that the return values on the services return the data that was mutated.
-// Delete is assumed to return a 204 - No Content if successful.
+// Note:  The pokemon API is read only, but these would still invoke the
+// endpoint with the given verbs The would just fail with 404s, but
+// these are here to illustrate the usage of a full rest service. There
+// is also an assumption that the return values on the services return
+// the data that was mutated. Delete is assumed to return a
+// 204 - No Content if successful.
 
 // Create a new resource - uses POST verb
 service
