@@ -86,6 +86,16 @@ export interface IZHttpRequest<TBody = any> {
    * The timeout before the rest method fails
    */
   timeout?: number;
+
+  /**
+   * The agent options from http and https.
+   *
+   * The type here is unknown since browsers viewing this
+   * will not be able to create one.  This is only for node
+   * based environments and is expected to receive new Agent()
+   * from the https or https modules.
+   */
+  agent?: unknown;
 }
 
 /**
@@ -232,6 +242,21 @@ export class ZHttpRequestBuilder<TBody = any> {
    */
   public timeout(ms: number): this {
     this._request.timeout = ms;
+    return this;
+  }
+
+  /**
+   * Sets the optional node agent for node based environments.
+   *
+   * @param val -
+   *        The agent implementation.
+   *
+   * @returns
+   *        This object.
+   */
+  public agent(val: unknown): this {
+    this._request.agent = val;
+
     return this;
   }
 

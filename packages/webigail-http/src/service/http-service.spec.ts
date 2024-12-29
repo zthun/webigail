@@ -1,4 +1,5 @@
 // @vitest-environment node
+import { Agent } from "http";
 import { HttpResponse, http } from "msw";
 import { SetupServer, setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
@@ -78,7 +79,11 @@ describe("ZHttpService", () => {
     it("should return a resolved result from a GET request.", async () => {
       // Arrange
       const target = createTestTarget();
-      const req = new ZHttpRequestBuilder().get().url(url).build();
+      const req = new ZHttpRequestBuilder()
+        .get()
+        .agent(new Agent({ maxSockets: 100 }))
+        .url(url)
+        .build();
       // Act
       const actual = await target.request(req);
       // Assert

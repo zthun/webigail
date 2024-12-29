@@ -1,3 +1,4 @@
+import { Agent } from "https";
 import { describe, expect, it } from "vitest";
 import { ZHttpMethod, ZHttpRequestBuilder } from "./http-request.mjs";
 
@@ -16,6 +17,13 @@ describe("ZHttpRequestBuilder", () => {
       it("should set the timeout.", () => {
         const expected = 5000;
         expect(createTestTarget().timeout(expected).build().timeout).toEqual(
+          expected,
+        );
+      });
+
+      it("should not validate certificates.", () => {
+        const expected = new Agent({ rejectUnauthorized: false });
+        expect(createTestTarget().agent(expected).build().agent).toEqual(
           expected,
         );
       });
