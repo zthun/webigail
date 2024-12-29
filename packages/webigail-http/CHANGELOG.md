@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/zthun/webigail/compare/v3.0.2...v3.1.0) (2024-12-29)
+
+
+### Features
+
+* support passing an agent for additional options in node ([1a8ce30](https://github.com/zthun/webigail/commit/1a8ce30b0a7fddd14f30f6abb9bb313c0a6039fa))
+
+
+
 ## [3.0.2](https://github.com/zthun/webigail/compare/v3.0.1...v3.0.2) (2024-12-29)
 
 **Note:** Version bump only for package @zthun/webigail-http
