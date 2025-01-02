@@ -7,7 +7,10 @@
 export function fromContentType(res: Response): Promise<any> {
   const contentType = res.headers.get("content-type");
 
-  if (contentType === "application/json" || contentType?.endsWith("+json")) {
+  if (
+    contentType?.startsWith("application/json") ||
+    contentType?.endsWith("+json")
+  ) {
     return res.json();
   }
 

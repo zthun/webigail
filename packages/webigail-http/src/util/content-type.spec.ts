@@ -20,7 +20,11 @@ describe("fromContentType", () => {
 
   it("should return json for application/json", async () => {
     const expected = { message: "this-should-parse-from-json" };
-    await shouldReturnData(expected, toBodyInit(expected), "application/json");
+    await shouldReturnData(
+      expected,
+      toBodyInit(expected),
+      "application/json; charset=utf8",
+    );
   });
 
   it("should return json if the content type ends with +json", async () => {
