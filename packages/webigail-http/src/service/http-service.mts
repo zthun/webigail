@@ -42,9 +42,6 @@ export class ZHttpService implements IZHttpService {
   ): Promise<IZHttpResult<TResult>> {
     try {
       const res = await fetch(req.url, {
-        // @ts-expect-error - This is hidden for node only. On browsers, nothing happens here since
-        // there will be no way to add this.
-        agent: req.agent,
         method: req.method,
         body: isBodyInit(req.body) ? req.body : JSON.stringify(req.body),
         headers: req.headers,
