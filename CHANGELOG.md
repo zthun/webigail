@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/zthun/webigail/compare/v3.1.1...v3.1.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* adding charset to a content type header should no longer prevent json values ([dcc18c1](https://github.com/zthun/webigail/commit/dcc18c16e759e3575541b45eb154543cded51c8a))
+
+
+
 ## [3.1.1](https://github.com/zthun/webigail/compare/v3.1.0...v3.1.1) (2025-01-02)
 
 

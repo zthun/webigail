@@ -1,6 +1,6 @@
 {
   "stream": true,
-  "version": "3.1.1",
+  "version": "3.1.2",
   "command": {
     "publish": {
       "message": "chore(release): publish [skip ci]"
@@ -8,7 +8,9 @@
   },
   "changelogPreset": {
     "name": "conventionalcommits",
-    "issuePrefixes": ["#"],
+    "issuePrefixes": [
+      "#"
+    ],
     "types": [
       {
         "type": "feat",
