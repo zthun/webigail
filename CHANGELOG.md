@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/zthun/webigail/compare/v3.1.0...v3.1.1) (2025-01-02)
+
+
+### Reverts
+
+* remove agent support as it does not work ([b625e6e](https://github.com/zthun/webigail/commit/b625e6e039b8a60023005c36ad96d6d9f715a44e))
+
+
+
 ## [3.1.0](https://github.com/zthun/webigail/compare/v3.0.2...v3.1.0) (2024-12-29)
 
 
