@@ -6,6 +6,9 @@ RUN yarn install
 FROM setup as analyze
 RUN yarn lint
 
+FROM setup as check
+RUN yarn check
+
 FROM setup as test
 RUN yarn test
 
