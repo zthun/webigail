@@ -18,7 +18,7 @@
     "test": "vitest --run --coverage",
     "lint": "lint-janitor",
     "build": "lerna run build",
-    "make": "yarn clean && yarn lint && yarn test && yarn build",
+    "make": "yarn clean && yarn check && yarn lint && yarn test && yarn build",
     "postinstall": "husky install"
   },
   "devDependencies": {
