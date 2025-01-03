@@ -5,7 +5,9 @@
     "target": "esnext",
     "paths": {
       "@zthun/webigail-url": ["webigail-url/src/index"],
-      "@zthun/webigail-http": ["webigail-http/src/index"]
+      "@zthun/webigail-http": ["webigail-http/src/index"],
+      "@zthun/webigail-nest": ["webigail-nest/src/index"],
+      "@zthun/webigail-rest": ["webigail-rest/src/index"]
     }
   },
   "include": ["**/*.ts", "**/*.mts"]
