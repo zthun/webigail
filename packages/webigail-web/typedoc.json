@@ -7,6 +7,5 @@
   "exclude": ["./"],
   "excludeNotDocumented": true,
   "name": "Webigail",
-  "plugin": ["typedoc-plugin-extras"],
   "favicon": "public/images/svg/webigail.svg"
 }
