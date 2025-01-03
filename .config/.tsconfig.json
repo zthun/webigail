@@ -13,7 +13,7 @@
     "strictBindCallApply": true,
     "skipLibCheck": true,
     "jsx": "react",
-    "target": "ESNext",
-    "module": "ESNext"
+    "target": "es5",
+    "module": "ES2020"
   }
 }
