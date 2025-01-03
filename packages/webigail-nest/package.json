@@ -9,20 +9,23 @@
     "url": "https://github.com/zthun/webigail",
     "directory": "packages/webigail-nest"
   },
+  "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
+    "types": "./dist/index.d.ts",
     "import": "./dist/index.js",
-    "require": "./dist/index.cjs",
-    "types": "./dist/index.d.ts"
+    "require": "./dist/index.cjs"
   },
-  "type": "module",
   "scripts": {
     "build": "vite build"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@zthun/webigail-http": "^3.1.2"
   },
   "devDependencies": {
     "@nestjs/common": "^10.4.15",
@@ -42,8 +45,5 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@zthun/webigail-http": "^3.1.2"
-  },
   "sideEffects": false
 }
