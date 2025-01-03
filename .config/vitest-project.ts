@@ -1,7 +1,7 @@
-import tsConfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
+import tsConfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
-export function defineTest(environment?: 'node' | 'jsdom') {
+export function defineTest(environment?: "node" | "happy-dom") {
   return defineConfig({
     plugins: [tsConfigPaths()],
     test: {
@@ -9,8 +9,8 @@ export function defineTest(environment?: 'node' | 'jsdom') {
       testTimeout: 30000,
       coverage: {
         all: false,
-        provider: 'istanbul'
-      }
-    }
+        provider: "istanbul",
+      },
+    },
   });
 }
