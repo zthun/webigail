@@ -1,4 +1,4 @@
-import { trim, trimEnd, trimStart } from "lodash-es";
+import { sortBy, trim, trimEnd, trimStart } from "lodash-es";
 import URLParse from "url-parse";
 
 /**
@@ -564,7 +564,7 @@ export class ZUrlBuilder {
    *        The url string.
    */
   public build(): string {
-    const search = this._url.params
+    const search = sortBy(this._url.params, (p) => p.key)
       .map((param) => `${param.key}=${encodeURIComponent(param.val)}`)
       .join("&");
     const user = trim(this._url.username);
