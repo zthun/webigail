@@ -1,7 +1,7 @@
 import { IZDataRequest, IZDataSource } from "@zthun/helpful-query";
 import { IZHttpService, ZHttpRequestBuilder } from "@zthun/webigail-http";
 import { ZUrlBuilder } from "@zthun/webigail-url";
-import { ZRestfulUrlBuilder } from "src/url/restful-url.mjs";
+import { ZRestfulUrlBuilder } from "../url/restful-url.mjs";
 import { IZRestfulCreate } from "./restful-create.mjs";
 import { IZRestfulDelete } from "./restful-delete.mjs";
 import { IZRestfulGet } from "./restful-get.mjs";
