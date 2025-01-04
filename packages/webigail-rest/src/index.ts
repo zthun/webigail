@@ -4,3 +4,4 @@ export * from "./service/restful-get.mjs";
 export * from "./service/restful-service.mjs";
 export * from "./service/restful-update.mjs";
 export * from "./service/restful-upsert.mjs";
+export * from "./url/restful-url.mjs";
