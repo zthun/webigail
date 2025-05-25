@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.0](https://github.com/zthun/webigail/compare/v3.2.0...v3.3.0) (2025-05-25)
+
+
+### Features
+
+* upgrade nestjs to 11.x ([11d46e5](https://github.com/zthun/webigail/commit/11d46e50dd7ad50b74eace07fde4442a58f72726))
+
+
+
 ## [3.2.0](https://github.com/zthun/webigail/compare/v3.1.3...v3.2.0) (2025-01-04)
 
 
