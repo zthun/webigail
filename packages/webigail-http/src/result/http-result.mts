@@ -1,5 +1,5 @@
 import { ZHttpCodeSuccess } from "./http-code-success.mjs";
-import { ZHttpCode } from "./http-code.mjs";
+import type { ZHttpCode } from "./http-code.mjs";
 
 /**
  * Represents a result from an http request.

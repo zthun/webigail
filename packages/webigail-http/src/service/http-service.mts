@@ -1,9 +1,10 @@
 import fetch from "cross-fetch";
 
-import { IZHttpRequest } from "../request/http-request.mjs";
+import type { IZHttpRequest } from "../request/http-request.mjs";
 import { ZHttpCodeClient } from "../result/http-code-client.mjs";
 import { ZHttpCodeServer } from "../result/http-code-server.mjs";
-import { IZHttpResult, ZHttpResultBuilder } from "../result/http-result.mjs";
+import type { IZHttpResult } from "../result/http-result.mjs";
+import { ZHttpResultBuilder } from "../result/http-result.mjs";
 import { isBodyInit } from "../util/body-init.mjs";
 import { fromContentType } from "../util/content-type.mjs";
 

@@ -1,12 +1,13 @@
-import { IZDataRequest, IZDataSource } from "@zthun/helpful-query";
-import { IZHttpService, ZHttpRequestBuilder } from "@zthun/webigail-http";
+import type { IZDataRequest, IZDataSource } from "@zthun/helpful-query";
+import type { IZHttpService } from "@zthun/webigail-http";
+import { ZHttpRequestBuilder } from "@zthun/webigail-http";
 import { ZUrlBuilder } from "@zthun/webigail-url";
 import { ZRestfulUrlBuilder } from "../url/restful-url.mjs";
-import { IZRestfulCreate } from "./restful-create.mjs";
-import { IZRestfulDelete } from "./restful-delete.mjs";
-import { IZRestfulGet } from "./restful-get.mjs";
-import { IZRestfulUpdate } from "./restful-update.mjs";
-import { IZRestfulUpsert } from "./restful-upsert.mjs";
+import type { IZRestfulCreate } from "./restful-create.mjs";
+import type { IZRestfulDelete } from "./restful-delete.mjs";
+import type { IZRestfulGet } from "./restful-get.mjs";
+import type { IZRestfulUpdate } from "./restful-update.mjs";
+import type { IZRestfulUpsert } from "./restful-upsert.mjs";
 
 /**
  * A service that conforms to all known restful standards.

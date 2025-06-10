@@ -1,25 +1,25 @@
+import type { ZHttpCodeClient } from "./http-code-client.mjs";
 import {
-  ZHttpCodeClient,
   ZHttpCodeClientDescriptions,
   ZHttpCodeClientNames,
 } from "./http-code-client.mjs";
+import type { ZHttpCodeInformationalResponse } from "./http-code-informational-response.mjs";
 import {
-  ZHttpCodeInformationalResponse,
   ZHttpCodeInformationalResponseDescriptions,
   ZHttpCodeInformationalResponseNames,
 } from "./http-code-informational-response.mjs";
+import type { ZHttpCodeRedirection } from "./http-code-redirection.mjs";
 import {
-  ZHttpCodeRedirection,
   ZHttpCodeRedirectionDescriptions,
   ZHttpCodeRedirectionNames,
 } from "./http-code-redirection.mjs";
+import type { ZHttpCodeServer } from "./http-code-server.mjs";
 import {
-  ZHttpCodeServer,
   ZHttpCodeServerDescriptions,
   ZHttpCodeServerNames,
 } from "./http-code-server.mjs";
+import type { ZHttpCodeSuccess } from "./http-code-success.mjs";
 import {
-  ZHttpCodeSuccess,
   ZHttpCodeSuccessDescriptions,
   ZHttpCodeSuccessNames,
 } from "./http-code-success.mjs";

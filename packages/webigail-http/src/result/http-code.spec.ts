@@ -24,8 +24,8 @@ import {
   ZHttpCodeSuccessDescriptions,
   ZHttpCodeSuccessNames,
 } from "./http-code-success.mjs";
+import type { ZHttpCode } from "./http-code.mjs";
 import {
-  ZHttpCode,
   ZHttpCodeCategory,
   ZHttpCodeSeverity,
   getHttpCodeCategory,

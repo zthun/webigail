@@ -1,8 +1,5 @@
-import {
-  IZDataRequest,
-  ZFilterSerialize,
-  ZSortSerialize,
-} from "@zthun/helpful-query";
+import type { IZDataRequest } from "@zthun/helpful-query";
+import { ZFilterSerialize, ZSortSerialize } from "@zthun/helpful-query";
 import { ZUrlBuilder } from "@zthun/webigail-url";
 
 /**

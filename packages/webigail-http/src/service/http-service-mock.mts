@@ -1,7 +1,8 @@
-import { IZHttpRequest, ZHttpMethod } from "../request/http-request.mjs";
+import type { IZHttpRequest, ZHttpMethod } from "../request/http-request.mjs";
 import { ZHttpCodeClient } from "../result/http-code-client.mjs";
-import { IZHttpResult, ZHttpResultBuilder } from "../result/http-result.mjs";
-import { IZHttpService } from "./http-service.mjs";
+import type { IZHttpResult } from "../result/http-result.mjs";
+import { ZHttpResultBuilder } from "../result/http-result.mjs";
+import type { IZHttpService } from "./http-service.mjs";
 
 /**
  * Represents a mock http service that can be useful for demos,

@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { HttpResponse, http } from "msw";
-import { SetupServer, setupServer } from "msw/node";
+import type { SetupServer } from "msw/node";
+import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 import { ZHttpRequestBuilder } from "../request/http-request.mjs";
 import { ZHttpCodeClient } from "../result/http-code-client.mjs";
