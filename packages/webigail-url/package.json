@@ -25,6 +25,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@zthun/janitor-build-config": "^19.1.5",
     "lodash-es": "^4.17.21",
     "url-parse": "^1.5.10"
   },

@@ -31,6 +31,7 @@
     "@zthun/webigail-url": "^3.2.0"
   },
   "devDependencies": {
+    "@zthun/janitor-build-config": "^19.1.5",
     "vite": "^6.3.5",
     "vitest": "^3.2.3"
   },
