@@ -10,11 +10,11 @@
     "directory": "packages/webigail-nest"
   },
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "exports": {
-    "types": "./dist/index.d.ts",
+    "types": "./dist/index.d.mts",
     "import": "./dist/index.js",
     "require": "./dist/index.cjs"
   },
