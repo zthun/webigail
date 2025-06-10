@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/zthun/webigail/compare/v3.3.0...v4.0.0) (2025-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* module resolution is now node next
+
+### Code Refactoring
+
+* module resolution is now node next ([c7fe39d](https://github.com/zthun/webigail/commit/c7fe39d51e4e2bf48c9e6e9dbac74d7ffd736621))
+
+
+
 ## [3.3.0](https://github.com/zthun/webigail/compare/v3.2.0...v3.3.0) (2025-05-25)
 
 **Note:** Version bump only for package @zthun/webigail-rest
