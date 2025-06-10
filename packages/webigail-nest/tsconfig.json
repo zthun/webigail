@@ -6,5 +6,9 @@
       "@zthun/webigail-http": ["../webigail-http/src/index"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/http/http-module.mts",
+    "src/http/http-service-token.mts"
+  ]
 }
