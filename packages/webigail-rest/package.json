@@ -25,8 +25,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/helpful-fn": "^7.2.1",
-    "@zthun/helpful-query": "^7.2.1",
+    "@zthun/helpful-fn": "^8.0.0",
+    "@zthun/helpful-query": "^8.0.0",
     "@zthun/webigail-http": "^3.1.3",
     "@zthun/webigail-url": "^3.2.0"
   },

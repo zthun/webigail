@@ -1,7 +1,7 @@
 /**
  * A method that determines if an object conforms to a Request BodyInit shape.
  *
- * See the {@link BodyInit} interface for more information about the possible
+ * See the BodyInit interface for more information about the possible
  * shapes.
  *
  * @param obj -

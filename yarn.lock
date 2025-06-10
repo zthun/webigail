@@ -3631,22 +3631,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/helpful-fn@npm:^7.2.1":
-  version: 7.2.1
-  resolution: "@zthun/helpful-fn@npm:7.2.1"
+"@zthun/helpful-fn@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@zthun/helpful-fn@npm:8.0.0"
   dependencies:
     uuid: "npm:^11.1.0"
-  checksum: 10c0/1ddde844df3a74b69db96734ce21d164df1883ec7a1a583d9603dacda5e02449139dd26134705d2313203220312d8ff8aa85633ad5cbf1412cbbea6ca5c59c53
+  checksum: 10c0/5970c514c07d4e377e7aadac6e535d9c7e7cc6fa8991118313b339000195cbe93cbdd978ec19764bcb92af1a54e0b129e1614665bd188f2619e119e5ad2c2c49
   languageName: node
   linkType: hard
 
-"@zthun/helpful-query@npm:^7.2.1":
-  version: 7.2.1
-  resolution: "@zthun/helpful-query@npm:7.2.1"
+"@zthun/helpful-query@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@zthun/helpful-query@npm:8.0.0"
   dependencies:
-    "@zthun/helpful-fn": "npm:^7.2.1"
+    "@zthun/helpful-fn": "npm:^8.0.0"
     lodash-es: "npm:^4.17.21"
-  checksum: 10c0/c5c20c481129d52a997246620527856d268a2d04f5bbe55ef392850e0c7e02915f463ab930df33e4e889cefbf41003420ab9b87402b511765f20daf4307e1bca
+  checksum: 10c0/0e21c400bb26075b31b1bd55c1233642c1bc5cb38a1d8cd26d8b4b56f894baaa22e387674dc200a5b926bd67b60e824bbdc18135211c88466c2afb866cedd1e7
   languageName: node
   linkType: hard
 
@@ -3863,8 +3863,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-rest@workspace:packages/webigail-rest"
   dependencies:
-    "@zthun/helpful-fn": "npm:^7.2.1"
-    "@zthun/helpful-query": "npm:^7.2.1"
+    "@zthun/helpful-fn": "npm:^8.0.0"
+    "@zthun/helpful-query": "npm:^8.0.0"
     "@zthun/janitor-build-config": "npm:^19.1.5"
     "@zthun/webigail-http": "npm:^3.1.3"
     "@zthun/webigail-url": "npm:^3.2.0"

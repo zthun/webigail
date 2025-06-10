@@ -4,10 +4,10 @@
     "baseUrl": "packages",
     "target": "esnext",
     "paths": {
-      "@zthun/webigail-url": ["webigail-url/src/index"],
-      "@zthun/webigail-http": ["webigail-http/src/index"],
-      "@zthun/webigail-nest": ["webigail-nest/src/index"],
-      "@zthun/webigail-rest": ["webigail-rest/src/index"]
+      "@zthun/webigail-url": ["webigail-url/src/index.mts"],
+      "@zthun/webigail-http": ["webigail-http/src/index.mts"],
+      "@zthun/webigail-nest": ["webigail-nest/src/index.mts"],
+      "@zthun/webigail-rest": ["webigail-rest/src/index.mts"]
     }
   },
   "include": ["**/*.ts", "**/*.mts"]

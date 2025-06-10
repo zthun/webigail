@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@zthun/webigail-http": ["../webigail-http/src/index"]
+      "@zthun/webigail-http": ["../webigail-http/src/index.mts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.mts"]
