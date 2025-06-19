@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/zthun/webigail/compare/v4.0.1...v4.0.2) (2025-06-19)
+
+
+### Bug Fixes
+
+* put, post, patch now correctly default the content type to application/json ([b586eb6](https://github.com/zthun/webigail/commit/b586eb6e10cbf0526da01acc6dde542d50639660))
+
+
+
 ## [4.0.1](https://github.com/zthun/webigail/compare/v4.0.0...v4.0.1) (2025-06-19)
 
 
