@@ -2,7 +2,10 @@
   "extends": "../../.config/.tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "paths": {
+      "@zthun/webigail-url": ["../webigail-url/src/index.mts"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.mts"]
 }
