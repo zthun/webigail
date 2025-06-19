@@ -1,3 +1,4 @@
+import { ZMimeTypeApplication } from "@zthun/webigail-url";
 import { describe, expect, it } from "vitest";
 import { ZHttpMethod, ZHttpRequestBuilder } from "./http-request.mjs";
 
@@ -119,6 +120,11 @@ describe("ZHttpRequestBuilder", () => {
           .header("connection", null)
           .build().headers;
         expect(actual).toEqual(expected);
+      });
+
+      it("should set the content type to json", () => {
+        const actual = createTestTarget().json().build().headers!;
+        expect(actual["Content-Type"]).toEqual(ZMimeTypeApplication.JSON);
       });
     });
   });

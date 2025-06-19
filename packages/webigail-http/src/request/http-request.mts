@@ -1,3 +1,5 @@
+import { ZMimeTypeApplication } from "@zthun/webigail-url";
+
 /**
  * Represents an available method for an http invocation.
  */
@@ -151,7 +153,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public get: () => this = this._method.bind(this, ZHttpMethod.Get);
+  public get() {
+    return this._method(ZHttpMethod.Get);
+  }
 
   /**
    * Constructs a post request.
@@ -159,10 +163,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public post: (body?: TBody) => this = this._method.bind(
-    this,
-    ZHttpMethod.Post,
-  );
+  public post(body?: TBody) {
+    return this._method(ZHttpMethod.Post, body).json();
+  }
 
   /**
    * Constructs a put request.
@@ -170,7 +173,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public put: (body?: TBody) => this = this._method.bind(this, ZHttpMethod.Put);
+  public put(body?: TBody) {
+    return this._method(ZHttpMethod.Put, body).json();
+  }
 
   /**
    * Constructs a delete request.
@@ -178,7 +183,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public delete: () => this = this._method.bind(this, ZHttpMethod.Delete);
+  public delete() {
+    return this._method(ZHttpMethod.Delete);
+  }
 
   /**
    * Constructs a patch request.
@@ -186,10 +193,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public patch: (body?: TBody) => this = this._method.bind(
-    this,
-    ZHttpMethod.Patch,
-  );
+  public patch(body?: TBody) {
+    return this._method(ZHttpMethod.Patch, body).json();
+  }
 
   /**
    * Constructs a options request.
@@ -197,7 +203,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public options: () => this = this._method.bind(this, ZHttpMethod.Options);
+  public options() {
+    return this._method(ZHttpMethod.Options);
+  }
 
   /**
    * Constructs a head request.
@@ -205,7 +213,9 @@ export class ZHttpRequestBuilder<TBody = any> {
    * @returns
    *        This object.
    */
-  public head: () => this = this._method.bind(this, ZHttpMethod.Head);
+  public head() {
+    return this._method(ZHttpMethod.Head);
+  }
 
   /**
    * Sets the url to make the request from.
@@ -271,6 +281,27 @@ export class ZHttpRequestBuilder<TBody = any> {
 
     return this;
   }
+
+  /**
+   * Sets the content type header.
+   *
+   * @param type -
+   *        The content mime type.
+   *
+   * @returns
+   *        This object.
+   */
+  public content(type: string) {
+    return this.header("Content-Type", type);
+  }
+
+  /**
+   * Sets the content type to json.
+   *
+   * @returns
+   *        This object.
+   */
+  public json = this.content.bind(this, ZMimeTypeApplication.JSON);
 
   /**
    * Copies other to this object.
