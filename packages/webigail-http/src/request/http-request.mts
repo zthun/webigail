@@ -7,28 +7,28 @@ export enum ZHttpMethod {
    *
    * Used for reads
    */
-  Get = "get",
+  Get = "GET",
 
   /**
    * PUT
    *
    * Used for updates and can combine creates.
    */
-  Put = "put",
+  Put = "PUT",
 
   /**
    * POST
    *
    * Use for create.
    */
-  Post = "post",
+  Post = "POST",
 
   /**
    * DELETE.
    *
    * Used for....delete..duh.
    */
-  Delete = "delete",
+  Delete = "DELETE",
 
   /**
    * PATCH.
@@ -36,7 +36,7 @@ export enum ZHttpMethod {
    * Used for updates but only
    * partials of objects.
    */
-  Patch = "patch",
+  Patch = "PATCH",
 
   /**
    * OPTIONS
@@ -45,14 +45,14 @@ export enum ZHttpMethod {
    * accessors for a single api.  Normally used
    * by the browser.
    */
-  Options = "options",
+  Options = "OPTIONS",
 
   /**
    * HEAD
    *
    * Used for metadata.
    */
-  Head = "head",
+  Head = "HEAD",
 }
 
 /**
