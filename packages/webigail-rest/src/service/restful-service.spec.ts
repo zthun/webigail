@@ -8,6 +8,7 @@ import {
   ZSortBuilder,
   ZSortSerialize,
 } from "@zthun/helpful-query";
+import type { IZHttpRequest } from "@zthun/webigail-http";
 import {
   ZHttpCodeSuccess,
   ZHttpMethod,
@@ -30,8 +31,12 @@ describe("ZRestfulService", () => {
   let electric: IPokemonType;
   let types: IPokemonType[];
 
-  const createTestTarget = () =>
-    new ZRestfulService<IPokemonType>(http, "https://pokeapi.co/api/v2/type");
+  const createTestTarget = (request?: IZHttpRequest) =>
+    new ZRestfulService<IPokemonType>(
+      http,
+      "https://pokeapi.co/api/v2/type",
+      request,
+    );
 
   beforeEach(() => {
     http = new ZHttpServiceMock();
@@ -102,6 +107,27 @@ describe("ZRestfulService", () => {
       const actual = await target.retrieve(request);
       // Assert.
       expect(actual).toEqual([electric]);
+    });
+
+    it("should use the base request as the template if it is provided", async () => {
+      // Arrange.
+      const base = new ZHttpRequestBuilder().header("Accept", "*").build();
+      const target = createTestTarget(base);
+      const request = new ZDataRequestBuilder().page(2).size(20).build();
+      http.set(
+        target.endpoint().page(request.page).size(request.size).build(),
+        ZHttpMethod.Get,
+        new ZHttpResultBuilder({ count: 1, result: [electric] }).build(),
+      );
+      vi.spyOn(http, "request");
+
+      // Act.
+      await target.retrieve(request);
+
+      // Assert.
+      expect(http.request).toHaveBeenCalledWith(
+        expect.objectContaining({ headers: { Accept: "*" } }),
+      );
     });
   });
 
