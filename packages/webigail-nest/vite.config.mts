@@ -1,4 +1,4 @@
 import { ZViteConfigBuilder } from "@zthun/janitor-build-config/vite";
 import { defineConfig } from "vite";
 
-export default defineConfig(new ZViteConfigBuilder().library().swc().build());
+export default defineConfig(new ZViteConfigBuilder().library().build());
