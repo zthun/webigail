@@ -25,13 +25,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/helpful-fn": "^9.3.0",
-    "@zthun/helpful-query": "^9.3.0",
+    "@zthun/helpful-fn": "^9.4.0",
+    "@zthun/helpful-query": "^9.4.0",
     "@zthun/webigail-http": "^4.0.3",
     "@zthun/webigail-url": "^4.0.3"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^19.2.2",
+    "@zthun/janitor-build-config": "^19.2.4",
     "vite": "^6.3.5",
     "vitest": "^3.2.4"
   },
