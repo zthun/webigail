@@ -135,11 +135,27 @@ describe("ZHttpServiceMock", () => {
       expect(actual.data).toEqual(8);
     });
 
-    it("should return a rejected promise for missing endpoints.", async () => {
+    it("should return a rejected promise for missing endpoint verbs.", async () => {
       // Arrange
       const target = createPopulatedTarget();
       const req = new ZHttpRequestBuilder()
         .url(numbersEndpoint)
+        .put({ data: 8, index: 2 })
+        .build();
+      // Act
+      const actual: any = await target
+        .request(req)
+        .then(() => Promise.reject("failed"))
+        .catch((e) => Promise.resolve(e));
+      // Assert
+      expect(actual.status).toEqual(ZHttpCodeClient.NotFound);
+    });
+
+    it("should return a rejected promise for missing endpoint urls.", async () => {
+      // Arrange
+      const target = createPopulatedTarget();
+      const req = new ZHttpRequestBuilder()
+        .url("https://not-a-configured-endpoint")
         .put({ data: 8, index: 2 })
         .build();
       // Act
