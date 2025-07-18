@@ -25,14 +25,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/helpful-fn": "^9.4.0",
-    "@zthun/helpful-query": "^9.4.0",
+    "@zthun/helpful-fn": "^9.4.2",
+    "@zthun/helpful-query": "^9.4.2",
     "@zthun/webigail-http": "^4.0.4",
     "@zthun/webigail-url": "^4.0.4"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^19.2.4",
-    "vite": "^6.3.5",
+    "@zthun/janitor-build-config": "^19.3.1",
+    "vite": "^7.0.5",
     "vitest": "^3.2.4"
   },
   "files": [
