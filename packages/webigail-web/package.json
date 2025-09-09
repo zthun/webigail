@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-web",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "description": "A documentation website for webigail packages.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -18,9 +18,9 @@
   },
   "devDependencies": {
     "@zthun/janitor-build-config": "^19.3.4",
-    "@zthun/webigail-http": "^4.0.6",
-    "@zthun/webigail-nest": "^4.0.6",
-    "@zthun/webigail-url": "^4.0.6",
+    "@zthun/webigail-http": "^4.0.7",
+    "@zthun/webigail-nest": "^4.0.7",
+    "@zthun/webigail-url": "^4.0.7",
     "typedoc": "^0.28.12",
     "typescript": "~5.9.2"
   },
