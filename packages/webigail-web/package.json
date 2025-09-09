@@ -17,7 +17,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^19.3.3",
+    "@zthun/janitor-build-config": "^19.3.4",
     "@zthun/webigail-http": "^4.0.6",
     "@zthun/webigail-nest": "^4.0.6",
     "@zthun/webigail-url": "^4.0.6",
