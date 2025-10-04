@@ -4009,12 +4009,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/webigail-http@npm:^4.0.7, @zthun/webigail-http@workspace:packages/webigail-http":
+"@zthun/webigail-http@npm:^4.0.8, @zthun/webigail-http@workspace:packages/webigail-http":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
     "@zthun/janitor-build-config": "npm:^19.3.6"
-    "@zthun/webigail-url": "npm:^4.0.7"
+    "@zthun/webigail-url": "npm:^4.0.8"
     cross-fetch: "npm:^4.1.0"
     lodash-es: "npm:^4.17.21"
     msw: "npm:^2.11.3"
@@ -4023,7 +4023,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-nest@npm:^4.0.7, @zthun/webigail-nest@workspace:packages/webigail-nest":
+"@zthun/webigail-nest@npm:^4.0.8, @zthun/webigail-nest@workspace:packages/webigail-nest":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-nest@workspace:packages/webigail-nest"
   dependencies:
@@ -4031,7 +4031,7 @@ __metadata:
     "@nestjs/core": "npm:^11.1.6"
     "@nestjs/testing": "npm:^11.1.6"
     "@zthun/janitor-build-config": "npm:^19.3.6"
-    "@zthun/webigail-http": "npm:^4.0.7"
+    "@zthun/webigail-http": "npm:^4.0.8"
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.2"
     vite: "npm:^7.1.9"
@@ -4051,14 +4051,14 @@ __metadata:
     "@zthun/helpful-fn": "npm:^9.4.5"
     "@zthun/helpful-query": "npm:^9.4.5"
     "@zthun/janitor-build-config": "npm:^19.3.6"
-    "@zthun/webigail-http": "npm:^4.0.7"
-    "@zthun/webigail-url": "npm:^4.0.7"
+    "@zthun/webigail-http": "npm:^4.0.8"
+    "@zthun/webigail-url": "npm:^4.0.8"
     vite: "npm:^7.1.9"
     vitest: "npm:^3.2.4"
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-url@npm:^4.0.7, @zthun/webigail-url@workspace:packages/webigail-url":
+"@zthun/webigail-url@npm:^4.0.8, @zthun/webigail-url@workspace:packages/webigail-url":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
@@ -4075,9 +4075,9 @@ __metadata:
   resolution: "@zthun/webigail-web@workspace:packages/webigail-web"
   dependencies:
     "@zthun/janitor-build-config": "npm:^19.3.6"
-    "@zthun/webigail-http": "npm:^4.0.7"
-    "@zthun/webigail-nest": "npm:^4.0.7"
-    "@zthun/webigail-url": "npm:^4.0.7"
+    "@zthun/webigail-http": "npm:^4.0.8"
+    "@zthun/webigail-nest": "npm:^4.0.8"
+    "@zthun/webigail-url": "npm:^4.0.8"
     typedoc: "npm:^0.28.13"
     typescript: "npm:~5.9.3"
   languageName: unknown
