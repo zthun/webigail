@@ -30,7 +30,7 @@
     "url-parse": "^1.5.10"
   },
   "devDependencies": {
-    "vite": "^7.1.9",
+    "vite": "^7.1.10",
     "vitest": "^3.2.4"
   },
   "files": [
