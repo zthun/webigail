@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.0](https://github.com/zthun/webigail/compare/v4.0.9...v5.0.0) (2025-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* output now builds to es2020
+
+### Build System
+
+* output now builds to es2020 ([f71e8f6](https://github.com/zthun/webigail/commit/f71e8f6b44e2026ef04e4aa0b1e1f19c3e62e894))
+
+
+
 ## [4.0.9](https://github.com/zthun/webigail/compare/v4.0.8...v4.0.9) (2025-10-19)
 
 **Note:** Version bump only for package @zthun/webigail-http
