@@ -16,7 +16,8 @@ import type { IZRestfulUpsert } from "./restful-upsert.mjs";
  *        The type of resource being retrieved or mutated.
  */
 export interface IZRestfulService<T>
-  extends IZRestfulCreate<T>,
+  extends
+    IZRestfulCreate<T>,
     IZRestfulDelete,
     IZRestfulGet<T>,
     IZRestfulUpdate<T>,
