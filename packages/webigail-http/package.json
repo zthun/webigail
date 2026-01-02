@@ -27,13 +27,13 @@
   "dependencies": {
     "@zthun/webigail-url": "^5.0.2",
     "cross-fetch": "^4.1.0",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.22"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^19.5.3",
-    "msw": "^2.12.4",
-    "vite": "^7.2.7",
-    "vitest": "^4.0.15"
+    "@zthun/janitor-build-config": "^19.5.4",
+    "msw": "^2.12.7",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.16"
   },
   "files": [
     "dist"
