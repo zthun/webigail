@@ -1,8 +1,7 @@
 {
-  "extends": "./.config/.tsconfig.json",
+  "extends": ["@zthun/janitor-ts-config/base", "@zthun/janitor-ts-config/node"],
   "compilerOptions": {
     "baseUrl": "packages",
-    "target": "esnext",
     "paths": {
       "@zthun/webigail-url": ["webigail-url/src/index.mts"],
       "@zthun/webigail-http": ["webigail-http/src/index.mts"],

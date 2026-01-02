@@ -25,11 +25,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@zthun/janitor-build-config": "^19.5.4",
     "lodash-es": "^4.17.22",
     "url-parse": "^1.5.10"
   },
   "devDependencies": {
+    "@zthun/janitor-build-config": "^19.5.4",
+    "@zthun/janitor-ts-config": "^19.5.3",
+    "typescript": "~5.9.3",
     "vite": "^7.3.0",
     "vitest": "^4.0.16"
   },

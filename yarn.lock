@@ -3885,15 +3885,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@zthun/janitor-ts-config@npm:^19.5.3":
+  version: 19.5.3
+  resolution: "@zthun/janitor-ts-config@npm:19.5.3"
+  peerDependencies:
+    typescript: ^5.0.0
+  checksum: 10c0/471e9e97bbdda69e30dd3e4f01432975ff8eb7625b3b4751d7118f585df46bf1c70ff46bc7e795b46f454842d81d63eef9ef598715b89264a4c979be2395f1cb
+  languageName: node
+  linkType: hard
+
 "@zthun/webigail-http@npm:^5.0.2, @zthun/webigail-http@workspace:packages/webigail-http":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
     "@zthun/janitor-build-config": "npm:^19.5.4"
+    "@zthun/janitor-ts-config": "npm:^19.5.3"
     "@zthun/webigail-url": "npm:^5.0.2"
     cross-fetch: "npm:^4.1.0"
     lodash-es: "npm:^4.17.22"
     msw: "npm:^2.12.7"
+    typescript: "npm:~5.9.3"
     vite: "npm:^7.3.0"
     vitest: "npm:^4.0.16"
   languageName: unknown
@@ -3907,9 +3918,11 @@ __metadata:
     "@nestjs/core": "npm:^11.1.11"
     "@nestjs/testing": "npm:^11.1.11"
     "@zthun/janitor-build-config": "npm:^19.5.4"
+    "@zthun/janitor-ts-config": "npm:^19.5.3"
     "@zthun/webigail-http": "npm:^5.0.2"
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.2"
+    typescript: "npm:~5.9.3"
     vite: "npm:^7.3.0"
     vitest: "npm:^4.0.16"
   peerDependencies:
@@ -3927,8 +3940,10 @@ __metadata:
     "@zthun/helpful-fn": "npm:^9.11.2"
     "@zthun/helpful-query": "npm:^9.11.2"
     "@zthun/janitor-build-config": "npm:^19.5.4"
+    "@zthun/janitor-ts-config": "npm:^19.5.3"
     "@zthun/webigail-http": "npm:^5.0.2"
     "@zthun/webigail-url": "npm:^5.0.2"
+    typescript: "npm:~5.9.3"
     vite: "npm:^7.3.0"
     vitest: "npm:^4.0.16"
   languageName: unknown
@@ -3939,7 +3954,9 @@ __metadata:
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
     "@zthun/janitor-build-config": "npm:^19.5.4"
+    "@zthun/janitor-ts-config": "npm:^19.5.3"
     lodash-es: "npm:^4.17.22"
+    typescript: "npm:~5.9.3"
     url-parse: "npm:^1.5.10"
     vite: "npm:^7.3.0"
     vitest: "npm:^4.0.16"
@@ -3973,6 +3990,7 @@ __metadata:
     "@zthun/janitor-lint": "npm:^19.5.4"
     "@zthun/janitor-lint-config": "npm:^19.5.4"
     "@zthun/janitor-options": "npm:^19.5.4"
+    "@zthun/janitor-ts-config": "npm:^19.5.3"
     happy-dom: "npm:^20.0.11"
     husky: "npm:^9.1.7"
     lerna: "npm:9.0.3"
