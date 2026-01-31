@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>5.0.5 (2026-01-31)</small>
+
+* build: update outdated dependencies ([8b54ba9](https://github.com/zthun/webigail/commit/8b54ba9))
+
+
+
+
+
 ## [5.0.4](https://github.com/zthun/webigail/compare/v5.0.3...v5.0.4) (2026-01-04)
 
 **Note:** Version bump only for package @zthun/webigail-rest
