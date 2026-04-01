@@ -130,15 +130,17 @@ export function getHttpCodeDescription(code: ZHttpCode) {
  *        The severity of a code.
  */
 export function getHttpCodeSeverity(code: ZHttpCode): ZHttpCodeSeverity {
-  if (code >= 200 && code < 300) {
+  const _code = +code;
+
+  if (_code >= 200 && _code < 300) {
     return ZHttpCodeSeverity.Success;
   }
 
-  if (code >= 400 && code < 500) {
+  if (_code >= 400 && _code < 500) {
     return ZHttpCodeSeverity.Warning;
   }
 
-  if (code >= 500) {
+  if (_code >= 500) {
     return ZHttpCodeSeverity.Error;
   }
 
@@ -155,19 +157,21 @@ export function getHttpCodeSeverity(code: ZHttpCode): ZHttpCodeSeverity {
  *        The code category.
  */
 export function getHttpCodeCategory(code: ZHttpCode): ZHttpCodeCategory {
-  if (code >= 100 && code < 200) {
+  const _code = +code;
+
+  if (_code >= 100 && _code < 200) {
     return ZHttpCodeCategory.InformationalResponse;
   }
 
-  if (code >= 200 && code < 300) {
+  if (_code >= 200 && _code < 300) {
     return ZHttpCodeCategory.Success;
   }
 
-  if (code >= 300 && code < 400) {
+  if (_code >= 300 && _code < 400) {
     return ZHttpCodeCategory.Redirection;
   }
 
-  if (code >= 400 && code < 500) {
+  if (_code >= 400 && _code < 500) {
     return ZHttpCodeCategory.Client;
   }
 

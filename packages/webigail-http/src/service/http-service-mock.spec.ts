@@ -146,7 +146,7 @@ describe("ZHttpServiceMock", () => {
       // Act
       const actual: any = await target
         .request(req)
-        .then(() => Promise.reject("failed"))
+        .then(() => Promise.reject(new Error("failed")))
         .catch((e) => Promise.resolve(e));
       // Assert
       expect(actual.status).toEqual(ZHttpCodeClient.NotFound);
@@ -162,7 +162,7 @@ describe("ZHttpServiceMock", () => {
       // Act
       const actual: any = await target
         .request(req)
-        .then(() => Promise.reject("failed"))
+        .then(() => Promise.reject(new Error("failed")))
         .catch((e) => Promise.resolve(e));
       // Assert
       expect(actual.status).toEqual(ZHttpCodeClient.NotFound);

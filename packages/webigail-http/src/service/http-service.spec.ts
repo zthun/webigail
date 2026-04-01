@@ -20,7 +20,7 @@ describe("ZHttpService", () => {
     return new ZHttpService();
   }
 
-  beforeAll(async () => {
+  beforeAll(() => {
     _server = setupServer(
       http.get(`${Domain}/api/success/json`, () =>
         HttpResponse.json(SuccessJson, { status: ZHttpCodeSuccess.OK }),
@@ -47,8 +47,7 @@ describe("ZHttpService", () => {
       ),
       http.delete(
         `${Domain}/api/success/json`,
-        async () =>
-          new HttpResponse(null, { status: ZHttpCodeSuccess.NoContent }),
+        () => new HttpResponse(null, { status: ZHttpCodeSuccess.NoContent }),
       ),
       http.get(`${Domain}/api/failure/client`, () =>
         HttpResponse.json(FailureJson, { status: ZHttpCodeClient.NotFound }),
