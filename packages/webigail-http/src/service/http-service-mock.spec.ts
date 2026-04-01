@@ -37,10 +37,12 @@ describe("ZHttpServiceMock", () => {
       const expected = new ZHttpResultBuilder(data).status(code).build();
       target.set(endpoint, ZHttpMethod.Get, expected);
       const req = new ZHttpRequestBuilder().get().url(endpoint).build();
+
       // Act
       const actual = await requestFn(target, req);
+
       // Assert
-      expect(actual).toEqual(expected);
+      expect(actual).toEqual(expect.objectContaining(expected));
     }
 
     const assertResolvesRequest: (code: ZHttpCode) => Promise<void> =

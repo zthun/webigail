@@ -2,6 +2,7 @@ import type { IZHttpRequest, ZHttpMethod } from "../request/http-request.mjs";
 import { ZHttpCodeClient } from "../result/http-code-client.mjs";
 import type { IZHttpResult } from "../result/http-result.mjs";
 import { ZHttpResultBuilder } from "../result/http-result.mjs";
+import { ZHttpResultError } from "./http-result-error.mjs";
 import type { IZHttpService } from "./http-service.mjs";
 
 /**
@@ -61,13 +62,13 @@ export class ZHttpServiceMock implements IZHttpService {
       const notFound = new ZHttpResultBuilder(null)
         .status(ZHttpCodeClient.NotFound)
         .build();
-      return Promise.reject(notFound);
+      return Promise.reject(new ZHttpResultError(notFound));
     }
 
     const errorThreshold = 400;
     const intermediate = await result(req);
     return +intermediate.status < errorThreshold
       ? Promise.resolve(intermediate)
-      : Promise.reject(intermediate);
+      : Promise.reject(new ZHttpResultError(intermediate));
   }
 }

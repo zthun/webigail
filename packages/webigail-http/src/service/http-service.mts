@@ -7,6 +7,7 @@ import type { IZHttpResult } from "../result/http-result.mjs";
 import { ZHttpResultBuilder } from "../result/http-result.mjs";
 import { isBodyInit } from "../util/body-init.mjs";
 import { fromContentType } from "../util/content-type.mjs";
+import { ZHttpResultError } from "./http-result-error.mjs";
 
 /**
  * Represents a service that makes http invocations.
@@ -54,7 +55,9 @@ export class ZHttpService implements IZHttpService {
         .headers(res.headers)
         .status(res.status)
         .build();
-      return res.ok ? Promise.resolve(result) : Promise.reject(result);
+      return res.ok
+        ? Promise.resolve(result)
+        : Promise.reject(new ZHttpResultError(result));
     } catch (e) {
       let result = new ZHttpResultBuilder(e.message)
         .headers()
@@ -65,7 +68,7 @@ export class ZHttpService implements IZHttpService {
         result = result.status(ZHttpCodeClient.NotFound);
       }
 
-      return Promise.reject(result.build());
+      return Promise.reject(new ZHttpResultError(result.build()));
     }
   }
 }
