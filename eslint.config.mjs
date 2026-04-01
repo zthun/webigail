@@ -2,7 +2,7 @@ import {
   environments,
   react,
   recommended,
-} from "@zthun/janitor-lint-config/eslint";
+} from "@zthun/janitor-eslint-config";
 
 export default [
   ...recommended,
