@@ -16,7 +16,7 @@
     "clean": "rimraf --glob 'dist' 'reports' 'coverage' '*.tgz' '*.log' 'packages/**/dist' 'packages/**/docs' 'packages/**/*.tgz' 'packages/**/*.log'",
     "check": "tsc --noEmit",
     "test": "vitest --run --coverage",
-    "lint": "janitor-lint",
+    "lint": "eslint",
     "build": "lerna run build",
     "make": "yarn clean && yarn check && yarn lint && yarn test && yarn build",
     "prepare": "husky"
