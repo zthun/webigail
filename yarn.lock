@@ -3576,6 +3576,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
+    "@zthun/helpful-fn": "npm:^9.11.11"
     "@zthun/janitor-build-config": "npm:^20.0.2"
     "@zthun/janitor-ts-config": "npm:^20.0.0"
     "@zthun/webigail-url": "npm:^5.0.5"

@@ -25,6 +25,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@zthun/helpful-fn": "^9.11.11",
     "@zthun/webigail-url": "^5.0.5",
     "cross-fetch": "^4.1.0",
     "lodash-es": "^4.17.23"
