@@ -21,7 +21,7 @@
     "@zthun/webigail-http": "^5.0.5",
     "@zthun/webigail-nest": "^5.0.5",
     "@zthun/webigail-url": "^5.0.5",
-    "typedoc": "^0.28.16",
+    "typedoc": "^0.28.18",
     "typescript": "~5.9.3"
   },
   "files": [
