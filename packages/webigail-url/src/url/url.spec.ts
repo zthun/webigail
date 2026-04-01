@@ -1,5 +1,6 @@
 import { find } from "lodash-es";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+
 import type { IZUrlInfo } from "./url.mjs";
 import { ZUrlBuilder, ZYouTubeApi } from "./url.mjs";
 
@@ -211,7 +212,7 @@ describe("ZUrlBuilder", () => {
       };
     });
 
-    it("it constructs the search params.", () => {
+    it("constructs the search params.", () => {
       // Arrange
       const target = createTestTarget();
       loc.search = "?a=b";

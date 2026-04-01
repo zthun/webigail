@@ -1,4 +1,14 @@
 import { describe, expect, it } from "vitest";
+
+import type { ZHttpCode } from "./http-code.mjs";
+import {
+  getHttpCodeCategory,
+  getHttpCodeDescription,
+  getHttpCodeName,
+  getHttpCodeSeverity,
+  ZHttpCodeCategory,
+  ZHttpCodeSeverity,
+} from "./http-code.mjs";
 import {
   ZHttpCodeClient,
   ZHttpCodeClientDescriptions,
@@ -24,15 +34,6 @@ import {
   ZHttpCodeSuccessDescriptions,
   ZHttpCodeSuccessNames,
 } from "./http-code-success.mjs";
-import type { ZHttpCode } from "./http-code.mjs";
-import {
-  ZHttpCodeCategory,
-  ZHttpCodeSeverity,
-  getHttpCodeCategory,
-  getHttpCodeDescription,
-  getHttpCodeName,
-  getHttpCodeSeverity,
-} from "./http-code.mjs";
 
 describe("ZHttpCode", () => {
   function assertValueFromDictionary(

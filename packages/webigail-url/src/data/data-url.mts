@@ -1,6 +1,7 @@
 import { last } from "lodash-es";
-import { ZMimeTypeApplication } from "../mime/mime-type-application.mjs";
+
 import { ZSupportedMimeTypes } from "../mime/mime-type.mjs";
+import { ZMimeTypeApplication } from "../mime/mime-type-application.mjs";
 
 /**
  * Represents information about a data url.

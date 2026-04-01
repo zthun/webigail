@@ -17,6 +17,7 @@ import {
   ZHttpServiceMock,
 } from "@zthun/webigail-http";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+
 import { ZRestfulService } from "./restful-service.mjs";
 
 interface IPokemonType {
@@ -234,7 +235,7 @@ describe("ZRestfulService", () => {
     it("should attempt to delete a resource", async () => {
       // Arrange.
       const target = createTestTarget();
-      const url = target.endpoint(fire.id!).build();
+      const url = target.endpoint(fire.id).build();
       http.set(
         url,
         ZHttpMethod.Delete,

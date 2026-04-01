@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+
 import { isBodyInit, toBodyInit } from "./body-init.mjs";
 
 describe("isBodyInit", () => {

@@ -1,5 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ZHttpService } from "@zthun/webigail-http";
+
 import { ZHttpServiceToken } from "./http-service-token.mjs";
 
 const ZHttpServiceProvider = {
