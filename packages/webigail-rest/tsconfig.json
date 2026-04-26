@@ -1,11 +1,10 @@
 {
   "extends": ["@zthun/janitor-ts-config/base", "@zthun/janitor-ts-config/node"],
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@zthun/webigail-http": ["../webigail-http/src/index.mts"],
       "@zthun/webigail-url": ["../webigail-url/src/index.mts"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.mts"]
+  "include": ["**/*.ts", "**/*.mts"]
 }
