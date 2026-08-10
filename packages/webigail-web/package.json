@@ -17,12 +17,12 @@
     "access": "public"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^20.0.6",
+    "@zthun/janitor-build-config": "^21.0.0",
     "@zthun/webigail-http": "^5.0.8",
     "@zthun/webigail-nest": "^5.0.8",
     "@zthun/webigail-url": "^5.0.8",
-    "typedoc": "^0.28.19",
-    "typescript": "~6.0.3"
+    "typedoc": "^0.28.20",
+    "typescript": "^6.0.3"
   },
   "files": [
     "dist"

@@ -29,11 +29,11 @@
     "url-parse": "^1.5.10"
   },
   "devDependencies": {
-    "@zthun/janitor-build-config": "^20.0.6",
-    "@zthun/janitor-ts-config": "^20.0.4",
-    "typescript": "~6.0.3",
-    "vite": "^8.0.14",
-    "vitest": "^4.1.7"
+    "@zthun/janitor-build-config": "^21.0.0",
+    "@zthun/janitor-ts-config": "^21.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
   },
   "files": [
     "dist"
