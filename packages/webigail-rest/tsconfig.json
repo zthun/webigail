@@ -1,5 +1,6 @@
 {
-  "extends": ["@zthun/janitor-ts-config/base", "@zthun/janitor-ts-config/node"],
+  "$schema": "https://www.schemastore.org/tsconfig",
+  "extends": ["@zthun/janitor-ts-config/base"],
   "compilerOptions": {
     "paths": {
       "@zthun/webigail-http": ["../webigail-http/src/index.mts"],
