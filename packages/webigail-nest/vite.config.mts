@@ -1,4 +1,4 @@
-import { extensionLibrary, project } from "@zthun/janitor-vite";
+import { extensionLibrary, projectNestJs } from "@zthun/janitor-vite";
 import { defineConfig } from "vite";
 
-export default defineConfig({ plugins: [project(), extensionLibrary()] });
+export default defineConfig({ plugins: [projectNestJs(), extensionLibrary()] });
