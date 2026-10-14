@@ -10,7 +10,7 @@ different parts of a URI.
 
 ## Usage
 
-Webigail is built in TypeScript and it exports both ESM and CJS modules.
+Webigail is built in TypeScript and exports both ESM and CJS modules.
 
 ```sh
 # NPM
@@ -37,18 +37,18 @@ There are also some utility functions for common use cases.
 ```ts
 import { ZUrlBuilder } from "@zthun/webigail-url";
 
-// Note: Browser only unless you're using jsdom in node.  Outputs the current
+// Note: Browser only unless you're using jsdom in Node.js. Outputs the current
 // browser location with /api appended to it.
 const locationUrl = new ZUrlBuilder().location(location).path("/api").build();
 console.log(url);
 
-// Url for a persons gravatar if one exists.
+// URL for a person's Gravatar, if one exists.
 const avatar = new ZUrlBuilder()
   .gravatar(md5("john-doe@gmail.com"), 256)
   .build();
 console.log(avatar);
 
-// Outputs the existing pieces of the url.
+// Outputs the existing pieces of the URL.
 const existingInfo = new ZUrlBuilder()
   .parse("https://webigail.zthunworks.com/api/path?filter=hello")
   .info();
@@ -57,7 +57,7 @@ console.log(existingInfo);
 
 ## Data URLs
 
-Webigail also supports building and parsing data urls as well.
+Webigail also supports building and parsing data URLs.
 
 ```ts
 import { ZDataUrlBuilder, ZMimeTypeApplication } from "@zthun/webigail-url";

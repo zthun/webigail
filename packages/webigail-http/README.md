@@ -1,11 +1,11 @@
-# Webigail Http
+# Webigail HTTP
 
-There's many libraries for invoking http requests such as axios, node-fetch, and
-the built in fetch api. These work, but don't make it easy to do dependency
+There are many libraries for making HTTP requests, such as axios, node-fetch,
+and the built-in fetch API. These work, but don't make it easy to do dependency
 injection.
 
-The webigail-http package uses an interface + class based approach to http
-requests which makes dependency injection much easier.
+The webigail-http package uses an approach based on interfaces and classes for
+HTTP requests, which makes dependency injection much easier.
 
 ## Build Status
 
@@ -13,7 +13,7 @@ requests which makes dependency injection much easier.
 
 ## Usage
 
-Webigail is built in TypeScript and it exports both ESM and CJS modules.
+Webigail is built in TypeScript and exports both ESM and CJS modules.
 
 ```sh
 # NPM
@@ -62,11 +62,12 @@ const product = new ProductService(new ZHttpService());
 
 ## Testing
 
-One challenge with dealing with http services and functions in tests is mocking
-API calls. You can override functions like get, post, but if you want to respond
-to different URL invocations, then it can become a bit of a pain to do so.
-Instead of having to create a mock and shuffle the http service implementations,
-this package also includes a mock implementation of the http service.
+One challenge with dealing with HTTP services and functions in tests is mocking
+API calls. You can override functions like get and post, but if you want to
+respond to different URL invocations, then it can become a bit of a pain to do
+so. Instead of having to create a mock and shuffle the HTTP service
+implementations, you can use the mock implementation of the HTTP service
+included in this package.
 
 ```ts
 import { createGuid } from "@zthun/helpful-fn";
