@@ -11,8 +11,6 @@ that for you.
 
 ## Usage
 
-Webigail is built in TypeScript and it exports both ESM and CJS modules.
-
 ```sh
 # NPM
 npm install @zthun/webigail-nest
