@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-http",
-  "version": "5.0.13",
+  "version": "5.0.14",
   "description": "Http service implementation with an equivalent mock for testing.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@zthun/helpful-fn": "^11.0.0",
-    "@zthun/webigail-url": "^5.0.12",
+    "@zthun/webigail-url": "^5.0.14",
     "cross-fetch": "^4.1.0",
     "lodash-es": "^4.18.1"
   },

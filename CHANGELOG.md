@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.14](https://github.com/zthun/webigail/compare/v5.0.13...v5.0.14) (2026-10-14)
+
+### Build System
+
+- no more webigail-web ([0dc7637](https://github.com/zthun/webigail/commit/0dc76371711334a7d26d66ce3f612aa09b425bac))
+
+### BREAKING CHANGES
+
+- webigail-web is no longer deployed. Use the READMEs instead.
+
 ## [5.0.13](https://github.com/zthun/webigail/compare/v5.0.12...v5.0.13) (2026-10-01)
 
 **Note:** Version bump only for package @zthun/webigail

@@ -1,6 +1,6 @@
 {
   "name": "@zthun/webigail-rest",
-  "version": "5.0.13",
+  "version": "5.0.14",
   "description": "Helpful services for querying rest services based on specific standards.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -27,8 +27,8 @@
   "dependencies": {
     "@zthun/helpful-fn": "^11.0.0",
     "@zthun/helpful-query": "^11.0.0",
-    "@zthun/webigail-http": "^5.0.13",
-    "@zthun/webigail-url": "^5.0.12"
+    "@zthun/webigail-http": "^5.0.14",
+    "@zthun/webigail-url": "^5.0.14"
   },
   "devDependencies": {
     "@zthun/janitor-ts-config": "^21.1.3",
