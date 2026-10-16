@@ -262,6 +262,34 @@ describe("ZUrlBuilder", () => {
     });
   });
 
+  describe("Github", () => {
+    it("returns the base github url.", () => {
+      expect(createTestTarget().github().build()).toEqual(
+        ZUrlBuilder.UrlGithub,
+      );
+    });
+
+    it("returns the url for an scope (organization or user)", () => {
+      const s = "zthun";
+      const expected = createTestTarget()
+        .parse(ZUrlBuilder.UrlGithub)
+        .append(s)
+        .build();
+      expect(createTestTarget().github(s).build()).toEqual(expected);
+    });
+
+    it("should return the url for a target project", () => {
+      const s = "zthun";
+      const p = "fashion";
+      const expected = createTestTarget()
+        .parse(ZUrlBuilder.UrlGithub)
+        .append(s)
+        .append(p)
+        .build();
+      expect(createTestTarget().github(s, p).build()).toEqual(expected);
+    });
+  });
+
   describe("YouTube", () => {
     it("returns the base YouTube url.", () => {
       expect(createTestTarget().youTube().build()).toEqual(
