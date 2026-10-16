@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/zthun/webigail/compare/v5.0.14...v5.1.0) (2026-10-16)
+
+### Features
+
+- url builder can now construct github urls ([25749fc](https://github.com/zthun/webigail/commit/25749fc8b4acfabc660dc5a827eebe0b3925e9e4))
+
 ## [5.0.14](https://github.com/zthun/webigail/compare/v5.0.13...v5.0.14) (2026-10-14)
 
 ### Build System

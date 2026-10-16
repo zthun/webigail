@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/zthun/webigail/compare/v5.0.14...v5.1.0) (2026-10-16)
+
+**Note:** Version bump only for package @zthun/webigail-rest
+
 ## [5.0.14](https://github.com/zthun/webigail/compare/v5.0.13...v5.0.14) (2026-10-14)
 
 **Note:** Version bump only for package @zthun/webigail-rest
