@@ -48,6 +48,13 @@ const avatar = new ZUrlBuilder()
   .build();
 console.log(avatar);
 
+// https://github.com
+const github = new ZUrlBuilder().github().build();
+// https://github.com/zthun
+const scopeGithub = new ZUrlBuilder().github("zthun").build();
+// https://github.com/zthun/webigail
+const projectGithub = new ZUrlBuilder().github("zthun", "webigail").build();
+
 // Outputs the existing pieces of the URL.
 const existingInfo = new ZUrlBuilder()
   .parse("https://webigail.zthunworks.com/api/path?filter=hello")
