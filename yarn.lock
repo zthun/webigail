@@ -3467,14 +3467,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/webigail-http@npm:^5.0.14, @zthun/webigail-http@workspace:packages/webigail-http":
+"@zthun/webigail-http@npm:^5.1.0, @zthun/webigail-http@workspace:packages/webigail-http":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-http@workspace:packages/webigail-http"
   dependencies:
     "@zthun/helpful-fn": "npm:^11.0.0"
     "@zthun/janitor-ts-config": "npm:^21.1.3"
     "@zthun/janitor-vite": "npm:^21.2.5"
-    "@zthun/webigail-url": "npm:^5.0.14"
+    "@zthun/webigail-url": "npm:^5.1.0"
     cross-fetch: "npm:^4.1.0"
     lodash-es: "npm:^4.18.1"
     msw: "npm:^3.0.3"
@@ -3493,7 +3493,7 @@ __metadata:
     "@nestjs/testing": "npm:^12.1.3"
     "@zthun/janitor-ts-config": "npm:^21.1.3"
     "@zthun/janitor-vite": "npm:^21.2.5"
-    "@zthun/webigail-http": "npm:^5.0.14"
+    "@zthun/webigail-http": "npm:^5.1.0"
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.2"
     typescript: "npm:^6.0.3"
@@ -3515,15 +3515,15 @@ __metadata:
     "@zthun/helpful-query": "npm:^11.0.0"
     "@zthun/janitor-ts-config": "npm:^21.1.3"
     "@zthun/janitor-vite": "npm:^21.2.5"
-    "@zthun/webigail-http": "npm:^5.0.14"
-    "@zthun/webigail-url": "npm:^5.0.14"
+    "@zthun/webigail-http": "npm:^5.1.0"
+    "@zthun/webigail-url": "npm:^5.1.0"
     typescript: "npm:^6.0.3"
     vite: "npm:^8.3.4"
     vitest: "npm:^5.0.5"
   languageName: unknown
   linkType: soft
 
-"@zthun/webigail-url@npm:^5.0.14, @zthun/webigail-url@workspace:packages/webigail-url":
+"@zthun/webigail-url@npm:^5.1.0, @zthun/webigail-url@workspace:packages/webigail-url":
   version: 0.0.0-use.local
   resolution: "@zthun/webigail-url@workspace:packages/webigail-url"
   dependencies:
