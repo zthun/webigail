@@ -302,9 +302,9 @@ export class ZUrlBuilder {
     let current = this.parse(ZUrlBuilder.UrlGithub);
 
     if (scope && project) {
-      current = current.path(`/${scope}/${project}`);
+      current = current.append(scope).append(project);
     } else if (scope) {
-      current = current.path(`/${scope}`);
+      current = current.append(scope);
     }
 
     return current;
