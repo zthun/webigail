@@ -299,7 +299,9 @@ export class ZUrlBuilder {
    *      This object.
    */
   public github(scope?: string, project?: string): this {
-    let current = this.parse(ZUrlBuilder.UrlGithub);
+    let current = this.clearParams()
+      .hash(undefined)
+      .parse(ZUrlBuilder.UrlGithub);
 
     if (scope && project) {
       current = current.append(scope).append(project);
@@ -543,6 +545,17 @@ export class ZUrlBuilder {
   public onlyParam(key: string, val?: string): this {
     this._url.params = this._url.params.filter((p) => p.key !== key);
     return val ? this.param(key, val) : this;
+  }
+
+  /**
+   * Removes all params.
+   *
+   * @returns
+   *        This object.
+   */
+  public clearParams() {
+    this._url.params = [];
+    return this;
   }
 
   /**

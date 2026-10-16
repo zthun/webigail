@@ -264,9 +264,13 @@ describe("ZUrlBuilder", () => {
 
   describe("Github", () => {
     it("returns the base github url.", () => {
-      expect(createTestTarget().github().build()).toEqual(
-        ZUrlBuilder.UrlGithub,
-      );
+      expect(
+        createTestTarget()
+          .param("garbage", "in")
+          .hash("/should/be/deleted")
+          .github()
+          .build(),
+      ).toEqual(ZUrlBuilder.UrlGithub);
     });
 
     it("returns the url for an scope (organization or user)", () => {
