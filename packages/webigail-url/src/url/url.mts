@@ -73,6 +73,13 @@ export class ZUrlBuilder {
   public static UrlGravatar = "https://s.gravatar.com/avatar";
 
   /**
+   * The url to github.
+   *
+   * Mostly use to reference source code.
+   */
+  public static UrlGithub = "https://github.com";
+
+  /**
    * The url to youtube.
    *
    * This is mostly used to embed videos.
@@ -243,6 +250,65 @@ export class ZUrlBuilder {
     let current = this.parse(ZUrlBuilder.UrlGravatar);
     current = hash ? current.append(hash) : current;
     current = size ? current.param("s", String(size)) : current;
+    return current;
+  }
+
+  /**
+   * Sets the route to be the root of github.
+   *
+   * @returns
+   *      This object.
+   */
+  public github(): this;
+
+  /**
+   * Sets the route to be a user or organizations github page.
+   *
+   * @param scope
+   *        The target user or organization.
+   *
+   * @returns
+   *      This object.
+   */
+  public github(scope: string): this;
+
+  /**
+   * Sets the route to be a user or organizations github
+   * project page.
+   *
+   * @param scope
+   *        The target user or organization.
+   * @param project
+   *        The target project.
+   *
+   * @returns
+   *      This object.
+   */
+  public github(scope: string, project: string): this;
+
+  /**
+   * Sets the route to be a user or organizations github
+   * project page.
+   *
+   * @param scope
+   *        The target user or organization.
+   * @param project
+   *        The target project.
+   *
+   * @returns
+   *      This object.
+   */
+  public github(scope?: string, project?: string): this {
+    let current = this.clearParams()
+      .hash(undefined)
+      .parse(ZUrlBuilder.UrlGithub);
+
+    if (scope && project) {
+      current = current.append(scope).append(project);
+    } else if (scope) {
+      current = current.append(scope);
+    }
+
     return current;
   }
 
@@ -479,6 +545,17 @@ export class ZUrlBuilder {
   public onlyParam(key: string, val?: string): this {
     this._url.params = this._url.params.filter((p) => p.key !== key);
     return val ? this.param(key, val) : this;
+  }
+
+  /**
+   * Removes all params.
+   *
+   * @returns
+   *        This object.
+   */
+  public clearParams() {
+    this._url.params = [];
+    return this;
   }
 
   /**
